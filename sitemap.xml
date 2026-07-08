@@ -2,8 +2,8 @@
 <!-- 아래 CHANGE_ME_DOMAIN 을 실제 주소로 바꾸세요 (index.html, robots.txt와 동일하게) -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://CHANGE_ME_DOMAIN/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <loc>https://bestrito.kro.kr/</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

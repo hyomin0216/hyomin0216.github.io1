@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # 아래 CHANGE_ME_DOMAIN 을 실제 주소로 바꾸세요 (index.html과 동일하게)
-Sitemap: https://CHANGE_ME_DOMAIN/sitemap.xml
+Sitemap: https://bestrito.kro.kr/sitemap.xml
