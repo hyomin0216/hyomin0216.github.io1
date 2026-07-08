@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ========================================================================
+     ⚠️ 배포 전 꼭 수정하세요 (SEO 핵심)
+     아래 CHANGE_ME_DOMAIN 을 실제 주소로 바꾸세요.
+     예) https://rito0223.github.io  또는  https://내도메인.com
+     canonical / og:url / sitemap.xml 세 곳의 주소가 일치해야 검색에 유리합니다.
+
+     ⚠️ 번개장터 링크 (2종류):
+        1) 상품별 링크 — 각 상품 카드의 CHANGE_ME_BUNJANG_URL_1 ~ _3 를
+           해당 상품의 번개장터 주소로 각각 바꾸세요. (상품마다 다름)
+        2) 상점 링크 — 헤더/히어로/하단의 CHANGE_ME_BUNJANG_STORE 는
+           번개장터 상점 메인 주소로 바꾸세요. (한 번에 교체)
+        예) https://m.bunjang.co.kr/products/상품번호  /  .../stores/상점번호
+========================================================================= -->
+
+<title>디스코드 서버제작·니트로·부스트 전문 | RIto0223</title>
+<meta name="description" content="디스코드 서버제작, 니트로, 부스트, 서버부스트까지 한 곳에서. RIto0223에서 카카오톡으로 1:1 빠른 상담 후 안전하게 진행하세요.">
+<meta name="keywords" content="디스코드, 디스코드 서버, 디스코드 서버제작, 디스코드 니트로, 디스코드 부스트, 디스코드 서버부스트">
+<meta name="robots" content="index, follow">
+<meta name="author" content="RIto0223">
+<link rel="canonical" href="https://CHANGE_ME_DOMAIN/">
+<meta name="theme-color" content="#0d0e17">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<!-- Open Graph (카톡·페북·디코 공유 미리보기) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RIto0223">
+<meta property="og:title" content="디스코드 서버제작·니트로·부스트 전문 | RIto0223">
+<meta property="og:description" content="디스코드 서버제작부터 니트로·부스트까지. 카카오톡으로 1:1 빠른 상담 후 안전하게 진행하세요.">
+<meta property="og:url" content="https://CHANGE_ME_DOMAIN/">
+<meta property="og:locale" content="ko_KR">
+<!-- 공유 썸네일: 1200x630 이미지 준비 후 아래 og-image.png 자리에 넣으세요 -->
+<meta property="og:image" content="https://CHANGE_ME_DOMAIN/logo-square.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="디스코드 서버제작·니트로·부스트 전문 | RIto0223">
+<meta name="twitter:description" content="디스코드 서버제작부터 니트로·부스트까지. 카카오톡으로 1:1 빠른 상담.">
+<meta name="twitter:image" content="https://CHANGE_ME_DOMAIN/logo-square.png">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+<!-- 구조화 데이터 (JSON-LD) : 구글 리치 결과용 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "RIto0223",
+  "url": "https://CHANGE_ME_DOMAIN/",
+  "description": "디스코드 서버제작, 니트로, 부스트, 서버부스트 전문",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://pf.kakao.com/_mSqYxj/chat",
+    "availableLanguage": ["Korean"]
+  },
+  "sameAs": ["https://pf.kakao.com/_mSqYxj"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "디스코드 서버제작", "description": "컨셉에 맞춘 채널·권한·봇 세팅까지 서버 제작 대행", "provider": { "@type": "Organization", "name": "RIto0223" } } },
+    { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "디스코드 니트로", "description": "디스코드 니트로 안내 및 판매", "provider": { "@type": "Organization", "name": "RIto0223" } } },
+    { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "디스코드 서버부스트", "description": "레벨 1·2·3 서버부스트 안내 및 판매", "provider": { "@type": "Organization", "name": "RIto0223" } } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "디스코드 서버제작은 어떻게 진행되나요?", "acceptedAnswer": { "@type": "Answer", "text": "카카오톡 채널로 원하시는 컨셉과 규모를 알려주시면 1:1 상담 후 진행합니다." } },
+    { "@type": "Question", "name": "니트로와 부스트는 어떻게 구매하나요?", "acceptedAnswer": { "@type": "Answer", "text": "카카오톡 채널로 문의하시면 종류와 가격을 안내해 드립니다." } },
+    { "@type": "Question", "name": "문의는 어디로 하나요?", "acceptedAnswer": { "@type": "Answer", "text": "상단 또는 하단의 카카오톡 채팅 버튼을 눌러 바로 문의하실 수 있습니다." } }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --ink:#0d0e17;          /* 배경 딥 네이비 */
+  --ink-2:#12131f;
+  --panel:#171826;        /* 카드 */
+  --panel-2:#1d1f30;
+  --line:#2a2c42;
+  --blurple:#5865f2;      /* 디스코드 블러플 */
+  --blurple-lo:#6b74f5;
+  --pink:#eb459e;         /* 니트로/부스트 핑크 */
+  --pink-lo:#f471b5;
+  --kakao:#fee500;        /* 카카오 옐로우 */
+  --kakao-ink:#171717;
+  --on:#3ba55d;           /* 온라인 그린 */
+  --txt:#edeef5;
+  --muted:#9ba0b4;
+  --muted-2:#6d7189;
+  --radius:18px;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  background:var(--ink);
+  color:var(--txt);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* ---------- 배경 글로우 ---------- */
+.glow{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.glow::before,.glow::after{content:"";position:absolute;border-radius:50%;filter:blur(120px);opacity:.4}
+.glow::before{width:520px;height:520px;background:var(--blurple);top:-160px;left:-120px}
+.glow::after{width:460px;height:460px;background:var(--pink);top:220px;right:-140px;opacity:.28}
+
+/* ---------- 헤더 ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);
+  background:rgba(13,14,23,.72);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.3px;font-size:1.12rem}
+.brand-logo{height:34px;width:auto;display:block;mix-blend-mode:screen}
+.brand .mark{
+  width:30px;height:30px;border-radius:9px;
+  background:linear-gradient(135deg,var(--blurple),var(--pink));
+  display:grid;place-items:center;color:#fff;font-weight:900;font-size:.9rem;
+  box-shadow:0 6px 18px -6px var(--blurple);
+}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--muted);font-size:.94rem;font-weight:500;transition:color .15s}
+.nav-links a:hover{color:var(--txt)}
+.nav-cta{display:inline-flex;align-items:center;gap:6px;background:var(--kakao);color:var(--kakao-ink);
+  font-weight:800;font-size:.92rem;padding:9px 16px;border-radius:11px;
+  box-shadow:0 4px 14px -3px rgba(254,229,0,.55);transition:transform .12s,box-shadow .15s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 22px -6px rgba(254,229,0,.75)}
+@media(max-width:720px){.nav-links a:not(.nav-cta):not(.nav-bunjang){display:none}.nav-links{gap:8px}}
+
+/* ---------- 히어로 ---------- */
+.hero{position:relative;z-index:1;padding:78px 0 64px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.82rem;font-weight:700;
+  letter-spacing:1.5px;color:var(--blurple-lo);text-transform:uppercase;margin-bottom:22px;
+  border:1px solid var(--line);padding:7px 14px;border-radius:999px;background:var(--panel)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--on);box-shadow:0 0 0 0 rgba(59,165,93,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(59,165,93,.55)}70%{box-shadow:0 0 0 8px rgba(59,165,93,0)}100%{box-shadow:0 0 0 0 rgba(59,165,93,0)}}
+h1{font-size:clamp(2.3rem,6vw,3.9rem);line-height:1.12;letter-spacing:-1.5px;font-weight:900;margin:0 0 20px}
+h1 .grad{background:linear-gradient(100deg,var(--blurple-lo),var(--pink-lo));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(1.02rem,2.4vw,1.22rem);color:var(--muted);max-width:560px;margin:0 0 34px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn-kakao{display:inline-flex;align-items:center;gap:10px;background:var(--kakao);color:var(--kakao-ink);
+  font-weight:800;font-size:1.02rem;padding:15px 26px;border-radius:14px;transition:transform .12s,box-shadow .18s}
+.btn-kakao:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(254,229,0,.55)}
+.btn-ghost{display:inline-flex;align-items:center;gap:9px;color:var(--txt);font-weight:700;font-size:1rem;
+  padding:15px 24px;border-radius:14px;border:1px solid var(--line);background:var(--panel);transition:border-color .15s,background .15s}
+.btn-ghost:hover{border-color:var(--blurple);background:var(--panel-2)}
+/* 번개장터 빨간 버튼 */
+.btn-bunjang{display:inline-flex;align-items:center;gap:10px;background:#ff3b3b;color:#fff;
+  font-weight:800;font-size:1.02rem;padding:15px 26px;border-radius:14px;transition:transform .12s,box-shadow .18s}
+.btn-bunjang:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(255,59,59,.55)}
+.nav-bunjang{display:inline-flex;align-items:center;gap:6px;background:#ff3b3b;color:#fff;
+  font-weight:800;font-size:.92rem;padding:9px 14px;border-radius:11px;
+  box-shadow:0 4px 14px -3px rgba(255,59,59,.6);transition:transform .12s,box-shadow .15s}
+.nav-bunjang:hover{transform:translateY(-1px);box-shadow:0 8px 22px -6px rgba(255,59,59,.8)}
+/* 문의하기 팝업 (카드) */
+.inquire{width:100%;position:relative}
+.inq-toggle{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;list-style:none;
+  cursor:pointer;background:var(--panel-2);border:1px solid var(--line);color:var(--txt);font-weight:800;
+  font-size:.96rem;padding:13px;border-radius:12px;transition:border-color .15s,background .15s}
+.inq-toggle::-webkit-details-marker{display:none}
+.inq-toggle::after{content:"▾";color:var(--muted);font-size:.85rem;transition:transform .2s}
+details[open] .inq-toggle::after{transform:rotate(180deg)}
+.inq-toggle:hover{border-color:var(--blurple);background:#20223a}
+.inq-menu{display:flex;flex-direction:column;gap:9px;margin-top:9px;animation:inqIn .18s ease}
+@keyframes inqIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.inq-opt{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px;border-radius:12px;
+  font-weight:800;font-size:.95rem;transition:transform .12s}
+.inq-opt:hover{transform:translateY(-1px)}
+.inq-opt.kakao{background:var(--kakao);color:var(--kakao-ink)}
+.inq-opt.bunjang{background:#ff3b3b;color:#fff}
+
+/* ---------- 자세히 보기 버튼 ---------- */
+.detail-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;cursor:pointer;
+  background:linear-gradient(100deg,var(--blurple),var(--pink));color:#fff;font-weight:800;font-size:.98rem;
+  padding:14px;border-radius:12px;border:none;font-family:inherit;transition:transform .12s,box-shadow .18s}
+.detail-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px var(--blurple)}
+
+/* ---------- 상세 모달 ---------- */
+body.modal-lock{overflow:hidden}
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:flex-start;justify-content:center;
+  padding:22px 14px;overflow-y:auto;background:rgba(5,6,12,.74);backdrop-filter:blur(6px)}
+.modal.open{display:flex}
+.modal-box{position:relative;width:100%;max-width:640px;margin:auto;background:var(--ink-2);
+  border:1px solid var(--line);border-radius:22px;overflow:hidden;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.8);animation:modalIn .22s ease}
+@keyframes modalIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.modal-close{position:absolute;top:14px;right:14px;z-index:6;width:38px;height:38px;border-radius:50%;
+  border:none;cursor:pointer;background:rgba(0,0,0,.5);color:#fff;font-size:1.4rem;line-height:1;
+  display:grid;place-items:center;transition:background .15s}
+.modal-close:hover{background:rgba(0,0,0,.78)}
+.modal-content{padding:24px 26px 26px}
+.modal-eyebrow{font-size:.76rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blurple-lo);margin-bottom:10px}
+.modal-content h3{font-size:1.55rem;letter-spacing:-.6px;margin:0 0 14px;font-weight:900}
+.modal-desc{color:#c7cad9;font-size:.97rem;line-height:1.75;margin:0;white-space:pre-line}
+
+/* ---------- 사진 슬라이드 (번개장터 스타일) ---------- */
+.gallery{position:relative;background:#0a0b12}
+.carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;aspect-ratio:4/3}
+.carousel::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:center}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.slide .ph{width:100%;height:100%;display:grid;place-items:center;color:#565b78;font-weight:700;
+  font-size:1rem;background:linear-gradient(135deg,#141626,#1d2033)}
+.gal-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;
+  border:none;cursor:pointer;background:rgba(0,0,0,.5);color:#fff;font-size:1.2rem;z-index:3;
+  display:grid;place-items:center;transition:background .15s}
+.gal-nav:hover{background:rgba(0,0,0,.78)}
+.gal-prev{left:12px}.gal-next{right:12px}
+.gal-dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:7px;z-index:3}
+.gal-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);transition:all .2s;cursor:pointer}
+.gal-dots i.on{background:#fff;width:20px;border-radius:99px}
+.gal-count{position:absolute;top:12px;left:12px;z-index:3;background:rgba(0,0,0,.55);color:#fff;
+  font-size:.76rem;font-weight:700;padding:4px 10px;border-radius:99px}
+@media(max-width:520px){.gal-nav{display:none}}
+
+/* ---------- 일반 vs 프리미엄 비교 ---------- */
+.sub-h{font-size:.8rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--pink-lo);margin:26px 0 12px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:480px){.compare{grid-template-columns:1fr}}
+.plan{border:1px solid var(--line);border-radius:16px;padding:20px 18px;background:var(--panel)}
+.plan.premium{position:relative;border:1.5px solid transparent;
+  background:linear-gradient(var(--panel),var(--panel)) padding-box,linear-gradient(135deg,var(--blurple),var(--pink)) border-box}
+.plan-badge{position:absolute;top:-11px;right:16px;background:linear-gradient(100deg,var(--blurple),var(--pink));
+  color:#fff;font-size:.7rem;font-weight:800;padding:4px 11px;border-radius:99px;letter-spacing:.5px}
+.plan-name{font-size:1.05rem;font-weight:800;margin:0 0 4px}
+.plan-price{font-size:.85rem;color:var(--muted);margin:0 0 14px;font-weight:600}
+.plan ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.plan li{display:flex;gap:9px;align-items:flex-start;font-size:.9rem;color:#c7cad9}
+.plan li svg{flex-shrink:0;margin-top:2px}
+.plan li.yes svg{color:var(--on)}
+.plan li.no{color:var(--muted-2)}
+.plan li.no svg{color:var(--muted-2)}
+
+/* ---------- 모달 하단 문의 ---------- */
+.modal-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+@media(max-width:420px){.modal-cta{grid-template-columns:1fr}}
+.modal-cta a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;border-radius:13px;
+  font-weight:800;font-size:1rem;transition:transform .12s}
+.modal-cta a:hover{transform:translateY(-2px)}
+.modal-cta .kakao{background:var(--kakao);color:var(--kakao-ink)}
+.modal-cta .bunjang{background:#ff3b3b;color:#fff}
+
+/* ---------- 부스트 미터 (시그니처) ---------- */
+.boost{margin-top:52px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;max-width:560px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.boost-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.boost-title{display:flex;align-items:center;gap:9px;font-weight:800;font-size:.98rem}
+.boost-title svg{color:var(--pink-lo)}
+.boost-lv{font-size:.8rem;color:var(--muted);font-weight:600}
+.bar{height:12px;border-radius:99px;background:var(--ink-2);overflow:hidden;position:relative;border:1px solid var(--line)}
+.bar-fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--blurple),var(--pink));
+  transition:width 1.4s cubic-bezier(.2,.7,.2,1);box-shadow:0 0 16px -2px var(--pink)}
+.ticks{display:flex;justify-content:space-between;margin-top:9px;font-size:.74rem;color:var(--muted-2);font-weight:600}
+.ticks span.active{color:var(--pink-lo)}
+
+/* ---------- 섹션 공통 ---------- */
+section.block{position:relative;z-index:1;padding:64px 0}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 46px}
+.sec-tag{font-size:.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--pink-lo);margin-bottom:12px}
+.sec-head h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-1px;font-weight:900;margin:0 0 12px}
+.sec-head p{color:var(--muted);margin:0}
+
+/* ---------- 상품 카드 ---------- */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;
+  position:relative;overflow:hidden;transition:transform .18s,border-color .18s}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--blurple),var(--pink));opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--blurple)}
+.card-ico{width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;
+  background:linear-gradient(135deg,rgba(88,101,242,.22),rgba(235,69,158,.22));border:1px solid var(--line);color:var(--blurple-lo)}
+.card h3{font-size:1.32rem;letter-spacing:-.5px;margin:0 0 10px;font-weight:800}
+.card .desc{color:var(--muted);font-size:.98rem;margin:0 0 18px;min-height:48px}
+.feat{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:9px}
+.feat li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:#c7cad9}
+.feat li svg{flex-shrink:0;margin-top:3px;color:var(--on)}
+.card-foot{display:flex;flex-direction:column;align-items:stretch;gap:14px}
+.card-foot .price{display:flex;align-items:baseline;gap:8px}
+.price{font-weight:800;font-size:1.05rem}
+.price small{color:var(--muted);font-weight:500;font-size:.82rem;display:block}
+.card-btn{display:inline-flex;align-items:center;gap:7px;background:var(--kakao);color:var(--kakao-ink);
+  font-weight:800;font-size:.9rem;padding:11px 18px;border-radius:11px;transition:transform .12s}
+.card-btn:hover{transform:translateY(-1px)}
+
+/* ---------- 신뢰 ---------- */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:860px){.why{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.why{grid-template-columns:1fr}}
+.why-item{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px}
+.why-item .n{font-size:.78rem;font-weight:700;color:var(--blurple-lo);letter-spacing:1px;margin-bottom:10px}
+.why-item h4{margin:0 0 8px;font-size:1.08rem;font-weight:800;letter-spacing:-.3px}
+.why-item p{margin:0;color:var(--muted);font-size:.92rem}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;font-size:1.02rem;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;color:var(--muted);font-weight:400;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0;padding:0 22px 20px;color:var(--muted);font-size:.96rem}
+
+/* ---------- 최종 CTA ---------- */
+.final{position:relative;z-index:1;text-align:center;padding:78px 0}
+.final-box{background:linear-gradient(135deg,rgba(88,101,242,.16),rgba(235,69,158,.16));
+  border:1px solid var(--line);border-radius:26px;padding:54px 28px}
+.final-box h2{font-size:clamp(1.7rem,4.5vw,2.6rem);letter-spacing:-1px;margin:0 0 14px;font-weight:900}
+.final-box p{color:var(--muted);max-width:480px;margin:0 auto 30px}
+
+/* ---------- 푸터 ---------- */
+footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:38px 0;margin-top:20px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+.foot .brand{color:var(--txt)}
+
+/* 접근성 */
+:focus-visible{outline:2px solid var(--blurple-lo);outline-offset:3px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+
+/* ---------- 레벨 선택 (서버부스트) ---------- */
+.lv-tabs{display:flex;gap:8px;margin-bottom:12px}
+.lv-tab{flex:1;padding:11px;border-radius:11px;border:1px solid var(--line);background:var(--panel);
+  color:var(--muted);font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit;transition:all .15s}
+.lv-tab:hover{color:var(--txt)}
+.lv-tab.on{color:#fff;border-color:transparent;background:linear-gradient(100deg,var(--blurple),var(--pink))}
+.lv-body{display:none;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.lv-body.on{display:block}
+.lv-price{font-size:1.15rem;font-weight:900;letter-spacing:-.5px;margin-bottom:5px}
+.lv-desc{font-size:.83rem;color:var(--muted);line-height:1.6}
+/* ---------- 모바일 최적화 ---------- */
+html{-webkit-text-size-adjust:100%}
+a,button{-webkit-tap-highlight-color:rgba(88,101,242,.25)}
+@media(max-width:480px){
+  .wrap{padding:0 16px}
+  .modal{padding:14px 10px}
+  .modal-content{padding:20px 18px 22px}
+  .modal-content h3{font-size:1.35rem}
+  .lv-tab{font-size:.9rem;padding:12px 6px}
+}
+@media(max-width:420px){
+  .nav-cta,.nav-bunjang{font-size:.8rem;padding:8px 11px;gap:5px}
+  .brand-logo{height:30px}
+  .nav-links{gap:6px}
+}
+.nav-cta,.nav-bunjang{white-space:nowrap;flex-shrink:0}
+.brand{flex-shrink:0}
+@media(max-width:560px){.nav-cta,.nav-bunjang{font-size:.82rem;padding:8px 12px;gap:5px}.brand-logo{height:30px}.nav-links{gap:7px}}
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand"><img src="data:image/png;base64,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" alt="RIto0223 · 디스코드 판매 1위" class="brand-logo"></a>
+    <nav class="nav-links">
+      <a href="#products">상품</a>
+      <a href="#why">이용 안내</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a class="nav-cta" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카톡 문의</a>
+      <a class="nav-bunjang" href="https://CHANGE_ME_BUNJANG_STORE" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg>번개장터
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= 히어로 ================= -->
+<main>
+<section class="hero">
+  <div class="wrap">
+    <h1>디스코드에 필요한 건<br><span class="grad">여기서 다 준비돼요</span></h1>
+    <p class="lead">서버 제작부터 니트로, 부스트, 서버부스트까지. 카카오톡으로 문의하면 1:1로 빠르게 안내해 드립니다.</p>
+    <div class="cta-row">
+      <a class="btn-kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>
+        카카오톡 채팅 문의
+      </a>
+      <a class="btn-bunjang" href="https://CHANGE_ME_BUNJANG_STORE" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg>
+        번개장터 문의
+      </a>
+      <a class="btn-ghost" href="https://pf.kakao.com/_mSqYxj/friend" target="_blank" rel="noopener">
+        채널 추가
+      </a>
+    </div>
+
+    <!-- 시그니처: 서버 부스트 레벨 미터 -->
+    <div class="boost" role="img" aria-label="디스코드 서버 부스트 레벨 진행 예시">
+      <div class="boost-top">
+        <span class="boost-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 5.9L20 9l-4.5 3.9L17 19l-5-3-5 3 1.5-6.1L4 9l5.6-1.1z"/></svg>
+          서버 부스트 레벨
+        </span>
+        <span class="boost-lv">LEVEL 3 달성 가능</span>
+      </div>
+      <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+      <div class="ticks"><span>0</span><span>LV.1</span><span>LV.2</span><span class="active">LV.3</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 상품 =================
+     ▼▼▼ 상품 카드 4개입니다. [설명]/[특징] 텍스트를 원하는 내용으로 바꾸세요.
+     - "자세히 보기" 를 누르면 아래쪽 상세 모달(사진 슬라이드+설명+비교)이 열립니다.
+     - 각 상세 모달은 이 섹션 바로 아래 <div class="modal" id="m1~m3"> 에 있습니다.
+     - 사진은 상세 모달 안 .ph 자리를 <img> 로 교체하면 됩니다. ▼▼▼ -->
+<section class="block" id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">Products</div>
+      <h2>판매 상품</h2>
+      <p>상품을 누르면 사진·설명·플랜 비교를 확인하고 바로 문의할 수 있어요.</p>
+    </div>
+    <div class="grid">
+
+      <!-- 상품 1 -->
+      <article class="card">
+        <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v10a2 2 0 002 2h4l-1 3 4-3h7a2 2 0 002-2V6a2 2 0 00-2-2z"/></svg></div>
+        <h3>디스코드 서버제작</h3>
+        <p class="desc"><!--설명 수정-->컨셉에 맞춘 채널·카테고리·권한·봇 세팅까지 한 번에 구성해 드립니다.</p>
+        <ul class="feat">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>채널·역할·권한 구조 설계</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>봇·인증·환영 메시지 세팅</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>디자인 배너·이모지 적용</span></li>
+        </ul>
+        <div class="card-foot">
+          <span class="price">4,000~10,000원<small>맞춤 견적</small></span>
+          <button class="detail-btn" data-modal="m1">자세히 보기 →</button>
+          <details class="inquire">
+            <summary class="inq-toggle">문의하기</summary>
+            <div class="inq-menu">
+              <a class="inq-opt kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡 문의</a>
+              <a class="inq-opt bunjang" href="https://CHANGE_ME_BUNJANG_URL_1" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg>번개장터</a>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <!-- 상품 2 -->
+      <article class="card">
+        <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 5.9L20 9l-4.5 3.9L17 19l-5-3-5 3 1.5-6.1L4 9l5.6-1.1z"/></svg></div>
+        <h3>디스코드 니트로</h3>
+        <p class="desc"><!--설명 수정-->디스코드 니트로를 합리적으로. 원하는 기간·종류로 안내해 드립니다.</p>
+        <ul class="feat">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>니트로 / 니트로 베이직 안내</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>기간 선택 가능</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>1:1 상담 후 안전 진행</span></li>
+        </ul>
+        <div class="card-foot">
+          <span class="price">문의<small>종류별 안내</small></span>
+          <button class="detail-btn" data-modal="m2">자세히 보기 →</button>
+          <details class="inquire">
+            <summary class="inq-toggle">문의하기</summary>
+            <div class="inq-menu">
+              <a class="inq-opt kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡 문의</a>
+              <a class="inq-opt bunjang" href="https://CHANGE_ME_BUNJANG_URL_2" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg>번개장터</a>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <!-- 상품 4 -->
+      <article class="card">
+        <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 3 2 5 3 7h8c1-2 3-4 3-7 0-4-3-7-7-7zm-2 19h4v1a2 2 0 01-4 0z"/></svg></div>
+        <h3>디스코드 서버부스트</h3>
+        <p class="desc"><!--설명 수정-->레벨 1·2·3까지 안정적으로. 서버 등급 상향을 도와드립니다.</p>
+        <ul class="feat">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>레벨 1·2·3 대응</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>목표 레벨 맞춤 견적</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>안정적 유지 안내</span></li>
+        </ul>
+        <div class="card-foot">
+          <span class="price">문의<small>레벨별 안내</small></span>
+          <button class="detail-btn" data-modal="m3">자세히 보기 →</button>
+          <details class="inquire">
+            <summary class="inq-toggle">문의하기</summary>
+            <div class="inq-menu">
+              <a class="inq-opt kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡 문의</a>
+              <a class="inq-opt bunjang" href="https://CHANGE_ME_BUNJANG_URL_3" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg>번개장터</a>
+            </div>
+          </details>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 상품 상세 모달 (사진 슬라이드 + 설명 + 일반/프리미엄 비교) ================= -->
+  <!-- ===== 상세: 디스코드 서버제작 ===== -->
+  <div class="modal" id="m1" role="dialog" aria-modal="true" aria-label="디스코드 서버제작 상세">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="닫기">&times;</button>
+      <!-- 사진 슬라이드: 아래 .ph 를 <img src="사진주소" alt="설명"> 로 바꾸세요. 슬라이드는 자유롭게 추가/삭제 -->
+      <div class="gallery">
+        <span class="gal-count">1 / 4</span>
+        <div class="carousel">
+            <div class="slide"><div class="ph">사진 1</div></div>
+            <div class="slide"><div class="ph">사진 2</div></div>
+            <div class="slide"><div class="ph">사진 3</div></div>
+            <div class="slide"><div class="ph">사진 4</div></div>
+        </div>
+        <button class="gal-nav gal-prev" aria-label="이전 사진">&#8249;</button>
+        <button class="gal-nav gal-next" aria-label="다음 사진">&#8250;</button>
+        <div class="gal-dots"></div>
+      </div>
+      <div class="modal-content">
+        <div class="modal-eyebrow">DISCORD</div>
+        <h3>디스코드 서버제작</h3>
+        <p class="modal-desc"><!--상품 설명 수정-->원하시는 서버 컨셉과 규모를 알려주시면 채널 구조부터 권한, 봇, 디자인까지 한 번에 완성해 드립니다.
+게임·커뮤니티·판매·스터디 등 목적에 맞춰 설계하고, 완성 후에도 수정과 관리를 도와드립니다.
+
+※ 이 설명은 예시입니다. 실제 내용으로 자유롭게 바꾸세요.</p>
+
+        <div class="sub-h">일반 vs 프리미엄</div>
+        <div class="compare">
+          <div class="plan">
+            <div class="plan-name">일반</div>
+            <div class="plan-price">기본 구성</div>
+            <ul>
+            <li class="yes"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>기본 채널·카테고리 구성</span></li>
+            <li class="yes"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>기본 역할·권한 설정</span></li>
+            <li class="yes"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>봇 1종 기본 연동</span></li>
+            <li class="no"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M5 11h14v2H5z"/></svg><span>맞춤 디자인·배너 제작</span></li>
+            <li class="no"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M5 11h14v2H5z"/></svg><span>자동화·인증 시스템</span></li>
+            </ul>
+          </div>
+          <div class="plan premium">
+            <span class="plan-badge">추천</span>
+            <div class="plan-name">프리미엄</div>
+            <div class="plan-price">맞춤 제작</div>
+            <ul>
+            <li class="yes"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>맞춤 컨셉 채널 설계</span></li>
+            <li class="yes"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>세부 역할·권한 체계</span></li>
+            <li class="yes"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>다중 봇·자동화 세팅</span></li>
+            <li class="yes"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>배너·이모지·아이콘 제작</span></li>
+            <li class="yes"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>인증·환영·규칙 시스템</span></li>
+            <li class="yes"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>완성 후 사후 관리</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-cta">
+          <a class="kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡 문의</a>
+          <a class="bunjang" href="https://CHANGE_ME_BUNJANG_URL_1" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg>번개장터 문의</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 상세: 디스코드 니트로 ===== -->
+  <div class="modal" id="m2" role="dialog" aria-modal="true" aria-label="디스코드 니트로 상세">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="닫기">&times;</button>
+      <!-- 사진 슬라이드: 아래 .ph 를 <img src="사진주소" alt="설명"> 로 바꾸세요. 슬라이드는 자유롭게 추가/삭제 -->
+      <div class="gallery">
+        <span class="gal-count">1 / 4</span>
+        <div class="carousel">
+            <div class="slide"><div class="ph">사진 1</div></div>
+            <div class="slide"><div class="ph">사진 2</div></div>
+            <div class="slide"><div class="ph">사진 3</div></div>
+            <div class="slide"><div class="ph">사진 4</div></div>
+        </div>
+        <button class="gal-nav gal-prev" aria-label="이전 사진">&#8249;</button>
+        <button class="gal-nav gal-next" aria-label="다음 사진">&#8250;</button>
+        <div class="gal-dots"></div>
+      </div>
+      <div class="modal-content">
+        <div class="modal-eyebrow">DISCORD</div>
+        <h3>디스코드 니트로</h3>
+        <p class="modal-desc"><!--상품 설명 수정-->원하는 종류(니트로 / 니트로 베이직)와 기간을 알려주시면 안내해 드립니다.
+1:1 상담 후 안전하게 진행하며 궁금한 점은 언제든 문의하실 수 있습니다.
+
+※ 이 설명은 예시입니다. 실제 내용으로 자유롭게 바꾸세요.</p>
+
+
+        <div class="modal-cta">
+          <a class="kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡 문의</a>
+          <a class="bunjang" href="https://CHANGE_ME_BUNJANG_URL_2" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg>번개장터 문의</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 상세: 디스코드 서버부스트 ===== -->
+  <div class="modal" id="m3" role="dialog" aria-modal="true" aria-label="디스코드 서버부스트 상세">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="닫기">&times;</button>
+      <!-- 사진 슬라이드: 아래 .ph 를 <img src="사진주소" alt="설명"> 로 바꾸세요. 슬라이드는 자유롭게 추가/삭제 -->
+      <div class="gallery">
+        <span class="gal-count">1 / 4</span>
+        <div class="carousel">
+            <div class="slide"><div class="ph">사진 1</div></div>
+            <div class="slide"><div class="ph">사진 2</div></div>
+            <div class="slide"><div class="ph">사진 3</div></div>
+            <div class="slide"><div class="ph">사진 4</div></div>
+        </div>
+        <button class="gal-nav gal-prev" aria-label="이전 사진">&#8249;</button>
+        <button class="gal-nav gal-next" aria-label="다음 사진">&#8250;</button>
+        <div class="gal-dots"></div>
+      </div>
+      <div class="modal-content">
+        <div class="modal-eyebrow">DISCORD</div>
+        <h3>디스코드 서버부스트</h3>
+        <p class="modal-desc"><!--상품 설명 수정-->목표 레벨(1·2·3)에 맞춰 서버부스트를 안정적으로 안내해 드립니다.
+서버 등급 상향과 유지에 대한 상담을 함께 제공합니다.
+
+※ 이 설명은 예시입니다. 실제 내용으로 자유롭게 바꾸세요.</p>
+
+
+        <!-- ▼ 레벨별 가격·설명: 아래 [가격 입력]/[설명 입력] 을 실제 내용으로 바꾸세요 ▼ -->
+        <div class="sub-h">레벨 선택</div>
+        <div class="lv-tabs" role="tablist">
+          <button class="lv-tab on" data-lv="1">1레벨</button>
+          <button class="lv-tab" data-lv="2">2레벨</button>
+          <button class="lv-tab" data-lv="3">3레벨</button>
+        </div>
+        <div class="lv-body on" data-lv="1">
+          <div class="lv-price"><!--가격 입력-->0,000원</div>
+          <div class="lv-desc"><!--설명 입력-->서버 부스트 2개 · 레벨 1 달성에 필요한 부스트를 안내해 드립니다.</div>
+        </div>
+        <div class="lv-body" data-lv="2">
+          <div class="lv-price"><!--가격 입력-->0,000원</div>
+          <div class="lv-desc"><!--설명 입력-->서버 부스트 7개 · 레벨 2 달성에 필요한 부스트를 안내해 드립니다.</div>
+        </div>
+        <div class="lv-body" data-lv="3">
+          <div class="lv-price"><!--가격 입력-->0,000원</div>
+          <div class="lv-desc"><!--설명 입력-->서버 부스트 14개 · 레벨 3 달성에 필요한 부스트를 안내해 드립니다.</div>
+        </div>
+
+        <div class="modal-cta">
+          <a class="kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡 문의</a>
+          <a class="bunjang" href="https://CHANGE_ME_BUNJANG_URL_3" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg>번개장터 문의</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ================= 이용 안내 ================= -->
+<section class="block" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">Why RIto0223</div>
+      <h2>이렇게 진행돼요</h2>
+      <p>복잡한 절차 없이 카카오톡 한 번이면 됩니다.</p>
+    </div>
+    <div class="why">
+      <div class="why-item"><div class="n">STEP 01</div><h4>빠른 응답</h4><p>카카오톡 채널로 문의하면 확인 후 바로 답변드려요.</p></div>
+      <div class="why-item"><div class="n">STEP 02</div><h4>1:1 상담</h4><p>원하는 상품과 조건을 듣고 맞춤으로 안내합니다.</p></div>
+      <div class="why-item"><div class="n">STEP 03</div><h4>안전 진행</h4><p>상담에서 정한 내용대로 진행하고 확인해 드립니다.</p></div>
+      <div class="why-item"><div class="n">STEP 04</div><h4>사후 문의</h4><p>진행 후 궁금한 점도 카카오톡으로 이어서 문의 가능해요.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">FAQ</div>
+      <h2>자주 묻는 질문</h2>
+      <p>답변 내용은 상황에 맞게 자유롭게 수정하세요.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>디스코드 서버제작은 어떻게 진행되나요?</summary>
+        <p>카카오톡 채널로 원하시는 컨셉과 규모를 알려주시면, 1:1 상담을 통해 채널 구성·권한·봇 세팅 등을 맞춰 진행합니다.</p>
+      </details>
+      <details>
+        <summary>니트로와 부스트는 어떻게 구매하나요?</summary>
+        <p>카카오톡 채널로 문의해 주시면 종류·기간·수량에 따라 안내해 드립니다.</p>
+      </details>
+      <details>
+        <summary>문의는 어디로 하면 되나요?</summary>
+        <p>이 페이지의 카카오톡 채팅 버튼을 누르면 바로 채널로 연결됩니다. 채널 추가 후 언제든 문의할 수 있어요.</p>
+      </details>
+      <details>
+        <summary>상담 가능한 시간이 정해져 있나요?</summary>
+        <p><!--수정-->메시지는 언제든 남겨주세요. 확인하는 대로 순서대로 답변드립니다.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 최종 CTA ================= -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-box">
+      <h2>지금 카카오톡으로 문의하세요</h2>
+      <p>궁금한 점이 있으면 편하게 남겨주세요. 확인하는 대로 빠르게 안내해 드릴게요.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn-kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>
+          카카오톡 채팅 문의
+        </a>
+        <a class="btn-bunjang" href="https://CHANGE_ME_BUNJANG_STORE" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg>
+          번개장터 문의
+        </a>
+        <a class="btn-ghost" href="https://pf.kakao.com/_mSqYxj/friend" target="_blank" rel="noopener">채널 추가</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span><span class="brand">RIto0223</span> · 디스코드 서버제작 · 니트로 · 부스트</span>
+    <span>© 2026 RIto0223. 카카오톡 채널로 문의하세요.</span>
+  </div>
+</footer>
+
+<script>
+// 부스트 미터 채우기
+window.addEventListener('load',function(){
+  var f=document.getElementById('barFill');
+  if(f){setTimeout(function(){f.style.width='100%';},250);}
+});
+
+// 상세 모달 열기/닫기
+function openModal(id){
+  var m=document.getElementById(id); if(!m) return;
+  m.classList.add('open'); document.body.classList.add('modal-lock');
+  var c=m.querySelector('.modal-close'); if(c) c.focus();
+}
+function closeModal(m){ m.classList.remove('open'); document.body.classList.remove('modal-lock'); }
+document.querySelectorAll('[data-modal]').forEach(function(b){
+  b.addEventListener('click',function(){ openModal(b.getAttribute('data-modal')); });
+});
+document.querySelectorAll('.modal').forEach(function(m){
+  m.addEventListener('click',function(e){ if(e.target===m) closeModal(m); });
+  var c=m.querySelector('.modal-close'); if(c) c.addEventListener('click',function(){ closeModal(m); });
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){ document.querySelectorAll('.modal.open').forEach(closeModal); }
+});
+
+// 사진 슬라이드 (번개장터 스타일)
+document.querySelectorAll('.gallery').forEach(function(g){
+  var car=g.querySelector('.carousel');
+  var slides=car.querySelectorAll('.slide');
+  var dotsWrap=g.querySelector('.gal-dots');
+  var countEl=g.querySelector('.gal-count');
+  var dots=[];
+  slides.forEach(function(_,i){
+    var d=document.createElement('i'); if(i===0) d.className='on';
+    d.addEventListener('click',function(){ car.scrollTo({left:car.clientWidth*i,behavior:'smooth'}); });
+    dotsWrap.appendChild(d); dots.push(d);
+  });
+  function update(){
+    var idx=Math.round(car.scrollLeft/Math.max(car.clientWidth,1));
+    dots.forEach(function(d,i){ d.classList.toggle('on',i===idx); });
+    if(countEl) countEl.textContent=(idx+1)+' / '+slides.length;
+  }
+  car.addEventListener('scroll',function(){ window.requestAnimationFrame(update); });
+  var prev=g.querySelector('.gal-prev'), next=g.querySelector('.gal-next');
+  if(prev) prev.addEventListener('click',function(){ car.scrollBy({left:-car.clientWidth,behavior:'smooth'}); });
+  if(next) next.addEventListener('click',function(){ car.scrollBy({left:car.clientWidth,behavior:'smooth'}); });
+});
+
+// 레벨 선택 (서버부스트)
+document.querySelectorAll('.lv-tabs').forEach(function(tabs){
+  var box=tabs.closest('.modal-content');
+  var btns=tabs.querySelectorAll('.lv-tab');
+  var bodies=box.querySelectorAll('.lv-body');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var lv=b.getAttribute('data-lv');
+      btns.forEach(function(x){ x.classList.toggle('on',x===b); });
+      bodies.forEach(function(bd){ bd.classList.toggle('on',bd.getAttribute('data-lv')===lv); });
+    });
+  });
+});
+</script>
+</body>
+</html>
