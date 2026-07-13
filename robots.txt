@@ -1,6 +1,4 @@
-# RIto0223 - 모든 검색엔진 크롤링 허용
 User-agent: *
 Allow: /
 
-# 아래 CHANGE_ME_DOMAIN 을 실제 주소로 바꾸세요 (index.html과 동일하게)
 Sitemap: https://bestrito0223.kro.kr/sitemap.xml
