@@ -1,4 +1,56 @@
+# Rito0223 - 디스코드 서버제작 · 니트로 · 서버부스트
+# 모든 검색엔진 및 AI 검색엔진 전체 허용
+
 User-agent: *
+Allow: /
+
+# ---- 주요 검색엔진 ----
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# 네이버
+User-agent: Yeti
+Allow: /
+
+# 다음
+User-agent: Daum
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
+# ---- AI 검색엔진 (AI 답변에 인용되도록 허용) ----
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://bestrito0223.kro.kr/sitemap.xml
