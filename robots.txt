@@ -41,6 +41,12 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
@@ -53,4 +59,16 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://bestrito0223.kro.kr/sitemap.xml
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# AI용 요약 문서
+# https://www.rito0223.com/llms.txt
+
+Sitemap: https://www.rito0223.com/sitemap.xml

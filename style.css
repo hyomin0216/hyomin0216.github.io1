@@ -54,4 +54,9 @@ th{background:var(--panel2);font-weight:800}
 .related a small{color:var(--muted);font-weight:500}
 footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.88rem;text-align:center}
 :focus-visible{outline:2px solid var(--blurple-lo);outline-offset:3px}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}/* SEO/AEO: 최종 업데이트 · 출처 표기 */
+.updated{font-size:.8rem;color:var(--muted-2,#6d7189);margin:-6px 0 18px}
+.note{font-size:.82rem;color:var(--muted);margin:10px 0 0}
+.note a,.updated a,footer a{text-decoration:underline;text-underline-offset:2px}
+footer a:hover{color:var(--txt)}
+h1,h2,h3,.lead{word-break:keep-all;overflow-wrap:break-word}
