@@ -1,0 +1,37 @@
+# Rito0223 사이트 설정 (GitHub Pages Jekyll)
+# 기존 HTML 페이지(홈·상품 페이지)는 그대로 복사되고, _posts 폴더의 글만 블로그 페이지로 변환됩니다.
+
+title: Rito0223 블로그
+description: 디스코드 서버제작·니트로·서버부스트에 대한 정보와 가이드
+url: https://www.rito0223.com
+baseurl: ""
+lang: ko-KR
+timezone: Asia/Seoul
+author: Rito0223
+
+# 글 주소: /blog/영문-슬러그/  (글 머리의 slug 값이 주소가 됩니다)
+permalink: /blog/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+
+# 네이버 서치어드바이저 RSS 제출용: https://www.rito0223.com/blog/feed.xml
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - .pages.yml

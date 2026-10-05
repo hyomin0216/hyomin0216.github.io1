@@ -1,0 +1,16 @@
+# 글 하단 "관련 서비스" 박스에 쓰이는 정보 (글 머리의 service 값과 연결)
+server-creation:
+  name: 디스코드 서버제작
+  url: /discord-server-creation/
+  headline: 서버 세팅, 직접 하기 번거롭다면
+  desc: 채널·역할·권한·봇·디자인까지 목적에 맞게 완성해 드려요. 일반 4,000원부터, 프리미엄 10,000원.
+nitro:
+  name: 디스코드 니트로
+  url: /discord-nitro/
+  headline: 니트로가 필요하다면
+  desc: 니트로·니트로 베이직을 원하는 종류와 기간으로 간편하게 안내해 드려요.
+server-boost:
+  name: 디스코드 서버부스트
+  url: /discord-server-boost/
+  headline: 서버 레벨을 올리고 싶다면
+  desc: 목표 레벨(1·2·3)에 필요한 부스트 수량과 함께 빠르게 안내해 드려요.
