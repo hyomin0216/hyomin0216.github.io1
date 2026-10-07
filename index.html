@@ -591,6 +591,10 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:38px
 
 /* 한글 줄바꿈: 단어 단위 */
 h1,h2,h3,.lead,.sec-head p{word-break:keep-all;overflow-wrap:break-word}
+/* 상품 카드 높이 맞춤: 체크리스트를 가운데 정렬해 위아래 여백으로 옆 카드와 맞춤, 가격·버튼은 하단 정렬 */
+.card{display:flex;flex-direction:column}
+.card>.feat{flex:1 0 auto;justify-content:center}
+.card-badges{min-height:25px}
 /* 사진이 아직 없는 상세 슬라이드는 숨김 (사진 <img>를 넣으면 자동으로 다시 보임) */
 .gallery:not(:has(img)){display:none}
 .modal-box:not(:has(.gallery img)) .modal-content{padding-top:58px}
@@ -828,6 +832,7 @@ a,button{-webkit-tap-highlight-color:transparent}
         </ul>
         <div class="card-foot">
           <span class="price">4,000원<small>기본 구성</small></span>
+          <div class="card-badges" aria-hidden="true"></div>
           <button class="detail-btn" data-modal="m1">자세히 보기 →</button>
           <details class="inquire">
             <summary class="inq-toggle">문의하기</summary>
@@ -884,6 +889,7 @@ a,button{-webkit-tap-highlight-color:transparent}
         </ul>
         <div class="card-foot">
           <span class="price">문의<small>종류별 안내</small></span>
+          <div class="card-badges" aria-hidden="true"></div>
           <button class="detail-btn" data-modal="m2">자세히 보기 →</button>
           <details class="inquire">
             <summary class="inq-toggle">문의하기</summary>
