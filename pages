@@ -1,0 +1,89 @@
+# Pages CMS 설정 — https://app.pagescms.org 에서 GitHub로 로그인하면 이 저장소의 글을 편집할 수 있습니다.
+# 저장소에 쓰기 권한이 있는 사람(본인)만 편집 가능합니다.
+
+media:
+  input: images/blog
+  output: /images/blog
+  extensions: [png, jpg, jpeg, webp, gif]
+
+content:
+  - name: posts
+    label: 블로그 글
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{fields.slug}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, category, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+        description: "검색에 걸릴 키워드를 앞쪽에 넣으세요. 예) 디스코드 서버 만드는 법, …"
+      - name: slug
+        label: 주소(영문)
+        type: string
+        required: true
+        description: "영문 소문자와 하이픈(-)만. 예) how-to-make-discord-server → rito0223.com/blog/how-to-make-discord-server/"
+      - name: description
+        label: 요약 설명 (검색결과에 보이는 문장)
+        type: text
+        required: true
+        description: 80~150자 권장. 이 글이 무엇을 알려주는지 한두 문장으로.
+      - name: date
+        label: 작성일
+        type: date
+        required: true
+      - name: updated
+        label: 수정일 (내용을 고쳤을 때만)
+        type: date
+      - name: category
+        label: 카테고리
+        type: select
+        options:
+          values: [서버 세팅 가이드, 봇·자동화, 니트로, 서버부스트, 디스코드 소식, 운영 팁]
+      - name: tags
+        label: 키워드 태그
+        type: string
+        list: true
+      - name: service
+        label: 글 하단 연결 서비스
+        type: select
+        options:
+          values: [server-creation, nitro, server-boost]
+        description: "server-creation=서버제작, nitro=니트로, server-boost=서버부스트"
+      - name: thumbnail
+        label: 대표 이미지 (선택)
+        type: image
+        description: 비워두면 사이트 기본 공유 이미지가 쓰여요. 1200×630 권장.
+      - name: summary
+        label: 핵심 요약 (AI 검색 인용용, 3~4줄)
+        type: string
+        list: true
+        description: 글 맨 위 '핵심 요약' 박스에 들어가요. 한 줄에 한 문장, 결론부터.
+      - name: faq
+        label: 자주 묻는 질문
+        type: object
+        list: true
+        fields:
+          - name: q
+            label: 질문
+            type: string
+          - name: a
+            label: 답변
+            type: text
+      - name: published
+        label: 공개
+        type: boolean
+        default: true
+        description: 끄면 저장만 되고 사이트에는 안 보여요 (임시저장).
+      - name: body
+        label: 본문
+        type: rich-text
+        format: markdown
