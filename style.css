@@ -60,3 +60,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-s
 .note a,.updated a,footer a{text-decoration:underline;text-underline-offset:2px}
 footer a:hover{color:var(--txt)}
 h1,h2,h3,.lead{word-break:keep-all;overflow-wrap:break-word}
+/* 헤더 메뉴 (상품·블로그 페이지 공통) */
+.blog-nav{display:flex;align-items:center;gap:16px}
+.blog-nav>a:not(.nav-cta){color:var(--muted);font-weight:700;font-size:.92rem;padding:8px 2px}
+.blog-nav>a:not(.nav-cta):hover{color:var(--txt)}
+footer a{display:inline-block;padding:6px 2px}

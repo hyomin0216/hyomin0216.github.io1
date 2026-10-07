@@ -591,6 +591,12 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:38px
 
 /* 한글 줄바꿈: 단어 단위 */
 h1,h2,h3,.lead,.sec-head p{word-break:keep-all;overflow-wrap:break-word}
+/* 사진이 아직 없는 상세 슬라이드는 숨김 (사진 <img>를 넣으면 자동으로 다시 보임) */
+.gallery:not(:has(img)){display:none}
+.modal-box:not(:has(.gallery img)) .modal-content{padding-top:58px}
+/* 모바일에서도 헤더에 블로그 링크 노출 */
+@media(max-width:720px){.nav-links>a.nav-blog{display:inline-block;font-weight:700;color:var(--txt);padding:8px 4px}}
+footer a{display:inline-block;padding:6px 2px}
 /* 접근성 */
 :focus-visible{outline:2px solid var(--blurple-lo);outline-offset:3px;border-radius:6px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
@@ -725,7 +731,7 @@ a,button{-webkit-tap-highlight-color:transparent}
       <a href="#why">이용 안내</a>
       <a href="#guide">가이드</a>
       <a href="#faq">자주 묻는 질문</a>
-      <a href="/blog/">블로그</a>
+      <a href="/blog/" class="nav-blog">블로그</a>
       <details class="nav-inq">
         <summary class="nav-inq-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v10a2 2 0 002 2h4l-1 3 4-3h7a2 2 0 002-2V6a2 2 0 00-2-2z"/></svg>문의하기</summary>
         <div class="nav-inq-menu">
@@ -742,7 +748,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 <section class="hero">
   <div class="wrap">
     <h1>디스코드 서버제작·니트로·부스트<br><span class="grad">여기서 다 준비돼요</span></h1>
-    <p class="lead">Rito0223은 디스코드 서버제작(4,000원부터), 니트로·니트로 베이직, 서버부스트(레벨 1·2·3)를 판매·대행합니다. 카카오톡이나 번개장터로 문의하면 1:1로 빠르게 안내해 드려요.</p>
+    <p class="lead">서버 세팅부터 니트로·부스트까지, 카톡 한 번이면 끝나요.</p>
     <div class="cta-row">
       <a class="btn-kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>
@@ -814,6 +820,7 @@ a,button{-webkit-tap-highlight-color:transparent}
         <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v10a2 2 0 002 2h4l-1 3 4-3h7a2 2 0 002-2V6a2 2 0 00-2-2z"/></svg></div>
         <h3>디스코드 서버제작 (일반)</h3>
         <p class="desc"><!--설명 수정-->기본 채널·권한·봇 구성으로 서버를 빠르게 만들어 드립니다.</p>
+        <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
         <ul class="feat">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>기본 채널·카테고리 구성</span></li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>기본 역할·권한 설정</span></li>
@@ -837,6 +844,7 @@ a,button{-webkit-tap-highlight-color:transparent}
         <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 5.9L20 9l-4.5 3.9L17 19l-5-3-5 3 1.5-6.1L4 9l5.6-1.1z"/></svg></div>
         <h3>디스코드 서버제작 (프리미엄)</h3>
         <p class="desc"><!--설명 수정-->맞춤 컨셉 설계부터 자동화·디자인·사후 관리까지 완성도 높게 제작합니다.</p>
+        <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
         <ul class="feat">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>출고시간 1시간 이내</span></li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>출고 후 수정 5회 가능</span></li>
@@ -868,6 +876,7 @@ a,button{-webkit-tap-highlight-color:transparent}
         <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 5.9L20 9l-4.5 3.9L17 19l-5-3-5 3 1.5-6.1L4 9l5.6-1.1z"/></svg></div>
         <h3>디스코드 니트로</h3>
         <p class="desc"><!--설명 수정-->디스코드 니트로를 합리적으로. 원하는 기간·종류로 안내해 드립니다.</p>
+        <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
         <ul class="feat">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>니트로 / 니트로 베이직 안내</span></li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>기간 선택 가능</span></li>
@@ -891,6 +900,7 @@ a,button{-webkit-tap-highlight-color:transparent}
         <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 3 2 5 3 7h8c1-2 3-4 3-7 0-4-3-7-7-7zm-2 19h4v1a2 2 0 01-4 0z"/></svg></div>
         <h3>디스코드 서버부스트</h3>
         <p class="desc"><!--설명 수정-->레벨 1·2·3까지 안정적으로. 서버 등급 상향을 도와드립니다.</p>
+        <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
         <ul class="feat">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>레벨 1·2·3 대응</span></li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>목표 레벨 맞춤 견적</span></li>
@@ -937,15 +947,10 @@ a,button{-webkit-tap-highlight-color:transparent}
         <div class="modal-eyebrow">DISCORD</div>
         <h3>디스코드 서버제작 (일반)</h3>
         <p class="modal-desc"><!--상품 설명 수정-->기본 채널 구조와 권한, 봇 1종 연동으로 서버를 빠르게 완성해 드립니다. 처음 서버를 만드시는 분께 적합합니다.
-
-※ 이 설명은 예시입니다. 실제 내용으로 자유롭게 바꾸세요.</p>
+</p>
 
         <div class="sub-h">포함 내용</div>
-        <ul class="feat">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>기본 채널·카테고리 구성</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>기본 역할·권한 설정</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>봇 1종 기본 연동</span></li>
-        </ul>
+        <ul class="feat" data-sync-feat></ul>
 
         <div class="modal-cta">
           <a class="kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡 문의</a>
@@ -1030,14 +1035,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 완전한 프리미엄으로 보답드리겠습니다.</p>
 
         <div class="sub-h">포함 내용</div>
-        <ul class="feat">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>맞춤 컨셉 채널 설계</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>세부 역할·권한 체계</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>다중 봇·자동화 세팅</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>배너·이모지·아이콘 제작</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>인증·환영·규칙 시스템</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.4z"/></svg><span>완성 후 사후 관리</span></li>
-        </ul>
+        <ul class="feat" data-sync-feat></ul>
 
         <div class="modal-cta">
           <a class="kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡 문의</a>
@@ -1069,8 +1067,9 @@ a,button{-webkit-tap-highlight-color:transparent}
         <h3>디스코드 니트로</h3>
         <p class="modal-desc"><!--상품 설명 수정-->원하는 종류(니트로 / 니트로 베이직)와 기간을 알려주시면 안내해 드립니다.
 1:1 상담 후 안전하게 진행하며 궁금한 점은 언제든 문의하실 수 있습니다.
-
-※ 이 설명은 예시입니다. 실제 내용으로 자유롭게 바꾸세요.</p>
+</p>
+        <div class="sub-h">포함 내용</div>
+        <ul class="feat" data-sync-feat></ul>
 
 
         <div class="modal-cta">
@@ -1103,8 +1102,9 @@ a,button{-webkit-tap-highlight-color:transparent}
         <h3>디스코드 서버부스트</h3>
         <p class="modal-desc"><!--상품 설명 수정-->목표 레벨(1·2·3)에 맞춰 서버부스트를 안정적으로 안내해 드립니다.
 서버 등급 상향과 유지에 대한 상담을 함께 제공합니다.
-
-※ 이 설명은 예시입니다. 실제 내용으로 자유롭게 바꾸세요.</p>
+</p>
+        <div class="sub-h">포함 내용</div>
+        <ul class="feat" data-sync-feat></ul>
 
 
         <!-- ▼ 레벨별 가격·설명: 아래 [가격 입력]/[설명 입력] 을 실제 내용으로 바꾸세요 ▼ -->
@@ -1374,6 +1374,13 @@ a,button{-webkit-tap-highlight-color:transparent}
 </footer>
 
 <script>
+// 카드 체크리스트 → 상세 팝업 '포함 내용' 자동 동기화 (카드 목록 하나만 수정하면 됨)
+document.querySelectorAll('.card [data-modal]').forEach(function(btn){
+  var card=btn.closest('.card'), src=card&&card.querySelector('ul.feat');
+  var modal=document.getElementById(btn.getAttribute('data-modal'));
+  var dst=modal&&modal.querySelector('[data-sync-feat]');
+  if(src&&dst){ dst.innerHTML=src.innerHTML; }
+});
 // 부스트 미터 채우기
 window.addEventListener('load',function(){
   var f=document.getElementById('barFill');

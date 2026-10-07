@@ -1,7 +1,4 @@
 /* ===== Rito0223 블로그 전용 스타일 (style.css 위에 덧씌움) ===== */
-.blog-nav{display:flex;align-items:center;gap:16px}
-.blog-nav>a:not(.nav-cta){color:var(--muted);font-weight:700;font-size:.92rem}
-.blog-nav>a:not(.nav-cta):hover{color:var(--txt)}
 
 /* 목록 */
 .blog-head{padding:6px 0 4px}
