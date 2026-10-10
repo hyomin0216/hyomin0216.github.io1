@@ -598,6 +598,11 @@ h1,h2,h3,.lead,.sec-head p{word-break:keep-all;overflow-wrap:break-word}
 .card-thumb img{object-fit:contain;transition:transform .35s ease}
 .card-thumb:hover img{transform:scale(1.04)}
 @media(max-width:720px){.card-thumb{aspect-ratio:4/3}}
+.card>.feat.collapsed li:nth-child(n+4){display:none}
+.feat-more{align-self:flex-start;margin:-10px 0 22px 26px;padding:6px 12px;border-radius:99px;cursor:pointer;font:inherit;
+  font-size:.82rem;font-weight:800;color:var(--blurple-lo);background:rgba(88,101,242,.12);border:1px solid rgba(88,101,242,.35);transition:background .15s}
+.feat-more:hover{background:rgba(88,101,242,.24)}
+
 .gallery.single .gal-nav,.gallery.single .gal-dots,.gallery.single .gal-count{display:none}
 /* 상품 카드 높이 맞춤: 체크리스트를 가운데 정렬해 위아래 여백으로 옆 카드와 맞춤, 가격·버튼은 하단 정렬 */
 .card{display:flex;flex-direction:column}
@@ -833,7 +838,8 @@ a,button{-webkit-tap-highlight-color:transparent}
 
       <!-- 상품 1: 서버제작 (일반) -->
       <article class="card">
-        <button type="button" class="card-thumb" data-modal="m1" aria-label="디스코드 서버제작 일반 자세히 보기"><picture><source srcset="/images/thumbs/basic.webp" type="image/webp"><img src="/images/thumbs/basic.png" alt="디스코드 서버제작 일반" width="1000" height="1000" loading="lazy" decoding="async"></picture></button>
+        <!-- 📷 사진은 아래 "자세히 보기" 팝업의 1번 사진이 자동으로 표시돼요 -->
+        <button type="button" class="card-thumb" data-modal="m1" aria-label="디스코드 서버제작 일반 자세히 보기"></button>
         <h3>디스코드 서버제작 (일반)</h3>
         <p class="desc"><!--설명 수정-->기본 채널·권한·봇 구성으로 서버를 빠르게 만들어 드립니다.</p>
         <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
@@ -858,7 +864,8 @@ a,button{-webkit-tap-highlight-color:transparent}
 
       <!-- 상품 1-2: 서버제작 (프리미엄) -->
       <article class="card">
-        <button type="button" class="card-thumb" data-modal="m4" aria-label="디스코드 서버제작 프리미엄 자세히 보기"><picture><source srcset="/images/premium/1.webp" type="image/webp"><img src="/images/premium/1.png" alt="디스코드 서버제작 프리미엄" width="1000" height="1000" loading="lazy" decoding="async"></picture></button>
+        <!-- 📷 사진은 아래 "자세히 보기" 팝업의 1번 사진이 자동으로 표시돼요 -->
+        <button type="button" class="card-thumb" data-modal="m4" aria-label="디스코드 서버제작 프리미엄 자세히 보기"></button>
         <h3>디스코드 서버제작 (프리미엄)</h3>
         <p class="desc"><!--설명 수정-->맞춤 컨셉 설계부터 자동화·디자인·사후 관리까지 완성도 높게 제작합니다.</p>
         <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
@@ -890,7 +897,8 @@ a,button{-webkit-tap-highlight-color:transparent}
 
       <!-- 상품 2 -->
       <article class="card">
-        <button type="button" class="card-thumb" data-modal="m2" aria-label="디스코드 니트로 자세히 보기"><picture><source srcset="/images/thumbs/nitro.webp" type="image/webp"><img src="/images/thumbs/nitro.png" alt="디스코드 니트로" width="1000" height="1000" loading="lazy" decoding="async"></picture></button>
+        <!-- 📷 사진은 아래 "자세히 보기" 팝업의 1번 사진이 자동으로 표시돼요 -->
+        <button type="button" class="card-thumb" data-modal="m2" aria-label="디스코드 니트로 자세히 보기"></button>
         <h3>디스코드 니트로</h3>
         <p class="desc"><!--설명 수정-->디스코드 니트로를 합리적으로. 원하는 기간·종류로 안내해 드립니다.</p>
         <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
@@ -915,7 +923,8 @@ a,button{-webkit-tap-highlight-color:transparent}
 
       <!-- 상품 4 -->
       <article class="card">
-        <button type="button" class="card-thumb" data-modal="m3" aria-label="디스코드 서버부스트 자세히 보기"><picture><source srcset="/images/thumbs/boost.webp" type="image/webp"><img src="/images/thumbs/boost.png" alt="디스코드 서버부스트" width="1000" height="1000" loading="lazy" decoding="async"></picture></button>
+        <!-- 📷 사진은 아래 "자세히 보기" 팝업의 1번 사진이 자동으로 표시돼요 -->
+        <button type="button" class="card-thumb" data-modal="m3" aria-label="디스코드 서버부스트 자세히 보기"></button>
         <h3>디스코드 서버부스트</h3>
         <p class="desc"><!--설명 수정-->레벨 1·2·3까지 안정적으로. 서버 등급 상향을 도와드립니다.</p>
         <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
@@ -1383,6 +1392,25 @@ a,button{-webkit-tap-highlight-color:transparent}
 </footer>
 
 <script>
+// 카드 사진 ← 상세 팝업(자세히 보기)의 1번 사진 자동 사용
+document.querySelectorAll('.card-thumb[data-modal]').forEach(function(t){
+  var modal=document.getElementById(t.getAttribute('data-modal'));
+  var first=modal&&modal.querySelector('.carousel .slide picture, .carousel .slide img');
+  if(!first){ t.style.display='none'; return; }
+  var c=first.cloneNode(true), img=c.tagName==='IMG'?c:c.querySelector('img');
+  if(img){ img.removeAttribute('style'); img.loading='lazy'; img.decoding='async'; }
+  t.appendChild(c);
+});
+// 체크리스트: 처음엔 3개만, '더보기'로 전체 보기
+document.querySelectorAll('.card > ul.feat').forEach(function(ul){
+  var n=ul.querySelectorAll('li').length; if(n<=3) return;
+  ul.classList.add('collapsed');
+  var b=document.createElement('button'); b.type='button'; b.className='feat-more';
+  var label=function(){ b.textContent=ul.classList.contains('collapsed')?('더보기 +'+(n-3)):'접기'; };
+  label(); b.setAttribute('aria-expanded','false');
+  b.addEventListener('click',function(){ ul.classList.toggle('collapsed'); b.setAttribute('aria-expanded',String(!ul.classList.contains('collapsed'))); label(); });
+  ul.parentNode.insertBefore(b,ul.nextSibling);
+});
 // 카드 체크리스트 → 상세 팝업 '포함 내용' 자동 동기화 (카드 목록 하나만 수정하면 됨)
 document.querySelectorAll('.card [data-modal]').forEach(function(btn){
   var card=btn.closest('.card'), src=card&&card.querySelector('ul.feat');
