@@ -591,6 +591,14 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:38px
 
 /* 한글 줄바꿈: 단어 단위 */
 h1,h2,h3,.lead,.sec-head p{word-break:keep-all;overflow-wrap:break-word}
+/* 상품 카드 사진 (번개장터 상품 썸네일 스타일) */
+.card-thumb{display:block;width:100%;padding:0;margin:0 0 20px;cursor:pointer;background:#000;border:1px solid var(--line);
+  border-radius:14px;overflow:hidden;aspect-ratio:16/10;font:inherit}
+.card-thumb picture,.card-thumb img{display:block;width:100%;height:100%}
+.card-thumb img{object-fit:contain;transition:transform .35s ease}
+.card-thumb:hover img{transform:scale(1.04)}
+@media(max-width:720px){.card-thumb{aspect-ratio:4/3}}
+.gallery.single .gal-nav,.gallery.single .gal-dots,.gallery.single .gal-count{display:none}
 /* 상품 카드 높이 맞춤: 체크리스트를 가운데 정렬해 위아래 여백으로 옆 카드와 맞춤, 가격·버튼은 하단 정렬 */
 .card{display:flex;flex-direction:column}
 .card>.feat{flex:1 0 auto;justify-content:flex-start}
@@ -825,7 +833,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 
       <!-- 상품 1: 서버제작 (일반) -->
       <article class="card">
-        <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v10a2 2 0 002 2h4l-1 3 4-3h7a2 2 0 002-2V6a2 2 0 00-2-2z"/></svg></div>
+        <button type="button" class="card-thumb" data-modal="m1" aria-label="디스코드 서버제작 일반 자세히 보기"><picture><source srcset="/images/thumbs/basic.webp" type="image/webp"><img src="/images/thumbs/basic.png" alt="디스코드 서버제작 일반" width="1000" height="1000" loading="lazy" decoding="async"></picture></button>
         <h3>디스코드 서버제작 (일반)</h3>
         <p class="desc"><!--설명 수정-->기본 채널·권한·봇 구성으로 서버를 빠르게 만들어 드립니다.</p>
         <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
@@ -850,7 +858,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 
       <!-- 상품 1-2: 서버제작 (프리미엄) -->
       <article class="card">
-        <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 5.9L20 9l-4.5 3.9L17 19l-5-3-5 3 1.5-6.1L4 9l5.6-1.1z"/></svg></div>
+        <button type="button" class="card-thumb" data-modal="m4" aria-label="디스코드 서버제작 프리미엄 자세히 보기"><picture><source srcset="/images/premium/1.webp" type="image/webp"><img src="/images/premium/1.png" alt="디스코드 서버제작 프리미엄" width="1000" height="1000" loading="lazy" decoding="async"></picture></button>
         <h3>디스코드 서버제작 (프리미엄)</h3>
         <p class="desc"><!--설명 수정-->맞춤 컨셉 설계부터 자동화·디자인·사후 관리까지 완성도 높게 제작합니다.</p>
         <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
@@ -882,7 +890,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 
       <!-- 상품 2 -->
       <article class="card">
-        <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 5.9L20 9l-4.5 3.9L17 19l-5-3-5 3 1.5-6.1L4 9l5.6-1.1z"/></svg></div>
+        <button type="button" class="card-thumb" data-modal="m2" aria-label="디스코드 니트로 자세히 보기"><picture><source srcset="/images/thumbs/nitro.webp" type="image/webp"><img src="/images/thumbs/nitro.png" alt="디스코드 니트로" width="1000" height="1000" loading="lazy" decoding="async"></picture></button>
         <h3>디스코드 니트로</h3>
         <p class="desc"><!--설명 수정-->디스코드 니트로를 합리적으로. 원하는 기간·종류로 안내해 드립니다.</p>
         <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
@@ -907,7 +915,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 
       <!-- 상품 4 -->
       <article class="card">
-        <div class="card-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 3 2 5 3 7h8c1-2 3-4 3-7 0-4-3-7-7-7zm-2 19h4v1a2 2 0 01-4 0z"/></svg></div>
+        <button type="button" class="card-thumb" data-modal="m3" aria-label="디스코드 서버부스트 자세히 보기"><picture><source srcset="/images/thumbs/boost.webp" type="image/webp"><img src="/images/thumbs/boost.png" alt="디스코드 서버부스트" width="1000" height="1000" loading="lazy" decoding="async"></picture></button>
         <h3>디스코드 서버부스트</h3>
         <p class="desc"><!--설명 수정-->레벨 1·2·3까지 안정적으로. 서버 등급 상향을 도와드립니다.</p>
         <!-- ✏️ 이 목록만 고치면 상세 팝업의 '포함 내용'에도 자동으로 똑같이 반영돼요 -->
@@ -944,10 +952,7 @@ a,button{-webkit-tap-highlight-color:transparent}
       <div class="gallery">
         <span class="gal-count">1 / 4</span>
         <div class="carousel">
-            <div class="slide"><div class="ph">사진 1</div></div>
-            <div class="slide"><div class="ph">사진 2</div></div>
-            <div class="slide"><div class="ph">사진 3</div></div>
-            <div class="slide"><div class="ph">사진 4</div></div>
+            <div class="slide"><picture><source srcset="/images/thumbs/basic.webp" type="image/webp"><img style="width:100%;height:100%;object-fit:contain;display:block;background:#000" src="/images/thumbs/basic.png" alt="디스코드 서버제작 일반 상품 사진 1" width="1000" height="1000" loading="lazy" decoding="async"></picture></div>
         </div>
         <button class="gal-nav gal-prev" aria-label="이전 사진">&#8249;</button>
         <button class="gal-nav gal-next" aria-label="다음 사진">&#8250;</button>
@@ -1063,10 +1068,7 @@ a,button{-webkit-tap-highlight-color:transparent}
       <div class="gallery">
         <span class="gal-count">1 / 4</span>
         <div class="carousel">
-            <div class="slide"><div class="ph">사진 1</div></div>
-            <div class="slide"><div class="ph">사진 2</div></div>
-            <div class="slide"><div class="ph">사진 3</div></div>
-            <div class="slide"><div class="ph">사진 4</div></div>
+            <div class="slide"><picture><source srcset="/images/thumbs/nitro.webp" type="image/webp"><img style="width:100%;height:100%;object-fit:contain;display:block;background:#000" src="/images/thumbs/nitro.png" alt="디스코드 니트로 상품 사진 1" width="1000" height="1000" loading="lazy" decoding="async"></picture></div>
         </div>
         <button class="gal-nav gal-prev" aria-label="이전 사진">&#8249;</button>
         <button class="gal-nav gal-next" aria-label="다음 사진">&#8250;</button>
@@ -1098,10 +1100,7 @@ a,button{-webkit-tap-highlight-color:transparent}
       <div class="gallery">
         <span class="gal-count">1 / 4</span>
         <div class="carousel">
-            <div class="slide"><div class="ph">사진 1</div></div>
-            <div class="slide"><div class="ph">사진 2</div></div>
-            <div class="slide"><div class="ph">사진 3</div></div>
-            <div class="slide"><div class="ph">사진 4</div></div>
+            <div class="slide"><picture><source srcset="/images/thumbs/boost.webp" type="image/webp"><img style="width:100%;height:100%;object-fit:contain;display:block;background:#000" src="/images/thumbs/boost.png" alt="디스코드 서버부스트 상품 사진 1" width="1000" height="1000" loading="lazy" decoding="async"></picture></div>
         </div>
         <button class="gal-nav gal-prev" aria-label="이전 사진">&#8249;</button>
         <button class="gal-nav gal-next" aria-label="다음 사진">&#8250;</button>
@@ -1433,6 +1432,7 @@ document.querySelectorAll('.gallery').forEach(function(g){
     if(countEl) countEl.textContent=(idx+1)+' / '+slides.length;
   }
   car.addEventListener('scroll',function(){ window.requestAnimationFrame(update); });
+  update(); if(slides.length<2){ g.classList.add('single'); }
   var prev=g.querySelector('.gal-prev'), next=g.querySelector('.gal-next');
   if(prev) prev.addEventListener('click',function(){ car.scrollBy({left:-car.clientWidth,behavior:'smooth'}); });
   if(next) next.addEventListener('click',function(){ car.scrollBy({left:car.clientWidth,behavior:'smooth'}); });
