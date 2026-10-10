@@ -593,7 +593,11 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:38px
 h1,h2,h3,.lead,.sec-head p{word-break:keep-all;overflow-wrap:break-word}
 /* 상품 카드 높이 맞춤: 체크리스트를 가운데 정렬해 위아래 여백으로 옆 카드와 맞춤, 가격·버튼은 하단 정렬 */
 .card{display:flex;flex-direction:column}
-.card>.feat{flex:1 0 auto;justify-content:center}
+.card>.feat{flex:1 0 auto;justify-content:flex-start}
+/* 남는 공간은 체크 표시 위아래 세로선으로 채움 (공간이 없으면 선도 자동으로 사라짐) */
+.card>.feat::before,.card>.feat::after{content:"";flex:1 1 0;min-height:0;width:2px;margin-left:7px;border-radius:2px}
+.card>.feat::before{background:linear-gradient(to bottom,rgba(59,165,93,0),rgba(59,165,93,.85))}
+.card>.feat::after{background:linear-gradient(to bottom,rgba(59,165,93,.85),rgba(59,165,93,0))}
 .card-badges{min-height:25px}
 /* 사진이 아직 없는 상세 슬라이드는 숨김 (사진 <img>를 넣으면 자동으로 다시 보임) */
 .gallery:not(:has(img)){display:none}
