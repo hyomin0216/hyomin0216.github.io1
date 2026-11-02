@@ -33,8 +33,8 @@ from seo_common import (SITE, KAKAO, BUNJANG_SHOP, OG_IMAGE, ORG, faq_schema, ld
 ROOT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(HERE)
 POSTS_DIR = os.path.join(HERE, "posts")
 KST = ZoneInfo("Asia/Seoul")
-HOME_MODIFIED = "2026-10-26"   # 메인 페이지를 고치면 이 날짜도 바꿔 주세요
-SERVICE_MODIFIED = "2026-10-05"
+HOME_MODIFIED = "2026-11-02"   # 메인 페이지를 고치면 이 날짜도 바꿔 주세요
+SERVICE_MODIFIED = "2026-11-02"
 esc = html.escape
 
 # ---------------------------------------------------------------- 글 읽기

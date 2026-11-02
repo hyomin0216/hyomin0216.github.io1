@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.rito0223.com/</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
+    <loc>https://www.rito0223.com/</loc><lastmod>2026-11-02</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
     <image:image><image:loc>https://www.rito0223.com/images/brand/og-image.png</image:loc><image:title>Rito0223 디스코드 서버제작·니트로·서버부스트</image:title></image:image>
     <image:image><image:loc>https://www.rito0223.com/images/premium/1.png</image:loc><image:title>디스코드 서버제작 프리미엄 상세 1</image:title></image:image>
     <image:image><image:loc>https://www.rito0223.com/images/premium/2.png</image:loc><image:title>디스코드 서버제작 프리미엄 상세 2</image:title></image:image>
@@ -11,9 +11,9 @@
     <image:image><image:loc>https://www.rito0223.com/images/premium/6.png</image:loc><image:title>디스코드 서버제작 프리미엄 상세 6</image:title></image:image>
     <image:image><image:loc>https://www.rito0223.com/images/premium/7.png</image:loc><image:title>디스코드 서버제작 프리미엄 상세 7</image:title></image:image>
   </url>
-  <url><loc>https://www.rito0223.com/discord-server-creation/</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.rito0223.com/discord-nitro/</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.rito0223.com/discord-server-boost/</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.rito0223.com/discord-server-creation/</loc><lastmod>2026-11-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.rito0223.com/discord-nitro/</loc><lastmod>2026-11-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.rito0223.com/discord-server-boost/</loc><lastmod>2026-11-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.rito0223.com/blog/</loc><lastmod>2026-10-26</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.rito0223.com/blog/how-to-boost-discord-server/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.rito0223.com/blog/discord-free-nitro-scam/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
