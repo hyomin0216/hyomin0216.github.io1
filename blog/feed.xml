@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title>Rito0223 디스코드 가이드 블로그</title>
+  <link>https://www.rito0223.com/blog/</link>
+  <atom:link href="https://www.rito0223.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>디스코드 서버 세팅·서버부스트·니트로·보안 정보 가이드</description>
+  <language>ko</language>
+  <lastBuildDate>Mon, 02 Nov 2026 17:09:11 +0900</lastBuildDate>
+  <item>
+   <title>디스코드 서버 부스트 하는 법, 몇 개부터 효과가 있을까?</title>
+   <link>https://www.rito0223.com/blog/how-to-boost-discord-server/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/how-to-boost-discord-server/</guid>
+   <category>서버부스트</category>
+   <pubDate>Mon, 26 Oct 2026 00:00:00 +0900</pubDate>
+   <description>디스코드 서버 부스트를 PC·모바일에서 하는 방법, 레벨 1·2·3에 필요한 부스트 개수(2·7·14개), 니트로에 포함된 부스트와 할인, 부스트를 옮길 때의 7일 쿨타임까지 정리했어요.</description>
+  </item>
+  <item>
+   <title>디스코드 무료 니트로 사기 구별법: 가짜 선물 링크·QR 로그인 피하는 법</title>
+   <link>https://www.rito0223.com/blog/discord-free-nitro-scam/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-free-nitro-scam/</guid>
+   <category>운영 팁</category>
+   <pubDate>Mon, 26 Oct 2026 00:00:00 +0900</pubDate>
+   <description>‘니트로 무료로 드려요’ 링크, QR 코드 인증, 직원 사칭 DM까지. 디스코드에서 자주 보이는 무료 니트로 사기 유형과 진짜 선물 구별법, 이미 눌렀을 때 해야 할 일을 정리했어요.</description>
+  </item>
+  <item>
+   <title>디스코드 채널 이름 꾸미기: 이모지·특수문자 넣는 법과 예시</title>
+   <link>https://www.rito0223.com/blog/discord-channel-name-decoration/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-channel-name-decoration/</guid>
+   <category>서버 꾸미기</category>
+   <pubDate>Mon, 26 Oct 2026 00:00:00 +0900</pubDate>
+   <description>디스코드 채널 이름에 이모지와 특수문자를 넣는 방법, 텍스트·음성 채널과 카테고리의 이름 규칙, 바로 복사해 쓸 수 있는 꾸미기 예시와 주의할 점을 정리했어요.</description>
+  </item>
+  <item>
+   <title>디스코드 서버 테러 유형과 예방법, 터졌을 때 대응 순서까지</title>
+   <link>https://www.rito0223.com/blog/discord-server-raid-protection/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-server-raid-protection/</guid>
+   <category>운영 팁</category>
+   <pubDate>Sat, 10 Oct 2026 00:00:00 +0900</pubDate>
+   <description>디스코드 서버 테러(레이드·관리자 계정 탈취·악성 봇)가 어떻게 일어나는지, 미리 막는 설정 8가지와 테러가 터졌을 때 바로 해야 할 대응 순서를 정리했어요.</description>
+  </item>
+  <item>
+   <title>디스코드 서버 만드는 법, 처음이라면 이 6단계만 따라 하세요</title>
+   <link>https://www.rito0223.com/blog/how-to-make-discord-server/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/how-to-make-discord-server/</guid>
+   <category>서버 세팅 가이드</category>
+   <pubDate>Mon, 05 Oct 2026 00:00:00 +0900</pubDate>
+   <description>디스코드 서버 만들기부터 채널·카테고리 구성, 역할과 권한 설정, 봇 연동, 커뮤니티 기능까지. 처음 서버를 만드는 사람이 헷갈리는 부분을 순서대로 정리했어요.</description>
+  </item>
+ </channel>
+</rss>

@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /_blog-src/
 
 # ---- 주요 검색엔진 ----
 User-agent: Googlebot
@@ -50,6 +51,9 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
@@ -57,9 +61,6 @@ User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Perplexity-User
 Allow: /
 
 User-agent: DuckAssistBot
