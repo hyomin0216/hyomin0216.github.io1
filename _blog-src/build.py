@@ -170,7 +170,7 @@ def header(blog_active=True):
     return f'''<a class="skip" href="#main">본문 바로가기</a>
 <header class="hd">
 <div class="hd-in">
-<a class="brand" href="/" aria-label="Rito0223 홈"><span class="brand-logo"><img src="/logo-sm.png" alt="Rito0223" width="91" height="57" onerror="this.parentNode.outerHTML='<span class=&quot;brand-txt&quot;>Rito0223</span>'"></span></a>
+<a class="brand" href="/" aria-label="Rito0223 홈"><span class="brand-logo"><img src="/images/brand/logo-sm.png" alt="Rito0223" width="91" height="57" onerror="this.parentNode.outerHTML='<span class=&quot;brand-txt&quot;>Rito0223</span>'"></span></a>
 <nav class="hd-nav" id="hdNav" aria-label="주요 메뉴">
 <a href="/#products">상품</a>
 <a href="/#guide">부스트 가이드</a>
@@ -195,7 +195,7 @@ def header(blog_active=True):
 
 FOOTER = f'''<footer class="ft">
 <div class="ft-in">
-<span class="ft-brand"><img src="/logo-sm.png" alt="" width="48" height="30" onerror="this.style.display='none'"><span><b>rito<span>0223</span></b> — 디스코드 서버제작 · 니트로 · 부스트</span></span>
+<span class="ft-brand"><img src="/images/brand/logo-sm.png" alt="" width="48" height="30" onerror="this.style.display='none'"><span><b>rito<span>0223</span></b> — 디스코드 서버제작 · 니트로 · 부스트</span></span>
 <nav aria-label="푸터 메뉴"><a href="/discord-server-creation/">서버제작</a><a href="/discord-nitro/">니트로</a><a href="/discord-server-boost/">서버부스트</a><a href="/blog/">블로그</a></nav>
 <span>© 2026 Rito0223</span>
 </div>
@@ -224,7 +224,7 @@ def page(head, body):
 </head>
 <body>
 <div id="pageLoader" class="pl" role="status" aria-live="polite">
-<div class="pl-box"><img src="https://www.rito0223.com/logo-sm.png" alt="" width="77" height="48"><span class="pl-ring" aria-hidden="true"></span><p>불러오는 중…</p></div>
+<div class="pl-box"><img src="https://www.rito0223.com/images/brand/logo-sm.png" alt="" width="77" height="48"><span class="pl-ring" aria-hidden="true"></span><p>불러오는 중…</p></div>
 </div>
 <script>
 (function () {{

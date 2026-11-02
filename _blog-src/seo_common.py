@@ -4,7 +4,7 @@ import json
 SITE = "https://www.rito0223.com"
 KAKAO = "https://pf.kakao.com/_mSqYxj/chat"
 BUNJANG_SHOP = "https://m.bunjang.co.kr/shops/78481327/products"
-OG_IMAGE = SITE + "/og-image.png"
+OG_IMAGE = SITE + "/images/brand/og-image.png"
 
 ORG = {
     "@type": "Organization",
@@ -12,7 +12,7 @@ ORG = {
     "name": "Rito0223",
     "alternateName": ["리토", "리토 디스코드", "Rito"],
     "url": SITE + "/",
-    "logo": {"@type": "ImageObject", "url": SITE + "/logo-square.png", "width": 1080, "height": 1080},
+    "logo": {"@type": "ImageObject", "url": SITE + "/images/brand/logo-square.png", "width": 1080, "height": 1080},
     "image": OG_IMAGE,
     "description": "디스코드 서버제작(4,000원~), 디스코드 니트로·니트로 베이직, 디스코드 서버부스트(레벨 1·2·3)를 판매·대행하는 한국 서비스. 번개장터 기준 누적 판매 450건·후기 300건 이상.",
     "areaServed": {"@type": "Country", "name": "대한민국"},
@@ -51,10 +51,10 @@ def ld_json(graph):
 
 
 ICONS = """<link rel="icon" href="https://www.rito0223.com/favicon.ico" sizes="48x48">
-<link rel="icon" type="image/png" sizes="48x48" href="https://www.rito0223.com/favicon-48.png">
-<link rel="icon" type="image/png" sizes="96x96" href="https://www.rito0223.com/favicon-96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://www.rito0223.com/favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://www.rito0223.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://www.rito0223.com/images/brand/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.rito0223.com/images/brand/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.rito0223.com/images/brand/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.rito0223.com/images/brand/apple-touch-icon.png">
 <link rel="manifest" href="https://www.rito0223.com/site.webmanifest">"""
 
 
