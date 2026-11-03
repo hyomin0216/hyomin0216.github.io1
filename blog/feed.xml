@@ -6,7 +6,55 @@
   <atom:link href="https://www.rito0223.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>디스코드 서버 세팅·서버부스트·니트로·보안 정보 가이드</description>
   <language>ko</language>
-  <lastBuildDate>Mon, 02 Nov 2026 17:42:46 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 13:51:16 +0900</lastBuildDate>
+  <item>
+   <title>디스코드 웹 버전 사용법: 설치 없이 로그인하기와 PC·모바일 다운로드</title>
+   <link>https://www.rito0223.com/blog/discord-web-login-download/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-web-login-download/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코)를 설치 없이 웹 브라우저로 쓰는 법, QR코드 로그인, PC·모바일 앱 다운로드 방법, 웹 버전과 앱의 차이, 로그인이 안 될 때 확인할 것까지 정리했어요.</description>
+  </item>
+  <item>
+   <title>디스코드 화면공유 하는 법: 소리까지 같이 방송하기와 화질 올리기</title>
+   <link>https://www.rito0223.com/blog/discord-screen-share/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-screen-share/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 화면공유(Go Live) 방법을 PC·모바일로 정리했어요. 소리 같이 공유하는 법, 무료·니트로 화질 차이(720p·1080p·4K), 검은 화면·소리 안 나올 때 해결법까지 담았어요.</description>
+  </item>
+  <item>
+   <title>디스코드 프로필 꾸미기: 프사·배너·자기소개 바꾸는 법과 니트로 차이</title>
+   <link>https://www.rito0223.com/blog/discord-profile-customize/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-profile-customize/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 프로필 꾸미는 법을 정리했어요. 프사(아바타)·별명·자기소개(190자) 바꾸는 법, 무료와 니트로로 할 수 있는 것(움짤 프사·배너·프로필 테마·서버별 프로필), 아바타 장식까지 담았어요.</description>
+  </item>
+  <item>
+   <title>디스코드 안 켜질 때·오류·렉 해결법: 무한 로딩부터 재설치까지</title>
+   <link>https://www.rito0223.com/blog/discord-not-opening-fix/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-not-opening-fix/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코)가 안 켜지거나 무한 로딩·회색 화면·업데이트 실패·렉이 생길 때 순서대로 해볼 해결법을 정리했어요. 작업 관리자 종료, 캐시 삭제, 깨끗한 재설치, 서버 장애 확인 방법까지 담았어요.</description>
+  </item>
+  <item>
+   <title>디스코드 마이크 안 될 때·소리 안 들릴 때 해결법 총정리</title>
+   <link>https://www.rito0223.com/blog/discord-mic-sound-fix/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-mic-sound-fix/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 마이크가 안 되거나 상대 소리가 안 들릴 때 순서대로 확인할 것을 정리했어요. 입력·출력 장치 선택, 입력 감도, 윈도우 마이크 권한, 음성 설정 초기화, 소음 억제까지 담았어요.</description>
+  </item>
+  <item>
+   <title>디스코드 봇 추가하는 법: 노래봇·TTS봇 서버에 넣기 (PC·모바일)</title>
+   <link>https://www.rito0223.com/blog/discord-bot-add-guide/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-bot-add-guide/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 서버에 봇을 추가하는 방법을 PC·모바일로 나눠 정리했어요. 필요한 권한(서버 관리하기), 앱 디렉터리 이용법, 노래봇·TTS봇 고르는 법, 봇이 안 들어올 때 해결법까지 담았어요.</description>
+  </item>
   <item>
    <title>디스코드 서버 부스트 하는 법, 몇 개부터 효과가 있을까?</title>
    <link>https://www.rito0223.com/blog/how-to-boost-discord-server/</link>

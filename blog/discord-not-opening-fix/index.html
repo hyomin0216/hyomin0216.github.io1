@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>디스코드 안 켜질 때·오류·렉 해결법: 무한 로딩부터 재설치까지 | Rito0223</title>
+<meta name="description" content="디스코드(디코)가 안 켜지거나 무한 로딩·회색 화면·업데이트 실패·렉이 생길 때 순서대로 해볼 해결법을 정리했어요. 작업 관리자 종료, 캐시 삭제, 깨끗한 재설치, 서버 장애 확인 방법까지 담았어요.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Rito0223">
+<link rel="canonical" href="https://www.rito0223.com/blog/discord-not-opening-fix/">
+<link rel="alternate" hreflang="ko" href="https://www.rito0223.com/blog/discord-not-opening-fix/">
+<link rel="alternate" hreflang="x-default" href="https://www.rito0223.com/blog/discord-not-opening-fix/">
+<meta name="theme-color" content="#0B0C14">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="https://www.rito0223.com/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="48x48" href="https://www.rito0223.com/images/brand/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.rito0223.com/images/brand/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.rito0223.com/images/brand/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.rito0223.com/images/brand/apple-touch-icon.png">
+<link rel="manifest" href="https://www.rito0223.com/site.webmanifest">
+<meta name="application-name" content="Rito0223">
+<meta name="apple-mobile-web-app-title" content="Rito0223">
+<link rel="alternate" type="application/rss+xml" title="Rito0223 블로그" href="https://www.rito0223.com/blog/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Rito0223">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="디스코드 안 켜질 때·오류·렉 해결법: 무한 로딩부터 재설치까지 | Rito0223">
+<meta property="og:description" content="디스코드(디코)가 안 켜지거나 무한 로딩·회색 화면·업데이트 실패·렉이 생길 때 순서대로 해볼 해결법을 정리했어요. 작업 관리자 종료, 캐시 삭제, 깨끗한 재설치, 서버 장애 확인 방법까지 담았어요.">
+<meta property="og:url" content="https://www.rito0223.com/blog/discord-not-opening-fix/">
+<meta property="og:image" content="https://www.rito0223.com/images/brand/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rito0223 디스코드 서버제작·니트로·서버부스트">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="디스코드 안 켜질 때·오류·렉 해결법: 무한 로딩부터 재설치까지 | Rito0223">
+<meta name="twitter:description" content="디스코드(디코)가 안 켜지거나 무한 로딩·회색 화면·업데이트 실패·렉이 생길 때 순서대로 해볼 해결법을 정리했어요. 작업 관리자 종료, 캐시 삭제, 깨끗한 재설치, 서버 장애 확인 방법까지 담았어요.">
+<meta name="twitter:image" content="https://www.rito0223.com/images/brand/og-image.png">
+<meta name="keywords" content="디스코드 안켜짐, 디스코드 오류, 디스코드 렉, 디스코드 무한로딩, 디코 안켜짐, 디스코드 업데이트 실패, 디스코드 재설치, 디스코드 서버 장애">
+<meta property="article:published_time" content="2026-11-03T00:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-03T00:00:00+09:00">
+<meta property="article:section" content="디스코드 사용법">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap"></noscript>
+<link rel="stylesheet" href="/blog/blog.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://www.rito0223.com/blog/discord-not-opening-fix/#article",
+   "headline": "디스코드 안 켜질 때·오류·렉 해결법: 무한 로딩부터 재설치까지",
+   "description": "디스코드(디코)가 안 켜지거나 무한 로딩·회색 화면·업데이트 실패·렉이 생길 때 순서대로 해볼 해결법을 정리했어요. 작업 관리자 종료, 캐시 삭제, 깨끗한 재설치, 서버 장애 확인 방법까지 담았어요.",
+   "image": "https://www.rito0223.com/images/brand/og-image.png",
+   "url": "https://www.rito0223.com/blog/discord-not-opening-fix/",
+   "mainEntityOfPage": "https://www.rito0223.com/blog/discord-not-opening-fix/",
+   "datePublished": "2026-11-03T00:00:00+09:00",
+   "dateModified": "2026-11-03T00:00:00+09:00",
+   "inLanguage": "ko-KR",
+   "articleSection": "디스코드 사용법",
+   "keywords": "디스코드 안켜짐, 디스코드 오류, 디스코드 렉, 디스코드 무한로딩, 디코 안켜짐, 디스코드 업데이트 실패, 디스코드 재설치, 디스코드 서버 장애",
+   "wordCount": 1246,
+   "author": {
+    "@id": "https://www.rito0223.com/#org"
+   },
+   "publisher": {
+    "@id": "https://www.rito0223.com/#org"
+   },
+   "isPartOf": {
+    "@id": "https://www.rito0223.com/blog/#blog"
+   },
+   "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+     ".post h1",
+     ".tldr"
+    ]
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://www.rito0223.com/#org",
+   "name": "Rito0223",
+   "alternateName": [
+    "리토",
+    "리토 디스코드",
+    "Rito"
+   ],
+   "url": "https://www.rito0223.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.rito0223.com/images/brand/logo-square.png",
+    "width": 1080,
+    "height": 1080
+   },
+   "image": "https://www.rito0223.com/images/brand/og-image.png",
+   "description": "디스코드 서버제작(4,000원~), 디스코드 니트로·니트로 베이직, 디스코드 서버부스트(레벨 1·2·3)를 판매·대행하는 한국 서비스. 번개장터 기준 누적 판매 450건·후기 300건 이상.",
+   "areaServed": {
+    "@type": "Country",
+    "name": "대한민국"
+   },
+   "knowsAbout": [
+    "디스코드 서버제작",
+    "디스코드 서버 세팅",
+    "디스코드 니트로",
+    "디스코드 니트로 베이직",
+    "디스코드 서버부스트",
+    "디스코드 봇 세팅",
+    "Discord"
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://pf.kakao.com/_mSqYxj/chat",
+    "availableLanguage": [
+     "ko"
+    ]
+   },
+   "sameAs": [
+    "https://pf.kakao.com/_mSqYxj",
+    "https://m.bunjang.co.kr/shops/78481327/products"
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "홈",
+     "item": "https://www.rito0223.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "블로그",
+     "item": "https://www.rito0223.com/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "디스코드 안 켜질 때·오류·렉 해결법: 무한 로딩부터 재설치까지",
+     "item": "https://www.rito0223.com/blog/discord-not-opening-fix/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.rito0223.com/blog/discord-not-opening-fix/#faq",
+   "inLanguage": "ko-KR",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "디스코드가 안 켜질 때 가장 먼저 뭘 해야 하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "discordstatus.com에서 디스코드 서버 장애인지 확인하고, 장애가 아니라면 작업 관리자에서 Discord를 모두 종료한 뒤 다시 켜 보세요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "디스코드 캐시를 지우면 대화 내용이 사라지나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "아니요. 메시지와 서버는 디스코드 서버에 저장돼 있어서 캐시를 지워도 그대로예요. 다시 로그인해야 할 수는 있어요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "디스코드 캐시 폴더는 어디 있나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Windows에서 Win + R을 누르고 %appdata%\\discord 를 입력하면 열려요. 그 안의 Cache, Code Cache, GPUCache 폴더를 지우면 돼요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "디스코드 업데이트 실패가 계속 떠요.",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "백신·방화벽·VPN을 잠시 끄고 다시 시도해 보세요. 그래도 안 되면 %appdata%\\discord 와 %localappdata%\\Discord 를 지우고 다시 설치하세요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "디스코드 렉은 어떻게 줄이나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "하드웨어 가속 설정을 바꿔 보고, 게임 오버레이와 GIF 자동 재생을 끄면 가벼워져요."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div id="pageLoader" class="pl" role="status" aria-live="polite">
+<div class="pl-box"><img src="https://www.rito0223.com/images/brand/logo-sm.png" alt="" width="77" height="48"><span class="pl-ring" aria-hidden="true"></span><p>불러오는 중…</p></div>
+</div>
+<script>
+(function () {
+  var el = document.getElementById('pageLoader'), done = false;
+  var t = setTimeout(function () { if (!done) el.classList.add('show'); }, 350);
+  function hide() {
+    if (done) return; done = true; clearTimeout(t);
+    el.classList.add('hide');
+    setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 400);
+  }
+  if (document.readyState === 'complete') hide();
+  else { window.addEventListener('load', hide); setTimeout(hide, 8000); }
+})();
+</script>
+<div class="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="hd">
+<div class="hd-in">
+<a class="brand" href="/" aria-label="Rito0223 홈"><span class="brand-logo"><img src="/images/brand/logo-sm.png" alt="Rito0223" width="91" height="57" onerror="this.parentNode.outerHTML='<span class=&quot;brand-txt&quot;>Rito0223</span>'"></span></a>
+<nav class="hd-nav" id="hdNav" aria-label="주요 메뉴">
+<a href="/#products">상품</a>
+<a href="/#guide">부스트 가이드</a>
+<a href="/#why">진행 방식</a>
+<a href="/#faq">자주 묻는 질문</a>
+<a href="/blog/" aria-current="page">블로그</a>
+</nav>
+<div class="hd-right">
+<div class="ask">
+<button type="button" id="askBtn" aria-expanded="false" aria-controls="askMenu">문의하기<svg class="ask-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+<div class="ask-menu" id="askMenu" role="menu" aria-label="문의 방법" hidden>
+<p class="ask-title">어디로 문의할까요?</p>
+<a role="menuitem" class="ask-item" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><span class="ask-ico" style="background:#FEE500;color:#191919;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg></span><span class="ask-txt"><b>카카오톡 문의</b><small>1:1 채팅으로 바로 상담</small></span><svg class="ask-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></a>
+<a role="menuitem" class="ask-item" href="https://m.bunjang.co.kr/shops/78481327/products" target="_blank" rel="noopener"><span class="ask-ico" style="background:#2B2D3C;color:#FFFFFF;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></span><span class="ask-txt"><b>번개장터 문의</b><small>Rito0223 상점 바로가기</small></span><svg class="ask-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></a>
+</div>
+</div>
+<button type="button" class="hd-burger" id="hdBurger" aria-controls="hdNav" aria-expanded="false" aria-label="메뉴 열기"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="hb1" d="M4 7h16"></path><path class="hb2" d="M4 12h16"></path><path class="hb3" d="M4 17h16"></path></svg></button>
+</div>
+</div>
+</header>
+<main id="main">
+<div class="bl-wrap">
+<div class="post-layout">
+<article class="post">
+<nav class="crumb" aria-label="현재 위치"><a href="/">홈</a><span aria-hidden="true">›</span><a href="/blog/">블로그</a><span aria-hidden="true">›</span><span>디스코드 사용법</span></nav>
+<span class="chip">디스코드 사용법</span>
+<h1>디스코드 안 켜질 때·오류·렉 해결법: 무한 로딩부터 재설치까지</h1>
+<p class="lead">디스코드(디코)가 안 켜지거나 무한 로딩·회색 화면·업데이트 실패·렉이 생길 때 순서대로 해볼 해결법을 정리했어요. 작업 관리자 종료, 캐시 삭제, 깨끗한 재설치, 서버 장애 확인 방법까지 담았어요.</p>
+<p class="meta"><time datetime="2026-11-03T00:00:00+09:00">2026년 11월 3일</time> 작성<span>· 약 3분</span><span>· Rito0223</span></p>
+<aside class="tldr" aria-label="핵심 요약"><p class="tldr-h">핵심 요약</p><ul><li>먼저 <strong>discordstatus.com</strong>에서 디스코드 서버 장애인지 확인하세요. 장애라면 기다리는 것 말고는 방법이 없어요.</li><li>PC라면 <strong>작업 관리자에서 Discord를 모두 종료</strong>한 뒤 다시 켜는 것만으로 대부분 해결돼요.</li><li>그래도 안 되면 <code>%appdata%\discord</code> 의 <strong>Cache·Code Cache·GPUCache</strong> 폴더를 지우세요. 로그인 정보는 그대로예요.</li><li>마지막 방법은 <code>%appdata%\discord</code> 와 <code>%localappdata%\Discord</code> 를 지운 뒤 <strong>깨끗하게 재설치</strong>하는 거예요.</li></ul></aside>
+<div class="post-body">
+<p>디스코드를 눌렀는데 아무 반응이 없거나, 로고만 돌다가 멈추거나, 업데이트에서 계속 실패하는 경우가 있어요. 원인은 다양하지만 <strong>해결 순서는 거의 같아요</strong>. 쉬운 것부터 하나씩 해 보세요.</p>
+<h2 id="디스코드가-안-켜질-때-가장-먼저-할-일은">디스코드가 안 켜질 때 가장 먼저 할 일은?</h2>
+<p><strong>디스코드 자체 장애인지</strong> 먼저 확인하세요. 공식 상태 페이지 <strong>discordstatus.com</strong>에 문제가 표시되어 있다면 내 컴퓨터 문제가 아니에요. 이때는 기다리거나 휴대폰 앱·<a href="/blog/discord-web-login-download/">웹 버전</a>으로 접속해 보세요.</p>
+<h2 id="Windows에서-디스코드가-안-켜질-때-해결-순서">Windows에서 디스코드가 안 켜질 때 해결 순서</h2>
+<h3>1. 작업 관리자에서 완전히 종료하고 다시 켜기</h3>
+<ol><li><code>Ctrl + Shift + Esc</code> 로 <strong>작업 관리자</strong>를 엽니다.</li><li><strong>Discord</strong> 항목을 모두 골라 <strong>작업 끝내기</strong>를 누릅니다. (여러 개일 수 있어요)</li><li>디스코드를 다시 실행합니다.</li></ol>
+<p>창을 닫아도 디스코드는 트레이(오른쪽 아래)에서 계속 돌아가요. 이 상태가 꼬이면 새로 켜도 반응이 없어요.</p>
+<h3>2. 관리자 권한으로 실행하기</h3>
+<p>디스코드 아이콘을 <strong>우클릭 → 관리자 권한으로 실행</strong>해 보세요. 업데이트 파일을 쓸 권한이 없어 멈춰 있는 경우에 효과가 있어요.</p>
+<h3>3. 캐시 폴더 지우기</h3>
+<ol><li>작업 관리자에서 디스코드를 <strong>완전히 종료</strong>합니다.</li><li><code>Win + R</code> 을 누르고 <code>%appdata%\discord</code> 를 입력해 엽니다.</li><li><strong>Cache</strong>, <strong>Code Cache</strong>, <strong>GPUCache</strong> 폴더를 삭제합니다.</li><li>디스코드를 다시 켭니다.</li></ol>
+<blockquote><p>캐시를 지워도 <strong>계정·서버·메시지는 그대로</strong>예요. 디스코드 서버에 저장돼 있기 때문이에요. 다시 로그인하라고 나올 수는 있어요.</p></blockquote>
+<h3>4. 깨끗하게 재설치하기</h3>
+<ol><li>설정 → 앱에서 <strong>Discord를 제거</strong>합니다.</li><li><code>%appdata%\discord</code> 폴더와 <code>%localappdata%\Discord</code> 폴더를 <strong>통째로 삭제</strong>합니다.</li><li>공식 사이트 <strong>discord.com/download</strong> 에서 새로 받아 설치합니다.</li></ol>
+<p>그냥 지우고 다시 깔면 남아 있는 폴더 때문에 같은 문제가 반복될 수 있어요. 2번 단계까지 해야 “깨끗한 재설치”예요.</p>
+<h2 id="업데이트-실패Update-Failed가-반복될-때는">업데이트 실패(Update Failed)가 반복될 때는?</h2>
+<ul><li><strong>백신·방화벽</strong>이 디스코드 업데이트를 막고 있을 수 있어요. 잠시 끄거나 디스코드를 예외로 추가해 보세요.</li><li><strong>VPN·프록시</strong>를 쓰고 있다면 끄고 다시 시도하세요.</li><li>디스크 용량이 부족하지 않은지 확인하세요.</li><li>그래도 안 되면 위의 <strong>깨끗한 재설치</strong>를 하세요.</li></ul>
+<h2 id="디스코드-렉이-심하거나-화면이-깨질-때는">디스코드 렉이 심하거나 화면이 깨질 때는?</h2>
+<ul><li><strong>하드웨어 가속</strong>: 사용자 설정 → 고급에서 하드웨어 가속을 끄거나 켜서 비교해 보세요. 그래픽카드에 따라 결과가 달라요.</li><li><strong>게임 오버레이 끄기</strong>: 게임 중 렉이 생긴다면 사용자 설정 → 게임 오버레이를 꺼 보세요.</li><li><strong>움직이는 효과 줄이기</strong>: 접근성 → 동작 줄이기, GIF 자동 재생 끄기를 켜면 가벼워져요.</li><li><strong>음성이 끊기는 렉</strong>이라면 <a href="/blog/discord-mic-sound-fix/">마이크·소리 해결법</a>의 음성 설정 초기화를 해 보세요.</li></ul>
+<h2 id="휴대폰에서-디스코드가-안-켜질-때는">휴대폰에서 디스코드가 안 켜질 때는?</h2>
+<ol><li>앱을 <strong>완전히 종료</strong>(최근 앱 목록에서 위로 밀기)한 뒤 다시 엽니다.</li><li>앱스토어·구글 플레이에서 <strong>업데이트</strong>가 있는지 확인합니다.</li><li>안드로이드는 설정 → 앱 → Discord → 저장공간 → <strong>캐시 삭제</strong>를 해 보세요.</li><li>그래도 안 되면 앱을 지우고 다시 설치하세요.</li></ol>
+<blockquote><p>서버가 갑자기 엉망이 돼서 디스코드가 이상한 것처럼 보인다면, 앱 문제가 아니라 <strong>서버 테러</strong>일 수도 있어요. <a href="/blog/discord-server-raid-protection/">서버 테러 막는 보안 설정</a>을 확인해 보세요.</p></blockquote>
+</div>
+<section class="post-section" id="faq" aria-labelledby="faq-h"><h2 id="faq-h">자주 묻는 질문</h2><details class="faq-item"><summary><span>디스코드가 안 켜질 때 가장 먼저 뭘 해야 하나요?</span><svg class="faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary><p>discordstatus.com에서 디스코드 서버 장애인지 확인하고, 장애가 아니라면 작업 관리자에서 Discord를 모두 종료한 뒤 다시 켜 보세요.</p></details><details class="faq-item"><summary><span>디스코드 캐시를 지우면 대화 내용이 사라지나요?</span><svg class="faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary><p>아니요. 메시지와 서버는 디스코드 서버에 저장돼 있어서 캐시를 지워도 그대로예요. 다시 로그인해야 할 수는 있어요.</p></details><details class="faq-item"><summary><span>디스코드 캐시 폴더는 어디 있나요?</span><svg class="faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary><p>Windows에서 Win + R을 누르고 %appdata%\discord 를 입력하면 열려요. 그 안의 Cache, Code Cache, GPUCache 폴더를 지우면 돼요.</p></details><details class="faq-item"><summary><span>디스코드 업데이트 실패가 계속 떠요.</span><svg class="faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary><p>백신·방화벽·VPN을 잠시 끄고 다시 시도해 보세요. 그래도 안 되면 %appdata%\discord 와 %localappdata%\Discord 를 지우고 다시 설치하세요.</p></details><details class="faq-item"><summary><span>디스코드 렉은 어떻게 줄이나요?</span><svg class="faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary><p>하드웨어 가속 설정을 바꿔 보고, 게임 오버레이와 GIF 자동 재생을 끄면 가벼워져요.</p></details></section>
+<div class="sources">참고 자료<ul><li><a href="https://discordstatus.com/" target="_blank" rel="noopener">Discord 서비스 상태</a></li><li><a href="https://discord.com/download" target="_blank" rel="noopener">Discord 다운로드</a></li></ul>세부 수치는 디스코드 정책에 따라 바뀔 수 있어요.</div>
+<div class="cta-card"><h2>서버 세팅, 직접 하기 번거롭다면</h2><p>채널·역할·권한·봇·디자인까지 목적에 맞게 완성해 드려요. 일반 4,000원부터, 프리미엄 10,000원.</p><div class="cta-btns"><a class="btn btn-kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>카카오톡 문의</a><a class="btn btn-line" href="/discord-server-creation/">디스코드 서버제작 자세히 보기</a></div></div>
+<section class="post-section" aria-labelledby="rel-h"><h2 id="rel-h">함께 보면 좋은 글</h2><div class="related"><a href="/blog/discord-web-login-download/">디스코드 웹 버전 사용법: 설치 없이 로그인하기와 PC·모바일 다운로드<small>디스코드 사용법 · 2026.11.03</small></a><a href="/blog/discord-screen-share/">디스코드 화면공유 하는 법: 소리까지 같이 방송하기와 화질 올리기<small>디스코드 사용법 · 2026.11.03</small></a></div></section>
+<a class="back" href="/blog/">← 블로그 전체 글 보기</a>
+</article>
+<aside class="toc" aria-label="목차">
+<div class="toc-in">
+<nav class="toc-box"><p>CONTENTS</p><ol><li><a href="#디스코드가-안-켜질-때-가장-먼저-할-일은">디스코드가 안 켜질 때 가장 먼저 할 일은?</a></li><li><a href="#Windows에서-디스코드가-안-켜질-때-해결-순서">Windows에서 디스코드가 안 켜질 때 해결 순서</a></li><li><a href="#업데이트-실패Update-Failed가-반복될-때는">업데이트 실패(Update Failed)가 반복될 때는?</a></li><li><a href="#디스코드-렉이-심하거나-화면이-깨질-때는">디스코드 렉이 심하거나 화면이 깨질 때는?</a></li><li><a href="#휴대폰에서-디스코드가-안-켜질-때는">휴대폰에서 디스코드가 안 켜질 때는?</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></nav>
+<div class="toc-cta"><b>직접 하기 번거롭다면</b><span>서버제작·니트로·부스트, 카톡 한 번이면 끝나요.</span><a class="btn btn-kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>카카오톡 문의</a></div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<footer class="ft">
+<div class="ft-in">
+<span class="ft-brand"><img src="/images/brand/logo-sm.png" alt="" width="48" height="30" onerror="this.style.display='none'"><span><b>rito<span>0223</span></b> — 디스코드 서버제작 · 니트로 · 부스트</span></span>
+<nav aria-label="푸터 메뉴"><a href="/discord-server-creation/">서버제작</a><a href="/discord-nitro/">니트로</a><a href="/discord-server-boost/">서버부스트</a><a href="/blog/">블로그</a></nav>
+<span>© 2026 Rito0223</span>
+</div>
+</footer>
+<div class="mbar" role="region" aria-label="빠른 문의">
+<a class="mbar-kakao" href="https://pf.kakao.com/_mSqYxj/chat" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>카카오톡 문의</a>
+<a class="mbar-bj" href="https://m.bunjang.co.kr/shops/78481327/products" target="_blank" rel="noopener">번개장터 상점</a>
+</div>
+<script src="/blog/blog.js" defer></script>
+</body>
+</html>
