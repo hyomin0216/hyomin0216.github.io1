@@ -6,7 +6,23 @@
   <atom:link href="https://www.rito0223.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>디스코드 서버 세팅·서버부스트·니트로·보안 정보 가이드</description>
   <language>ko</language>
-  <lastBuildDate>Tue, 03 Nov 2026 13:51:16 +0900</lastBuildDate>
+  <lastBuildDate>Wed, 04 Nov 2026 15:25:59 +0900</lastBuildDate>
+  <item>
+   <title>디스코드 니트로 선물하기·받기, 구독 해지와 환불 방법 (PC·모바일)</title>
+   <link>https://www.rito0223.com/blog/discord-nitro-gift-cancel/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-nitro-gift-cancel/</guid>
+   <category>니트로</category>
+   <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 니트로를 친구한테 선물하는 법과 받는 법, 니트로 구독 해지(취소) 방법, 환불 기준(구매 후 5일·1회)까지 PC·모바일로 나눠서 적었어요. 선물 링크를 엉뚱한 사람이 가져가지 않게 보내는 요령도 있어요.</description>
+  </item>
+  <item>
+   <title>디스코드 니트로 혜택·가격 총정리: 무료와 뭐가 다르고 살 만할까?</title>
+   <link>https://www.rito0223.com/blog/discord-nitro-benefits-price/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-nitro-benefits-price/</guid>
+   <category>니트로</category>
+   <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 니트로를 쓰면 무료랑 뭐가 달라지는지 업로드 용량(10MB→500MB), 화면공유 화질, 서버 부스트 2개, 메시지 4,000자, 프로필 꾸미기까지 표로 비교했어요. 니트로·니트로 베이직 가격과 어떤 분께 맞는지도 같이 적었어요.</description>
+  </item>
   <item>
    <title>디스코드 웹 버전 사용법: 설치 없이 로그인하기와 PC·모바일 다운로드</title>
    <link>https://www.rito0223.com/blog/discord-web-login-download/</link>
