@@ -78,3 +78,82 @@
     });
   });
 })();
+
+/* ---------- 상품 카드 → 상품 상세 창 (메인 페이지와 같은 내용) ---------- */
+(function () {
+  var dlg = document.getElementById('pd'), dataEl = document.getElementById('pd-data');
+  if (!dlg || !dataEl) return;
+  var P = JSON.parse(dataEl.textContent);
+  var el = function (id) { return document.getElementById(id); };
+  var CHECK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C5F25A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>';
+  var cur = null, idx = 0;
+
+  function showImg(i) {
+    var imgs = cur.images;
+    idx = (i + imgs.length) % imgs.length;
+    var img = el('pdImg');
+    img.style.visibility = 'visible';
+    img.parentNode.classList.add('loading');
+    img.src = imgs[idx].src;
+    img.alt = imgs[idx].alt;
+    if (img.complete && img.naturalWidth) img.parentNode.classList.remove('loading');
+    el('pdCount').textContent = (idx + 1) + ' / ' + imgs.length;
+    Array.prototype.forEach.call(el('pdThumbs').children, function (b, j) { b.setAttribute('aria-current', j === idx ? 'true' : 'false'); });
+  }
+  el('pdImg').addEventListener('error', function () { this.style.visibility = 'hidden'; this.parentNode.classList.remove('loading'); });
+  el('pdImg').addEventListener('load', function () { this.parentNode.classList.remove('loading'); });
+  el('pdPrev').addEventListener('click', function () { showImg(idx - 1); });
+  el('pdNext').addEventListener('click', function () { showImg(idx + 1); });
+
+  function open(key) {
+    cur = P[key];
+    if (!cur) return false;
+    el('pdTitle').textContent = cur.title;
+    el('pdPrice').innerHTML = '';
+    var b = document.createElement('b'); b.textContent = cur.price; el('pdPrice').appendChild(b);
+    var s = document.createElement('span'); s.textContent = cur.note; el('pdPrice').appendChild(s);
+    el('pdDesc').textContent = cur.desc;
+    el('pdTags').innerHTML = (cur.tags || []).map(function (t) { return (P._tags || {})[t] || ''; }).join('');
+    var thumbs = el('pdThumbs');
+    thumbs.innerHTML = '';
+    cur.images.forEach(function (im, j) {
+      var tb = document.createElement('button');
+      tb.type = 'button';
+      tb.setAttribute('aria-label', (j + 1) + '번째 사진 보기');
+      var ti = document.createElement('img'); ti.src = im.src; ti.alt = ''; ti.loading = 'lazy';
+      tb.appendChild(ti);
+      tb.addEventListener('click', function () { showImg(j); });
+      thumbs.appendChild(tb);
+    });
+    thumbs.hidden = cur.images.length < 2;
+    el('pdPrev').hidden = el('pdNext').hidden = cur.images.length < 2;
+    showImg(0);
+    var ul = el('pdList');
+    ul.innerHTML = '';
+    cur.list.forEach(function (it) {
+      var li = document.createElement('li');
+      li.innerHTML = CHECK;
+      var sp = document.createElement('span');
+      sp.textContent = typeof it === 'string' ? it : it.t;
+      li.appendChild(sp);
+      ul.appendChild(li);
+    });
+    el('pdBunjang').href = cur.bunjang;
+    el('pdBunjang').textContent = '번개장터 문의';
+    var more = el('pdMore');
+    if (cur.more) { more.href = cur.more; more.hidden = false; } else { more.hidden = true; }
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+    el('pdClose').focus();
+    return true;
+  }
+  function close() { if (dlg.open) dlg.close(); else dlg.removeAttribute('open'); }
+
+  el('pdClose').addEventListener('click', close);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+  document.querySelectorAll('.pd-actions a, .pd-more').forEach(function (a) { a.target = '_blank'; a.rel = 'noopener'; });
+  document.querySelectorAll('[data-product]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (open(a.getAttribute('data-product'))) e.preventDefault();
+    });
+  });
+})();

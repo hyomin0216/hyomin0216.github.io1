@@ -1342,6 +1342,20 @@ body:has(#pd[open]){overflow:hidden}
     });
   });
 
+  /* ---------- 주소 #product-키 로 들어오면 그 상품 상세를 바로 열기 (블로그 상품 카드용) ---------- */
+  function openFromHash() {
+    var m = location.hash.match(/^#product-([a-z]+)$/);
+    if (!m || !PRODUCTS[m[1]]) return;
+    var sec = document.getElementById('products');
+    if (sec) sec.scrollIntoView();
+    openProduct(m[1]);
+  }
+  window.addEventListener('hashchange', openFromHash);
+  dlg.addEventListener('close', function () {
+    if (/^#product-/.test(location.hash)) history.replaceState(null, '', location.pathname + location.search + '#products');
+  });
+  openFromHash();
+
   /* ---------- 상품별 문의하기: 카카오톡 / 해당 상품 번개장터 선택 ---------- */
   var paMenu = document.getElementById('paMenu'), paItems = document.getElementById('paItems'), paTitle = document.getElementById('paTitle');
   var paFor = null;

@@ -207,11 +207,22 @@ FOOTER = f'''<footer class="ft">
 <script src="/blog/blog.js" defer></script>'''
 
 CTAS = {
-    "server": ("서버 세팅, 직접 하기 번거롭다면", "채널·역할·권한·봇·디자인까지 목적에 맞게 완성해 드려요. 일반 4,000원부터, 프리미엄 10,000원.", "/discord-server-creation/", "디스코드 서버제작 자세히 보기"),
+    "server": ("서버 세팅, 직접 하기 번거롭다면", "", "/discord-server-creation/", "디스코드 서버제작 자세히 보기"),
     "premium": ("테러 방지·채널 꾸미기까지 한 번에", "프리미엄 서버제작은 1시간 이내 출고, 모든 봇 세팅, 테러 방지봇과 행동 로그, 이모지·특수문자 채널 꾸미기까지 포함해요. 10,000원.", "/#products", "프리미엄 서버제작 보기"),
     "boost": ("원하는 레벨까지 바로 맞추고 싶다면", "목표 레벨(1·2·3)만 알려주세요. 필요한 부스트 개수와 함께 안내해 드려요. 로켓지급이면 1시간 안에 받아요.", "/discord-server-boost/", "서버부스트 레벨별 안내 보기"),
     "nitro": ("니트로, 출처가 확실한 곳에서", "원하는 종류(니트로 / 니트로 베이직)와 기간을 알려주시면 1:1 상담 후 안전하게 진행해요. 번개장터 누적 판매 450건·후기 300건 이상.", "/discord-nitro/", "니트로 종류 비교 보기"),
 }
+
+# 서버제작 CTA 안에 보이는 상품 카드 (누르면 메인 페이지 상품 상세가 바로 열림)
+SERVER_PRODUCTS = [
+    ("premium", "프리미엄 서버제작", "10,000원", "맞춤 제작", "/images/premium/1.webp"),
+    ("basic", "일반 서버제작", "4,000원", "기본 구성", "/images/thumbs/basic.webp"),
+]
+
+# 상품 상세 창: 메인 페이지 상품 정보(products.json)와 같은 구성으로 블로그 안에서 바로 열림
+_PD_DIR = os.path.dirname(os.path.abspath(__file__))
+PD_DIALOG = open(os.path.join(_PD_DIR, "pd-dialog.html"), encoding="utf-8").read()
+PD_DATA = json.dumps(json.load(open(os.path.join(_PD_DIR, "products.json"), encoding="utf-8")), ensure_ascii=False).replace("</", "<\\/")
 
 FAQ_ICO = '<svg class="faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>'
 
@@ -289,7 +300,21 @@ def render_post(p, posts):
                    + "".join(f'<li><a href="{esc(u)}" target="_blank" rel="noopener">{esc(n)}</a></li>' for n, u in p["sources"])
                    + "</ul>세부 수치는 디스코드 정책에 따라 바뀔 수 있어요.</div>")
     ct, cd, cu, cl = CTAS.get(p["cta"], CTAS["server"])
-    cta = f'''<div class="cta-card"><h2>{ct}</h2><p>{cd}</p><div class="cta-btns"><a class="btn btn-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_KAKAO}카카오톡 문의</a><a class="btn btn-line" href="{cu}">{cl}</a></div></div>'''
+    prods = ""
+    if p["cta"] == "server":
+        cards = []
+        for k, n, pr, note, img in SERVER_PRODUCTS:
+            best = " best" if k == "premium" else ""
+            badge = "<em>추천</em>" if k == "premium" else ""
+            cards.append(
+                f'<a class="cta-prod{best}" href="/#product-{k}" data-product="{k}">'
+                f'<img src="{img}" alt="{esc(n)} 상품 사진" width="56" height="56" loading="lazy">'
+                f'<span class="cp-t"><span class="cp-n">{n}{badge}</span><span class="cp-p">{pr}<small>{note}</small></span></span>'
+                '<svg class="cp-go" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></a>')
+        prods = '<div class="cta-prods">' + "".join(cards) + '</div>'
+        prods += PD_DIALOG + '<script type="application/json" id="pd-data">' + PD_DATA + '</script>'
+    cd_html = f"<p>{cd}</p>" if cd else ""
+    cta = f'''<div class="cta-card"><h2>{ct}</h2>{cd_html}{prods}<div class="cta-btns"><a class="btn btn-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_KAKAO}카카오톡 문의</a><a class="btn btn-line" href="{cu}">{cl}</a></div></div>'''
     others = [o for o in posts if o["slug"] != p["slug"]]
     rel = [o for o in others if o["category"] == p["category"]] + [o for o in others if o["category"] != p["category"]]
     related = ('<section class="post-section" aria-labelledby="rel-h"><h2 id="rel-h">함께 보면 좋은 글</h2><div class="related">'
