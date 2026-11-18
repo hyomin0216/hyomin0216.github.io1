@@ -232,7 +232,7 @@ def page(head, body):
 <html lang="ko">
 <head>
 {head}
-<script src="/analytics.js" defer></script>
+<script src="/analytics.js" async></script>
 </head>
 <body>
 <div id="pageLoader" class="pl" role="status" aria-live="polite">
