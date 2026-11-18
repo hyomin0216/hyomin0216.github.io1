@@ -6,7 +6,39 @@
   <atom:link href="https://www.rito0223.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>디스코드 서버 세팅·서버부스트·니트로·보안 정보 가이드</description>
   <language>ko</language>
-  <lastBuildDate>Tue, 17 Nov 2026 21:42:28 +0900</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 14:04:27 +0900</lastBuildDate>
+  <item>
+   <title>디스코드 채팅 꾸미기: 코드블록, 굵게·기울임, 스포일러, 큰 글씨 쓰는 법</title>
+   <link>https://www.rito0223.com/blog/discord-text-formatting/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-text-formatting/</guid>
+   <category>서버 꾸미기</category>
+   <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 채팅에서 쓸 수 있는 글자 꾸미기를 모았어요. 코드블록과 색깔 넣는 법, 굵게·기울임·밑줄·취소선, 스포일러(가리기), 큰 글씨 제목, 작은 글씨, 인용, 목록, 링크 숨기기, 시간 표시까지 바로 따라 쓸 수 있게 적었어요.</description>
+  </item>
+  <item>
+   <title>디스코드 사진·파일 보내는 법: 용량 제한, 화질 깨질 때, 사진 저장하기</title>
+   <link>https://www.rito0223.com/blog/discord-photo-file-upload/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-photo-file-upload/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코)에서 사진·영상·파일 보내는 법을 PC·모바일로 적었어요. 업로드 용량 제한(무료 10MB·니트로 500MB), 용량 넘을 때 방법, 화질이 깨져 보일 때, 받은 사진 저장하는 법까지 담았어요.</description>
+  </item>
+  <item>
+   <title>디스코드 노래 트는 법: 노래봇·스포티파이 같이 듣기·TTS 읽어주기</title>
+   <link>https://www.rito0223.com/blog/discord-music-bot-tts/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-music-bot-tts/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 통화방에서 노래 트는 방법을 정리했어요. 노래봇 넣고 쓰는 법, 스포티파이 같이 듣기, 노래가 안 들릴 때 확인할 것, 글을 읽어 주는 TTS 기능과 TTS 봇까지 담았어요.</description>
+  </item>
+  <item>
+   <title>디스코드 연령 인증(나이 인증) 정리: 왜 뜨는지, 인증 방법, 안 하면 생기는 제한</title>
+   <link>https://www.rito0223.com/blog/discord-age-verification/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-age-verification/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 나이 인증이 왜 뜨는지, 성인·청소년·미확인 연령 그룹 차이, 신용카드·앱스토어·얼굴 인식·신분증 인증 방법, 인증 안 하면 막히는 기능, 내 연령 그룹 확인하는 곳까지 적었어요. 서버 운영자가 알아둘 점도 있어요.</description>
+  </item>
   <item>
    <title>디스코드 상태 바꾸는 법: 온라인·자리 비움·방해 금지·오프라인 표시와 상태 메시지</title>
    <link>https://www.rito0223.com/blog/discord-status/</link>

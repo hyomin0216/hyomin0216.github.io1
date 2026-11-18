@@ -322,3 +322,7 @@ body:has(#pd[open]){overflow:hidden}
   .pd-actions a{flex:1 1 0;min-height:50px}
 }
 @media (prefers-reduced-motion: reduce){#pd[open] .pd-wrap{animation:none}}
+
+.post-body pre.md-ex{margin:0;padding:16px 18px;border-radius:12px;background:#12131E;border:1px solid var(--line);font-family:var(--mono);font-size:14px;line-height:1.7;color:var(--text);white-space:pre-wrap;word-break:break-all;overflow-x:auto}
+.post-body pre.md-ex .md-k{color:#C5F25A}
+.tldr code{font-family:var(--mono);font-size:.88em;padding:1px 6px;border-radius:6px;background:var(--card2);border:1px solid var(--line);color:var(--text)}
