@@ -1,5 +1,5 @@
-/* Rito0223 방문 통계 (구글 태그 / 구글 애널리틱스)
- * 태그 ID는 아래 한 줄만 바꾸면 사이트 전체에 적용돼요.
+/* Rito0223 방문 통계 (구글 애널리틱스 + 구글 태그 관리자)
+ * ID는 아래 두 줄만 바꾸면 사이트 전체에 적용돼요.
  * 체류시간·방문자·유입 경로는 구글 애널리틱스가 자동으로 모으고,
  * 아래 이벤트는 문의로 이어지는 클릭을 따로 세기 위한 거예요.
  *   contact_kakao   : 카카오톡 문의 클릭
@@ -7,21 +7,28 @@
  *   view_product    : 상품 상세 창 열기
  */
 (function () {
-  var TAG_ID = 'GTM-KLNN53SW';
-  if (!/^(GTM|G)-[A-Z0-9]{4,}$/.test(TAG_ID)) return;
+  var GA_ID = 'G-JPZ2M8BPFM';   // 구글 애널리틱스 측정 ID (체류시간·방문자)
+  var GTM_ID = 'GTM-KLNN53SW';  // 구글 태그 관리자 컨테이너 (나중에 다른 태그 추가용)
+  // 주의: 태그 관리자 안에 같은 GA4 태그(G-JPZ2M8BPFM)를 또 넣으면 방문이 두 번씩 잡혀요.
 
-  // 구글 태그 설치 코드 (구글이 안내한 코드와 같은 내용)
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = gtag;
   gtag('js', new Date());
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = TAG_ID.indexOf('GTM-') === 0
-    ? 'https://www.googletagmanager.com/gtm.js?id=' + TAG_ID
-    : 'https://www.googletagmanager.com/gtag/js?id=' + TAG_ID;
-  (document.head || document.documentElement).appendChild(s);
-  if (TAG_ID.indexOf('G-') === 0) gtag('config', TAG_ID);
+  function load(src) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = src;
+    (document.head || document.documentElement).appendChild(s);
+  }
+  if (/^G-[A-Z0-9]{4,}$/.test(GA_ID)) {
+    load('https://www.googletagmanager.com/gtag/js?id=' + GA_ID);
+    gtag('config', GA_ID);
+  }
+  if (/^GTM-[A-Z0-9]{4,}$/.test(GTM_ID)) {
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    load('https://www.googletagmanager.com/gtm.js?id=' + GTM_ID);
+  }
 
   // 이벤트 보내기: 구글 태그(gtag)와 태그 관리자 트리거(dataLayer) 둘 다에서 쓸 수 있게
   function track(name, params) {
