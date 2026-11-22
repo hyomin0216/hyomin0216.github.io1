@@ -36,6 +36,9 @@ KST = ZoneInfo("Asia/Seoul")
 HOME_MODIFIED = "2026-11-02"   # 메인 페이지를 고치면 이 날짜도 바꿔 주세요
 SERVICE_MODIFIED = "2026-11-02"
 esc = html.escape
+import hashlib
+# 디자인 파일이 바뀌면 주소 뒤 ?v= 값이 자동으로 바뀌어서, 방문자 브라우저에 남은 옛 디자인 대신 새 파일을 받아요
+ASSET_V = hashlib.md5(b"".join(open(os.path.join(HERE, "assets", n), "rb").read() for n in ("blog.css", "blog.js"))).hexdigest()[:8]
 
 # ---------------------------------------------------------------- 글 읽기
 def slug_id(text):
@@ -215,7 +218,7 @@ FOOTER = f'''<footer class="ft">
 <a class="mbar-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_CHAT}카카오톡 문의</a>
 <a class="mbar-bj" href="{BUNJANG_SHOP}" target="_blank" rel="noopener">번개장터 상점</a>
 </div>
-<script src="/blog/blog.js" defer></script>'''
+<script src="/blog/blog.js?v={ASSET_V}" defer></script>'''
 
 CTAS = {
     "server": ("서버 세팅, 직접 하기 번거롭다면", "", "/discord-server-creation/", "디스코드 서버제작 자세히 보기"),
@@ -295,7 +298,7 @@ def render_post(p, posts):
     if p["faq"]:
         graph.append(faq_schema(url, p["faq"]))
     head = (head_meta(esc(title), esc(p["description"]), url, og_type="article", extra=extra)
-            + '\n<link rel="stylesheet" href="/blog/blog.css">\n' + ld_json(graph))
+            + f'\n<link rel="stylesheet" href="/blog/blog.css?v={ASSET_V}">\n' + ld_json(graph))
 
     tldr = ""
     if p["tldr"]:
@@ -382,7 +385,7 @@ def render_index(posts):
         ORG,
         breadcrumb([("홈", SITE + "/"), ("블로그", url)]),
     ]
-    head = head_meta(esc(title), esc(desc), url) + '\n<link rel="stylesheet" href="/blog/blog.css">\n' + ld_json(graph)
+    head = head_meta(esc(title), esc(desc), url) + f'\n<link rel="stylesheet" href="/blog/blog.css?v={ASSET_V}">\n' + ld_json(graph)
     cats = []
     for p in posts:
         if p["category"] not in cats:
