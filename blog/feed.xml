@@ -6,7 +6,31 @@
   <atom:link href="https://www.rito0223.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>디스코드 서버 세팅·서버부스트·니트로·보안 정보 가이드</description>
   <language>ko</language>
-  <lastBuildDate>Wed, 18 Nov 2026 14:12:54 +0900</lastBuildDate>
+  <lastBuildDate>Sun, 22 Nov 2026 13:32:50 +0900</lastBuildDate>
+  <item>
+   <title>디스코드 번역하는 법: 외국어 메시지 번역하기와 디스코드 한국어 설정</title>
+   <link>https://www.rito0223.com/blog/discord-translate-language/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-translate-language/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Sun, 22 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코)에서 외국어 메시지를 번역하는 방법을 적었어요. 기본 번역 버튼이 없는 이유, 번역 앱(봇) 쓰는 법, 웹 버전 브라우저 번역, 휴대폰에서 번역하는 법, 디스코드 화면을 한국어로 바꾸는 법까지 담았어요.</description>
+  </item>
+  <item>
+   <title>디스코드 모바일 사용법: 휴대폰 앱 화면 구성, 통화·알림, PC와 같이 쓰는 법</title>
+   <link>https://www.rito0223.com/blog/discord-mobile-app-guide/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-mobile-app-guide/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Sun, 22 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코)를 휴대폰으로 쓰는 법을 정리했어요. 앱 설치와 로그인, 새로 바뀐 아래쪽 메뉴, 서버·DM 오가는 법, 통화와 화면공유, 알림 설정, 데이터 아끼는 법, PC와 같이 쓸 때 알아둘 것까지 담았어요.</description>
+  </item>
+  <item>
+   <title>디스코드 메시지 수정·삭제·답장·고정·검색하는 법 (PC·모바일)</title>
+   <link>https://www.rito0223.com/blog/discord-message-tips/</link>
+   <guid isPermaLink="true">https://www.rito0223.com/blog/discord-message-tips/</guid>
+   <category>디스코드 사용법</category>
+   <pubDate>Sun, 22 Nov 2026 00:00:00 +0900</pubDate>
+   <description>디스코드(디코) 메시지를 다루는 기본 기능을 모았어요. 메시지 수정과 삭제, 답장 달기, 메시지 고정, 옛날 메시지 검색하는 법과 검색 필터, 다른 사람 메시지를 지울 수 있는 권한까지 PC·모바일로 나눠 적었어요.</description>
+  </item>
   <item>
    <title>디스코드 채팅 꾸미기: 코드블록, 굵게·기울임, 스포일러, 큰 글씨 쓰는 법</title>
    <link>https://www.rito0223.com/blog/discord-text-formatting/</link>
