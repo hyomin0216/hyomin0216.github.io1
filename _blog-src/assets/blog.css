@@ -18,8 +18,8 @@ img{max-width:100%}
 .hd{position:sticky;top:0;z-index:40;background:rgba(10,10,10,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid #262626}
 .hd-in{max-width:1280px;margin:0 auto;padding:10px 32px;min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:var(--white) !important}
-.brand-logo{--h:40px;display:block;height:var(--h);overflow:hidden;flex-shrink:0}
-.brand .brand-logo img{display:block;height:calc(var(--h) * 1.43);width:auto;margin-top:calc(var(--h) * -0.04)}
+.brand-logo{--h:30px;display:block;height:var(--h);flex-shrink:0}
+.brand .brand-logo img{display:block;height:var(--h);width:auto}
 .brand-txt{font-family:var(--mono);font-weight:700;font-size:19px;letter-spacing:-.02em}
 .brand-txt span{color:var(--white)}
 .hd-nav{display:flex;gap:4px 26px;font-size:15px}
@@ -241,7 +241,7 @@ img{max-width:100%}
 }
 @media (max-width:860px){
   .hd-in{padding:8px 16px;min-height:60px}
-  .brand-logo{--h:34px}
+  .brand-logo{--h:26px}
   #askBtn{padding:0 12px 0 14px;font-size:14px}
   .ask-menu{position:fixed;left:16px;right:16px;width:auto}
   .ask-menu::before{display:none}
