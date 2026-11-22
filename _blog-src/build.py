@@ -165,6 +165,17 @@ def dot(d):
 ICON_KAKAO = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>'
 
 
+ICON_STORE = '<svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"></path><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"></path><path d="M5 13v7h14v-7"></path></svg>'
+ICON_CHAT = '<svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.6 1.6 4.9 4 6.4L5 21l4.3-2.4c.9.2 1.8.4 2.7.4 5.5 0 10-3.6 10-8s-4.5-8-10-8z"></path></svg>'
+ICON_CLOCK = '<svg class="ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>'
+ICON_OUT = '<svg class="ico" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"></path><path d="M20 4 10 14"></path><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path></svg>'
+ICON_ARROW = '<svg class="ico" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>'
+ICON_CHEV = '<svg class="ico" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>'
+ICON_SEARCH = '<svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>'
+ICON_LOCK = '<svg class="ico" width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 10V7a5 5 0 0 0-10 0v3H5v11h14V10h-2zm-8 0V7a3 3 0 0 1 6 0v3H9z"></path></svg>'
+ICON_DIAGRAM = '<svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="6" rx="1"></rect><rect x="14" y="15" width="7" height="6" rx="1"></rect><path d="M6.5 9v3a2 2 0 0 0 2 2h7a2 2 0 0 1 2 2v-1"></path></svg>'
+
+
 def header(blog_active=True):
     cur = ' aria-current="page"' if blog_active else ""
     return f'''<a class="skip" href="#main">본문 바로가기</a>
@@ -184,7 +195,7 @@ def header(blog_active=True):
 <div class="ask-menu" id="askMenu" role="menu" aria-label="문의 방법" hidden>
 <p class="ask-title">어디로 문의할까요?</p>
 <a role="menuitem" class="ask-item" href="{KAKAO}" target="_blank" rel="noopener"><span class="ask-ico" style="background:#FEE500;color:#191919;">{ICON_KAKAO}</span><span class="ask-txt"><b>카카오톡 문의</b><small>1:1 채팅으로 바로 상담</small></span><svg class="ask-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></a>
-<a role="menuitem" class="ask-item" href="{BUNJANG_SHOP}" target="_blank" rel="noopener"><span class="ask-ico" style="background:#2B2D3C;color:#FFFFFF;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></span><span class="ask-txt"><b>번개장터 문의</b><small>Rito0223 상점 바로가기</small></span><svg class="ask-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></a>
+<a role="menuitem" class="ask-item" href="{BUNJANG_SHOP}" target="_blank" rel="noopener"><span class="ask-ico" style="background:#262626;color:#FFFFFF;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></span><span class="ask-txt"><b>번개장터 문의</b><small>Rito0223 상점 바로가기</small></span><svg class="ask-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></a>
 </div>
 </div>
 <button type="button" class="hd-burger" id="hdBurger" aria-controls="hdNav" aria-expanded="false" aria-label="메뉴 열기"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="hb1" d="M4 7h16"></path><path class="hb2" d="M4 12h16"></path><path class="hb3" d="M4 17h16"></path></svg></button>
@@ -195,13 +206,13 @@ def header(blog_active=True):
 
 FOOTER = f'''<footer class="ft">
 <div class="ft-in">
-<span class="ft-brand"><img src="/images/brand/logo-sm.png" alt="" width="48" height="30" onerror="this.style.display='none'"><span><b>rito<span>0223</span></b> — 디스코드 서버제작 · 니트로 · 부스트</span></span>
-<nav aria-label="푸터 메뉴"><a href="/discord-server-creation/">서버제작</a><a href="/discord-nitro/">니트로</a><a href="/discord-server-boost/">서버부스트</a><a href="/blog/">블로그</a></nav>
-<span>© 2026 Rito0223</span>
+<span class="ft-brand"><b>rito0223</b><span class="sep">|</span><span>디스코드 서버제작 · 니트로 · 서버부스트</span></span>
+<nav aria-label="푸터 메뉴"><a href="/discord-server-creation/">서버제작</a><a href="/discord-nitro/">니트로</a><a href="/discord-server-boost/">서버부스트</a><a href="{KAKAO}" target="_blank" rel="noopener noreferrer">카카오톡 문의</a><a href="{BUNJANG_SHOP}" target="_blank" rel="noopener noreferrer">번개장터</a></nav>
+<span class="ft-copy">© 2026 Rito0223. All rights reserved.</span>
 </div>
 </footer>
 <div class="mbar" role="region" aria-label="빠른 문의">
-<a class="mbar-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_KAKAO}카카오톡 문의</a>
+<a class="mbar-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_CHAT}카카오톡 문의</a>
 <a class="mbar-bj" href="{BUNJANG_SHOP}" target="_blank" rel="noopener">번개장터 상점</a>
 </div>
 <script src="/blog/blog.js" defer></script>'''
@@ -315,7 +326,7 @@ def render_post(p, posts):
         prods = '<div class="cta-prods">' + "".join(cards) + '</div>'
         prods += PD_DIALOG + '<script type="application/json" id="pd-data">' + PD_DATA + '</script>'
     cd_html = f"<p>{cd}</p>" if cd else ""
-    cta = f'''<div class="cta-card"><h2>{ct}</h2>{cd_html}{prods}<div class="cta-btns"><a class="btn btn-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_KAKAO}카카오톡 문의</a><a class="btn btn-line" href="{cu}">{cl}</a></div></div>'''
+    cta = f'''<div class="cta-card"><h2>{ct}</h2>{cd_html}{prods}<div class="cta-btns"><a class="btn btn-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_CHAT}카카오톡 문의</a><a class="btn btn-line" href="{cu}">{cl}</a></div></div>'''
     others = [o for o in posts if o["slug"] != p["slug"]]
     rel = [o for o in others if o["category"] == p["category"]] + [o for o in others if o["category"] != p["category"]]
     related = ('<section class="post-section" aria-labelledby="rel-h"><h2 id="rel-h">함께 보면 좋은 글</h2><div class="related">'
@@ -331,11 +342,11 @@ def render_post(p, posts):
 <div class="bl-wrap">
 <div class="post-layout">
 <article class="post">
-<nav class="crumb" aria-label="현재 위치"><a href="/">홈</a><span aria-hidden="true">›</span><a href="/blog/">블로그</a><span aria-hidden="true">›</span><span>{esc(p["category"])}</span></nav>
+<nav class="crumb" aria-label="현재 위치"><a href="/">홈</a>{ICON_CHEV}<a href="/blog/">블로그</a>{ICON_CHEV}<span class="cur">{esc(p["category"])}</span></nav>
 <span class="chip">{esc(p["category"])}</span>
 <h1>{esc(p["title"])}</h1>
 <p class="lead">{esc(p["description"])}</p>
-<p class="meta"><time datetime="{iso(p["date"])}">{kdate(p["date"])}</time> 작성{updated}<span>· 약 {p["minutes"]}분</span><span>· Rito0223</span></p>
+<p class="meta"><time datetime="{iso(p["date"])}">{kdate(p["date"])}</time> 작성{updated}<span>· Rito0223</span></p>
 {tldr}
 <div class="post-body">
 {p["body"]}
@@ -349,7 +360,7 @@ def render_post(p, posts):
 <aside class="toc" aria-label="목차">
 <div class="toc-in">
 <nav class="toc-box"><p>CONTENTS</p><ol>{toc}</ol></nav>
-<div class="toc-cta"><b>직접 하기 번거롭다면</b><span>서버제작·니트로·부스트, 카톡 한 번이면 끝나요.</span><a class="btn btn-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_KAKAO}카카오톡 문의</a></div>
+<div class="toc-cta"><b>직접 하기 번거롭다면</b><span>서버제작·니트로·부스트, 카톡 한 번이면 끝나요.</span><a class="btn btn-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_CHAT}카카오톡 문의</a></div>
 </div>
 </aside>
 </div>
@@ -378,23 +389,58 @@ def render_index(posts):
             cats.append(p["category"])
     chips = '<button type="button" data-cat="" aria-pressed="true">전체</button>' + "".join(
         f'<button type="button" data-cat="{esc(c)}" aria-pressed="false">{esc(c)}</button>' for c in cats)
+    feat = next((p for p in posts if p.get("featured")), posts[0])
     items = []
-    for i, p in enumerate(posts):
-        cls = ' class="featured"' if i == 0 else ""
-        items.append(f'''<li data-cat="{esc(p["category"])}"{cls}><a class="post-card" href="/blog/{p["slug"]}/"><span class="chip">{esc(p["category"])}</span><h2>{esc(p["title"])}</h2><p>{esc(p["description"])}</p><span class="pc-meta"><time datetime="{iso(p["date"])}">{dot(p["date"])}</time><span>약 {p["minutes"]}분</span></span></a></li>''')
+    for p in posts:
+        fa = ' data-feat="1"' if p is feat else ""
+        q = esc(f'{p["title"]} {p["description"]} {p["category"]} {p.get("keywords", "")}'.lower())
+        items.append(f'''<li data-cat="{esc(p["category"])}" data-q="{q}"{fa}><a class="post-card" href="/blog/{p["slug"]}/"><div class="pc-body"><div class="pc-top"><span class="chip">{esc(p["category"])}</span></div><h3>{esc(p["title"])}</h3><p>{esc(p["description"])}</p></div><div class="pc-foot"><time datetime="{iso(p["date"])}">{dot(p["date"])}</time>{ICON_OUT}</div></a></li>''')
+    featured = f'''<section class="feat" id="feat" aria-label="추천 글">
+<a class="feat-card" href="/blog/{feat["slug"]}/">
+<div class="feat-vis" aria-hidden="true">
+<div class="fv-top"><span>DOC_REF: SETUP_SPEC_V26</span>{ICON_DIAGRAM}</div>
+<div class="fv-mid"><div class="fv-bar" style="width:96px;background:rgba(255,255,255,.2)"></div><div class="fv-bar" style="width:144px;background:rgba(255,255,255,.1)"></div>
+<div class="fv-grid"><div><i style="background:#34D399"></i>SERVER_OK</div><div><i style="background:#60A5FA"></i>BOT_ATTACH</div></div></div>
+<div class="fv-bot">{ICON_LOCK} VERIFIED ARCHIVE</div>
+</div>
+<div class="feat-txt">
+<div class="feat-meta"><span class="badge-w">FEATURED</span><span class="chip">{esc(feat["category"])}</span><time datetime="{iso(feat["date"])}">{dot(feat["date"])}</time></div>
+<h2>{esc(feat["title"])}</h2>
+<p>{esc(feat["description"])}</p>
+<div class="feat-foot"><b>Rito Studio Research</b><span class="go">아티클 전문 보기 {ICON_ARROW}</span></div>
+</div>
+</a>
+</section>'''
     body = f'''{header()}
-<main id="main">
+<main id="main" class="bl-main">
 <div class="bl-wrap">
+<nav class="crumb" aria-label="현재 위치"><a href="/">홈</a>{ICON_CHEV}<span class="cur">블로그</span></nav>
 <section class="bl-hero">
-<nav class="crumb" aria-label="현재 위치"><a href="/">홈</a><span aria-hidden="true">›</span><span>블로그</span></nav>
-<p class="kicker">BLOG / 디스코드 가이드</p>
-<h1>디스코드, <span>제대로</span> 쓰는 법</h1>
-<p class="lead">{desc}</p>
+<h1>디스코드, 제대로 쓰는 법</h1>
+<p class="lead">디스코드 서버 만드는 법, 채널 꾸미기, 서버부스트, 니트로, 테러·사기 예방까지. 디스코드를 더 잘 쓰기 위한 실전 가이드를 체계적으로 정리합니다.</p>
+<div class="search" role="search"><label for="blSearch" class="skip">가이드 검색</label>{ICON_SEARCH}<input type="search" id="blSearch" placeholder="가이드 검색 (예: 역할 권한 설정, 니트로 혜택, 서버 테러 대처...)" autocomplete="off"></div>
 </section>
 <div class="cat-bar" role="group" aria-label="카테고리">{chips}</div>
-<ul class="post-grid">
+{featured}
+<section class="archive" aria-labelledby="archH">
+<div class="arch-head"><h2 id="archH">실전 가이드 아카이브 <span class="chip" id="archCat">전체 카테고리</span></h2><span class="arch-count" id="archCount">총 {len(posts)}개 가이드</span></div>
+<ul class="post-grid" id="postGrid">
 {chr(10).join(items)}
 </ul>
+<p class="empty" id="blEmpty" hidden>검색 결과가 없어요. 다른 키워드로 찾아보세요.</p>
+<nav class="pager" id="pager" aria-label="페이지"></nav>
+</section>
+<section class="support" aria-labelledby="supH">
+<div class="support-txt">
+<span class="support-k">Rito Studio Direct Support</span>
+<h2 id="supH">서버 세팅이나 봇 연동이 고민이신가요?</h2>
+<p>수동 세팅의 피로감과 복잡한 보안 설정 없이 바로 완벽한 커뮤니티를 구축해 드립니다. 1:1 상담으로 조건에 맞춰 견적을 안내받으세요.</p>
+</div>
+<div class="support-btns">
+<a class="sbtn sbtn-solid" href="{KAKAO}" target="_blank" rel="noopener noreferrer">{ICON_CHAT}카카오톡 1:1 채팅 문의</a>
+<a class="sbtn sbtn-line" href="{BUNJANG_SHOP}" target="_blank" rel="noopener noreferrer">{ICON_STORE}번개장터 상점 방문</a>
+</div>
+</section>
 </div>
 </main>
 {FOOTER}'''

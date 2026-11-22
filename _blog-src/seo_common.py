@@ -68,7 +68,7 @@ def head_meta(title, desc, url, og_type="website", extra=""):
 <link rel="canonical" href="{url}">
 <link rel="alternate" hreflang="ko" href="{url}">
 <link rel="alternate" hreflang="x-default" href="{url}">
-<meta name="theme-color" content="#0B0C14">
+<meta name="theme-color" content="#0A0A0A">
 <meta name="color-scheme" content="dark">
 {ICONS}
 <meta name="application-name" content="Rito0223">
@@ -90,5 +90,5 @@ def head_meta(title, desc, url, og_type="website", extra=""):
 <meta name="twitter:image" content="{OG_IMAGE}">
 {extra}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap"></noscript>"""
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans+KR:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans+KR:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap"></noscript>"""

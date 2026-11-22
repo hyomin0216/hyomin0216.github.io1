@@ -66,17 +66,69 @@
     Object.keys(map).forEach(function (id) { var h = document.getElementById(id); if (h) io.observe(h); });
   }
 
-  /* 블로그 목록: 카테고리 필터 */
-  var chips = Array.prototype.slice.call(document.querySelectorAll('.cat-bar button'));
-  chips.forEach(function (b) {
-    b.addEventListener('click', function () {
-      var c = b.getAttribute('data-cat');
-      chips.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      document.querySelectorAll('.post-grid li').forEach(function (li) {
-        li.hidden = !!c && li.getAttribute('data-cat') !== c;
+  /* 블로그 목록: 검색 + 카테고리 필터 + 페이지 나누기 */
+  var grid = $('#postGrid');
+  if (grid) {
+    var PER = 9;
+    var lis = Array.prototype.slice.call(grid.children);
+    var chips = Array.prototype.slice.call(document.querySelectorAll('.cat-bar button'));
+    var input = $('#blSearch'), feat = $('#feat'), pager = $('#pager');
+    var catLabel = $('#archCat'), count = $('#archCount'), empty = $('#blEmpty');
+    var st = { cat: '', q: '', page: 1 };
+    var CL = '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"></path></svg>';
+
+    function btn(label, page, opts) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.innerHTML = label;
+      if (opts && opts.cur) b.setAttribute('aria-current', 'page');
+      if (opts && opts.dis) b.disabled = true;
+      if (opts && opts.aria) b.setAttribute('aria-label', opts.aria);
+      b.addEventListener('click', function () {
+        st.page = page; render();
+        var top = $('.archive').getBoundingClientRect().top + window.scrollY - 90;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      });
+      return b;
+    }
+    function render() {
+      var q = st.q.trim().toLowerCase(), filtering = !!(st.cat || q);
+      var match = lis.filter(function (li) {
+        if (!filtering && li.hasAttribute('data-feat')) return false;
+        if (st.cat && li.getAttribute('data-cat') !== st.cat) return false;
+        if (q && li.getAttribute('data-q').indexOf(q) < 0) return false;
+        return true;
+      });
+      var pages = Math.max(1, Math.ceil(match.length / PER));
+      if (st.page > pages) st.page = pages;
+      var from = (st.page - 1) * PER, show = match.slice(from, from + PER);
+      lis.forEach(function (li) { li.hidden = show.indexOf(li) < 0; });
+      if (feat) feat.hidden = filtering;
+      var total = filtering ? match.length : match.length + 1;
+      if (catLabel) catLabel.textContent = st.cat || (q ? '검색 결과' : '전체 카테고리');
+      if (count) count.textContent = '총 ' + total + '개 가이드';
+      if (empty) empty.hidden = match.length > 0;
+      pager.innerHTML = '';
+      if (pages < 2) return;
+      pager.appendChild(btn(CL, st.page - 1, { dis: st.page === 1, aria: '이전 페이지' }));
+      for (var i = 1; i <= pages; i++) {
+        if (pages > 7 && i > 1 && i < pages && Math.abs(i - st.page) > 1) {
+          if (i === 2 || i === pages - 1) { var g = document.createElement('span'); g.className = 'gap'; g.textContent = '...'; pager.appendChild(g); }
+          continue;
+        }
+        pager.appendChild(btn(String(i), i, { cur: i === st.page }));
+      }
+      pager.appendChild(btn('다음', st.page + 1, { dis: st.page === pages, aria: '다음 페이지' }));
+    }
+    chips.forEach(function (b) {
+      b.addEventListener('click', function () {
+        st.cat = b.getAttribute('data-cat'); st.page = 1;
+        chips.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        render();
       });
     });
-  });
+    if (input) input.addEventListener('input', function () { st.q = input.value; st.page = 1; render(); });
+    render();
+  }
 })();
 
 /* ---------- 상품 카드 → 상품 상세 창 (메인 페이지와 같은 내용) ---------- */
@@ -85,7 +137,7 @@
   if (!dlg || !dataEl) return;
   var P = JSON.parse(dataEl.textContent);
   var el = function (id) { return document.getElementById(id); };
-  var CHECK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C5F25A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>';
+  var CHECK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>';
   var cur = null, idx = 0;
 
   function showImg(i) {
