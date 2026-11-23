@@ -9,11 +9,11 @@
  *   - 다시 보지 않기: 이 기기에서는 같은 팝업이 다시 안 떠요.
  */
 (function () {
-  var IMAGE = '/images/popup/notice-20261122.png';
+  var IMAGE = '/images/popup/notice-20261124.png';
   var LINK = '';
-  var VERSION = '20261122';
+  var VERSION = '20261124';
   var ALT = '안내사항: 번개장터 상점 일시 이용 제한 안내, 카카오톡 구매·문의는 정상 운영';
-  var W = 879, H = 1119;   // 이미지 가로·세로 픽셀 (비율을 맞추는 데 써요)
+  var W = 864, H = 1112;   // 이미지 가로·세로 픽셀 (비율을 맞추는 데 써요)
 
   if (!IMAGE) return;
   var SEEN = 'rito_popup_seen', NEVER = 'rito_popup_never';
