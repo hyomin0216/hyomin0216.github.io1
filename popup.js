@@ -34,7 +34,9 @@
     '.rp-bar button{flex:1;min-height:52px;font:inherit;font-size:14.5px;background:none;border:0;color:#A3A3A3;cursor:pointer}' +
     '.rp-bar button+button{border-left:1px solid #2A2A2A;color:#EDEDED;font-weight:700}' +
     '.rp-bar button:hover{background:#1C1C1C}' +
-    '.rp-pop button:focus-visible{outline:2px solid #EDEDED;outline-offset:-2px}' +
+    '.rp-bar button:first-child{border-bottom-left-radius:15px}.rp-bar button:last-child{border-bottom-right-radius:15px}' +
+    '.rp-pop:focus{outline:none}' +
+    '.rp-pop button:focus-visible{outline:2px solid #EDEDED;outline-offset:-3px}' +
     '@keyframes rpIn{from{opacity:0}to{opacity:1}}@keyframes rpUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}' +
     '@media (prefers-reduced-motion:reduce){.rp-dim,.rp-pop{animation:none}}';
 
@@ -46,7 +48,7 @@
     dim.setAttribute('aria-modal', 'true');
     dim.setAttribute('aria-label', ALT);
     var tag = LINK ? 'a' : 'div';
-    dim.innerHTML = '<div class="rp-pop">' +
+    dim.innerHTML = '<div class="rp-pop" tabindex="-1">' +
       '<' + tag + ' class="rp-img"' + (LINK ? ' href="' + LINK + '"' + (/^https?:/.test(LINK) ? ' target="_blank" rel="noopener"' : '') : '') + '>' +
       '<img src="' + IMAGE + '" alt="' + ALT + '" width="' + W + '" height="' + H + '"></' + tag + '>' +
       '<button type="button" class="rp-x" aria-label="닫기">×</button>' +
@@ -68,7 +70,7 @@
     img.addEventListener('error', close);   // 이미지가 없으면 빈 팝업 대신 그냥 닫기
     if (LINK && window.gtag) dim.querySelector('.rp-img').addEventListener('click', function () { window.gtag('event', 'popup_click', { page_path: location.pathname }); });
     document.body.appendChild(dim);
-    dim.querySelector('.rp-close').focus({ preventScroll: true });
+    dim.querySelector('.rp-pop').focus({ preventScroll: true });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', show);
   else show();
