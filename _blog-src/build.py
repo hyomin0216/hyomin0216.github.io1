@@ -195,10 +195,9 @@ def header(blog_active=True):
 <div class="hd-right">
 <div class="ask">
 <button type="button" id="askBtn" aria-expanded="false" aria-controls="askMenu">문의하기<svg class="ask-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
-<div class="ask-menu" id="askMenu" role="menu" aria-label="문의 방법" hidden>
-<p class="ask-title">어디로 문의할까요?</p>
-<a role="menuitem" class="ask-item" href="{KAKAO}" target="_blank" rel="noopener"><span class="ask-ico" style="background:#FEE500;color:#191919;">{ICON_KAKAO}</span><span class="ask-txt"><b>카카오톡 문의</b><small>1:1 채팅으로 바로 상담</small></span><svg class="ask-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></a>
-<a role="menuitem" class="ask-item" href="{BUNJANG_SHOP}" target="_blank" rel="noopener"><span class="ask-ico" style="background:#FFFFFF;color:#000000;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></span><span class="ask-txt"><b>번개장터 문의</b><small>Rito0223 상점 바로가기</small></span><svg class="ask-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></a>
+<div class="ask-menu ask-duo" id="askMenu" role="menu" aria-label="문의 방법" hidden>
+<a role="menuitem" class="ask-pill" href="{BUNJANG_SHOP}" target="_blank" rel="noopener">{ICON_STORE}번개장터 상점</a>
+<a role="menuitem" class="ask-pill" href="{KAKAO}" target="_blank" rel="noopener">{ICON_CHAT}카카오톡 문의</a>
 </div>
 </div>
 <button type="button" class="hd-burger" id="hdBurger" aria-controls="hdNav" aria-expanded="false" aria-label="메뉴 열기"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="hb1" d="M4 7h16"></path><path class="hb2" d="M4 12h16"></path><path class="hb3" d="M4 17h16"></path></svg></button>

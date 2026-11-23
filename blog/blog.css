@@ -406,3 +406,11 @@ body:has(#pd[open]){overflow:hidden}
 .hd-nav a{color:#A3A3A3}
 .hd-nav a[aria-current="page"]{color:var(--white);font-weight:700}
 .hd-nav a:hover{color:var(--white)}
+
+/* 상단 문의하기: 번개장터 상점 · 카카오톡 문의 좌우 버튼 */
+.ask-menu.ask-duo{width:auto;display:flex;gap:10px;padding:12px;border-radius:16px;background:#141414;border:1px solid #262626}
+.ask-menu.ask-duo[hidden]{display:none}
+.ask-menu.ask-duo::before{background:#141414;border-color:#262626}
+.ask-pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;background:#FFFFFF;color:#000000 !important;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .15s}
+.ask-pill:hover,.ask-pill:focus-visible{background:#E5E7EB;outline:none}
+@media (max-width:860px){.ask-menu.ask-duo{position:fixed;left:16px;right:16px;gap:8px;padding:10px}.ask-pill{flex:1 1 0;min-height:50px;padding:0 10px}}
