@@ -246,7 +246,7 @@ def page(head, body):
 <head>
 {head}
 <script src="/analytics.js" async></script>
-<script src="/popup.js" defer></script>
+<script src="/popup.js?v=20261124" defer></script>
 </head>
 <body>
 <div id="pageLoader" class="pl" role="status" aria-live="polite">
