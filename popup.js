@@ -9,10 +9,11 @@
  *   - 다시 보지 않기: 이 기기에서는 같은 팝업이 다시 안 떠요.
  */
 (function () {
-  var IMAGE = '';
+  var IMAGE = '/images/popup/notice-20261122.png';
   var LINK = '';
-  var VERSION = '1';
-  var ALT = 'Rito0223 공지';
+  var VERSION = '20261122';
+  var ALT = '안내사항: 번개장터 상점 일시 이용 제한 안내, 카카오톡 구매·문의는 정상 운영';
+  var W = 879, H = 1119;   // 이미지 가로·세로 픽셀 (비율을 맞추는 데 써요)
 
   if (!IMAGE) return;
   var SEEN = 'rito_popup_seen', NEVER = 'rito_popup_never';
@@ -25,9 +26,9 @@
 
   var css = '' +
     '.rp-dim{position:fixed;inset:0;z-index:2147483000;background:rgba(0,0,0,.66);display:flex;align-items:center;justify-content:center;padding:20px;animation:rpIn .25s ease-out}' +
-    '.rp-pop{position:relative;width:min(380px,100%);border-radius:16px;overflow:hidden;background:#141414;border:1px solid #2A2A2A;box-shadow:0 24px 60px rgba(0,0,0,.6);animation:rpUp .3s ease-out;font-family:"Plus Jakarta Sans","Noto Sans KR",system-ui,sans-serif}' +
-    '.rp-img{display:block;aspect-ratio:4/5;max-height:calc(100vh - 140px);max-height:calc(100dvh - 140px);width:100%;background:#1C1C1C}' +
-    '.rp-img img{display:block;width:100%;height:100%;object-fit:cover}' +
+    '.rp-pop{position:relative;width:min(420px,100%);border-radius:16px;overflow:hidden;background:#141414;border:1px solid #2A2A2A;box-shadow:0 24px 60px rgba(0,0,0,.6);animation:rpUp .3s ease-out;font-family:"Plus Jakarta Sans","Noto Sans KR",system-ui,sans-serif}' +
+    '.rp-img{display:block;width:100%;background:#000}' +
+    '.rp-img img{display:block;width:100%;height:auto;max-height:calc(100vh - 120px);max-height:calc(100dvh - 120px);object-fit:contain}' +
     '.rp-x{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:20px;line-height:1;cursor:pointer}' +
     '.rp-bar{display:flex;border-top:1px solid #2A2A2A}' +
     '.rp-bar button{flex:1;min-height:52px;font:inherit;font-size:14.5px;background:none;border:0;color:#A3A3A3;cursor:pointer}' +
@@ -47,7 +48,7 @@
     var tag = LINK ? 'a' : 'div';
     dim.innerHTML = '<div class="rp-pop">' +
       '<' + tag + ' class="rp-img"' + (LINK ? ' href="' + LINK + '"' + (/^https?:/.test(LINK) ? ' target="_blank" rel="noopener"' : '') : '') + '>' +
-      '<img src="' + IMAGE + '" alt="' + ALT + '" width="1080" height="1350"></' + tag + '>' +
+      '<img src="' + IMAGE + '" alt="' + ALT + '" width="' + W + '" height="' + H + '"></' + tag + '>' +
       '<button type="button" class="rp-x" aria-label="닫기">×</button>' +
       '<div class="rp-bar"><button type="button" class="rp-never">다시 보지 않기</button><button type="button" class="rp-close">닫기</button></div></div>';
     var prevOverflow = document.documentElement.style.overflow;
