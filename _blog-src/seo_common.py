@@ -9,8 +9,8 @@ OG_IMAGE = SITE + "/images/brand/og-image.png"
 ORG = {
     "@type": "Organization",
     "@id": SITE + "/#org",
-    "name": "Rito0223",
-    "alternateName": ["리토", "리토 디스코드", "Rito"],
+    "name": "리토",
+    "alternateName": ["Rito0223", "리토 디스코드", "디스코드 리토", "Rito"],
     "url": SITE + "/",
     "logo": {"@type": "ImageObject", "url": SITE + "/images/brand/logo-square.png", "width": 1080, "height": 1080},
     "image": OG_IMAGE,
@@ -71,11 +71,11 @@ def head_meta(title, desc, url, og_type="website", extra=""):
 <meta name="theme-color" content="#0A0A0A">
 <meta name="color-scheme" content="dark">
 {ICONS}
-<meta name="application-name" content="Rito0223">
-<meta name="apple-mobile-web-app-title" content="Rito0223">
+<meta name="application-name" content="리토 Rito0223">
+<meta name="apple-mobile-web-app-title" content="리토">
 <link rel="alternate" type="application/rss+xml" title="Rito0223 블로그" href="{SITE}/blog/feed.xml">
 <meta property="og:type" content="{og_type}">
-<meta property="og:site_name" content="Rito0223">
+<meta property="og:site_name" content="리토 Rito0223">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">

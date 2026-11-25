@@ -184,7 +184,7 @@ def header(blog_active=True):
     return f'''<a class="skip" href="#main">본문 바로가기</a>
 <header class="hd">
 <div class="hd-in">
-<a class="brand" href="/" aria-label="Rito0223 홈"><span class="brand-logo"><img src="/images/brand/logo-rito.png" alt="Rito0223" width="70" height="30" onerror="this.parentNode.outerHTML='<span class=&quot;brand-txt&quot;>Rito0223</span>'"></span></a>
+<a class="brand" href="/" aria-label="Rito0223 홈"><span class="brand-logo"><img src="/images/brand/logo-rito.png" alt="리토 Rito0223" width="70" height="30" onerror="this.parentNode.outerHTML='<span class=&quot;brand-txt&quot;>Rito0223</span>'"></span></a>
 <nav class="hd-nav" id="hdNav" aria-label="주요 메뉴">
 <a href="/#products">상품</a>
 <a href="/#guide">부스트 가이드</a>
@@ -208,9 +208,9 @@ def header(blog_active=True):
 
 FOOTER = f'''<footer class="ft">
 <div class="ft-in">
-<span class="ft-brand"><b>Rito0223</b><span class="sep">|</span><span>디스코드 서버제작 · 니트로 · 서버부스트</span></span>
-<nav aria-label="푸터 메뉴"><a href="/discord-server-creation/">서버제작</a><a href="/discord-nitro/">니트로</a><a href="/discord-server-boost/">서버부스트</a><a href="{KAKAO}" target="_blank" rel="noopener noreferrer">카카오톡 문의</a><a href="{BUNJANG_SHOP}" target="_blank" rel="noopener noreferrer">번개장터</a></nav>
-<span class="ft-copy">© 2026 Rito0223. All rights reserved.</span>
+<span class="ft-brand"><b>리토 Rito0223</b><span class="sep">|</span><span>디스코드 서버제작 · 니트로 · 서버부스트</span></span>
+<nav aria-label="푸터 메뉴"><a href="/discord-server-creation/">서버제작</a><a href="/discord-nitro/">니트로</a><a href="/discord-server-boost/">서버부스트</a><a href="/about/">리토 소개</a><a href="{KAKAO}" target="_blank" rel="noopener noreferrer">카카오톡 문의</a><a href="{BUNJANG_SHOP}" target="_blank" rel="noopener noreferrer">번개장터</a></nav>
+<span class="ft-copy">© 2026 리토(Rito0223). All rights reserved.</span>
 </div>
 </footer>
 <div class="mbar" role="region" aria-label="빠른 문의">
@@ -278,7 +278,7 @@ def breadcrumb(items):
 # ---------------------------------------------------------------- 글 페이지
 def render_post(p, posts):
     url = f"{SITE}/blog/{p['slug']}/"
-    title = f"{p['title']} | Rito0223"
+    title = f"{p['title']} | 리토(Rito0223)"
     extra = (f'<meta property="article:published_time" content="{iso(p["date"])}">\n'
              f'<meta property="article:modified_time" content="{iso(p["updated"])}">\n'
              f'<meta property="article:section" content="{esc(p["category"])}">\n')
@@ -349,7 +349,7 @@ def render_post(p, posts):
 <span class="chip">{esc(p["category"])}</span>
 <h1>{esc(p["title"])}</h1>
 <p class="lead">{esc(p["description"])}</p>
-<p class="meta"><time datetime="{iso(p["date"])}">{kdate(p["date"])}</time> 작성{updated}<span>· Rito0223</span></p>
+<p class="meta"><time datetime="{iso(p["date"])}">{kdate(p["date"])}</time> 작성{updated}<span>· 리토(Rito0223)</span></p>
 {tldr}
 <div class="post-body">
 {p["body"]}
@@ -375,10 +375,10 @@ def render_post(p, posts):
 # ---------------------------------------------------------------- 목록 페이지
 def render_index(posts):
     url = SITE + "/blog/"
-    title = "디스코드 가이드 블로그 | Rito0223"
+    title = "디스코드 가이드 블로그 | 리토(Rito0223)"
     desc = "디스코드 서버 만드는 법, 채널 꾸미기, 서버부스트, 니트로, 테러·사기 예방까지. 디스코드를 더 잘 쓰기 위한 정보를 정리합니다."
     graph = [
-        {"@type": "Blog", "@id": url + "#blog", "name": "Rito0223 디스코드 가이드 블로그", "description": desc, "url": url,
+        {"@type": "Blog", "@id": url + "#blog", "name": "리토(Rito0223) 디스코드 가이드 블로그", "description": desc, "url": url,
          "inLanguage": "ko-KR", "publisher": {"@id": SITE + "/#org"},
          "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}/",
                        "datePublished": iso(p["date"]), "dateModified": iso(p["updated"])} for p in posts]},
@@ -464,7 +464,7 @@ def render_feed(posts):
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
  <channel>
-  <title>Rito0223 디스코드 가이드 블로그</title>
+  <title>리토(Rito0223) 디스코드 가이드 블로그</title>
   <link>{SITE}/blog/</link>
   <atom:link href="{SITE}/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>디스코드 서버 세팅·서버부스트·니트로·보안 정보 가이드</description>
@@ -482,7 +482,7 @@ def render_sitemap(posts):
     <loc>{SITE}/</loc><lastmod>{HOME_MODIFIED}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
     <image:image><image:loc>{OG_IMAGE}</image:loc><image:title>Rito0223 디스코드 서버제작·니트로·서버부스트</image:title></image:image>{imgs}
   </url>''']
-    for path in ("discord-server-creation", "discord-nitro", "discord-server-boost"):
+    for path in ("about", "discord-server-creation", "discord-nitro", "discord-server-boost"):
         rows.append(f"  <url><loc>{SITE}/{path}/</loc><lastmod>{SERVICE_MODIFIED}</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>")
     rows.append(f"  <url><loc>{SITE}/blog/</loc><lastmod>{latest}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>")
     for p in posts:
@@ -494,9 +494,9 @@ def render_sitemap(posts):
 def render_llms(posts):
     latest = max([p["updated"] for p in posts] + [HOME_MODIFIED])
     blog_lines = "\n".join(f"- [{p['title']}]({SITE}/blog/{p['slug']}/): {p['description']}" for p in posts)
-    return f"""# Rito0223 (리토 디스코드)
+    return f"""# 리토 (Rito0223 · 디스코드 리토 · 리토 디스코드)
 
-> Rito0223은 디스코드 서버제작 대행(일반 4,000원부터 · 프리미엄 10,000원), 디스코드 봇 제작/세팅(1,000원부터), 디스코드 니트로·니트로 베이직, 디스코드 서버부스트(레벨 1·2·3)를 판매·대행하는 한국 서비스입니다. 문의와 거래는 카카오톡 채널 또는 번개장터에서 진행하며, 번개장터 기준 누적 판매 450건 이상·후기 300건 이상입니다.
+> 리토(Rito0223)는 디스코드 서버제작 대행(일반 4,000원부터 · 프리미엄 10,000원), 디스코드 봇 제작/세팅(1,000원부터), 디스코드 니트로·니트로 베이직, 디스코드 서버부스트(레벨 1·2·3)를 판매·대행하는 한국 서비스입니다. 문의와 거래는 카카오톡 채널 또는 번개장터에서 진행하며, 번개장터 기준 누적 판매 450건 이상·후기 300건 이상입니다.
 
 공식 사이트: {SITE}/
 최종 업데이트: {latest}
@@ -505,6 +505,7 @@ def render_llms(posts):
 ## 서비스 페이지
 
 - [홈]({SITE}/): 전체 상품, 상품별 상세(사진·포함 내용), 서버부스트 레벨 가이드, 진행 방식, 자주 묻는 질문
+- [리토 소개]({SITE}/about/): 리토(Rito0223)가 어떤 곳인지, 하는 일, 문의 방법, 자주 묻는 질문
 - [디스코드 서버제작 대행]({SITE}/discord-server-creation/): 일반(4,000원~)과 프리미엄(10,000원) 차이, 진행 과정, 비용, FAQ
 - [디스코드 니트로 vs 니트로 베이직]({SITE}/discord-nitro/): 두 요금제의 혜택 비교와 구매 방법
 - [디스코드 서버부스트 레벨별 차이]({SITE}/discord-server-boost/): 레벨 1·2·3 부스트 요건(2·7·14개)과 혜택, 구매 방법
@@ -629,6 +630,58 @@ Sitemap: https://www.rito0223.com/sitemap.xml
 """
 
 # ---------------------------------------------------------------- 실행
+
+# ---------------------------------------------------------------- 리토 소개 페이지
+def render_about():
+    a = json.load(open(os.path.join(HERE, "about.json"), encoding="utf-8"))
+    url = SITE + "/about/"
+    title = "리토(Rito0223) 소개 | 디스코드 리토"
+    body_html = render_blocks(a["content"], "about.json")
+    toc = []
+
+    def add_id(mh):
+        inner = mh.group(2)
+        hid = f"a{len(toc) + 1}"
+        toc.append((hid, re.sub(r"<[^>]+>", "", inner)))
+        return f'<h2 id="{hid}"{mh.group(1)}>{inner}</h2>'
+
+    body_html = re.sub(r"<h2([^>]*)>(.*?)</h2>", add_id, body_html, flags=re.S)
+    faq_items = [(f["q"], f["a"]) for f in a["faq"]]
+    graph = [
+        {"@type": "AboutPage", "@id": url + "#webpage", "url": url, "name": a["title"], "description": a["description"],
+         "inLanguage": "ko-KR", "dateModified": iso(a["updated"]), "about": {"@id": SITE + "/#org"},
+         "isPartOf": {"@id": SITE + "/#website"}, "publisher": {"@id": SITE + "/#org"},
+         "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".post h1", ".tldr"]}},
+        ORG,
+        breadcrumb([("홈", SITE + "/"), ("리토 소개", url)]),
+        faq_schema(url, faq_items),
+    ]
+    head = (head_meta(esc(title), esc(a["description"]), url)
+            + f'\n<link rel="stylesheet" href="/blog/blog.css?v={ASSET_V}">\n' + ld_json(graph))
+    tldr = ('<aside class="tldr" aria-label="핵심 요약"><p class="tldr-h">한눈에 보기</p><ul>'
+            + "".join(f"<li>{md(t)}</li>" for t in a["tldr"]) + "</ul></aside>")
+    faq = ('<section class="post-section" id="faq" aria-labelledby="faq-h"><h2 id="faq-h">자주 묻는 질문</h2>'
+           + "".join(f'<details class="faq-item"><summary><span>{esc(q)}</span>{FAQ_ICO}</summary><p>{esc(x)}</p></details>' for q, x in faq_items)
+           + "</section>")
+    toc_html = "".join(f'<li><a href="#{hid}">{esc(t)}</a></li>' for hid, t in toc + [("faq", "자주 묻는 질문")])
+    cta = ('<div class="cta-card"><h2>리토에 문의하기</h2><p>서버제작, 니트로, 서버부스트 무엇이든 카카오톡으로 편하게 물어보세요.</p>'
+           f'<div class="cta-btns"><a class="btn btn-kakao" href="{KAKAO}" target="_blank" rel="noopener">{ICON_CHAT}카카오톡 문의</a>'
+           '<a class="btn btn-line" href="/">상품 전체 보기</a></div></div>')
+    body = "\n".join([
+        '<div class="progress" aria-hidden="true"></div>',
+        header(blog_active=False),
+        '<main id="main">', '<div class="bl-wrap">', '<div class="post-layout">', '<article class="post">',
+        f'<nav class="crumb" aria-label="현재 위치"><a href="/">홈</a>{ICON_CHEV}<span class="cur">리토 소개</span></nav>',
+        '<span class="chip">리토 소개</span>',
+        f'<h1>{esc(a["title"])}</h1>',
+        f'<p class="lead">{esc(a["description"])}</p>',
+        tldr, '<div class="post-body">', body_html, '</div>', faq, cta, '</article>',
+        '<aside class="toc" aria-label="목차">', '<div class="toc-in">',
+        f'<nav class="toc-box"><p>CONTENTS</p><ol>{toc_html}</ol></nav>',
+        '</div>', '</aside>', '</div>', '</div>', '</main>', FOOTER])
+    return page(head, body)
+
+
 def write(rel, text):
     path = os.path.join(ROOT, rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -646,6 +699,7 @@ def main():
     for p in posts:
         write(f"blog/{p['slug']}/index.html", render_post(p, posts))
     write("blog/index.html", render_index(posts))
+    write("about/index.html", render_about())
     write("blog/feed.xml", render_feed(posts))
     for name in ("blog.css", "blog.js"):
         shutil.copyfile(os.path.join(HERE, "assets", name), os.path.join(ROOT, "blog", name))
