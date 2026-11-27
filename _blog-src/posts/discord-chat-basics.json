@@ -1,0 +1,116 @@
+{
+  "slug": "discord-chat-basics",
+  "title": "디스코드 채팅 기초: DM·그룹 DM·채널·스레드·포럼 차이와 쓰는 법",
+  "description": "디스코드(디코) 채팅을 처음 쓰는 분을 위해 DM, 그룹 DM, 서버 텍스트 채널, 스레드, 포럼 채널 차이를 그림으로 정리했어요. 모르는 사람 DM이 가는 메시지 요청함, DM 막는 설정, DM 닫기와 삭제 차이까지 담았어요.",
+  "category": "디스코드 사용법",
+  "date": "2026-11-28",
+  "updated": "2026-11-28",
+  "keywords": "디스코드 채팅, 디스코드 DM, 디스코드 그룹 DM, 디코 채팅, 디스코드 스레드, 디스코드 메시지 요청, 디스코드 DM 막기, 디스코드 채팅방",
+  "draft": false,
+  "cta": "server",
+  "tldr": [
+    "디스코드 채팅은 서버 밖 DM(1:1·그룹)과 서버 안 채널(텍스트 채널·스레드·포럼) 두 갈래예요.",
+    "그룹 DM은 최대 10명이고, 그보다 많거나 주제를 나누고 싶으면 서버를 만드는 게 좋아요.",
+    "모르는 사람이 보낸 DM은 메시지 요청함에 따로 모여요. 서버 멤버의 DM을 아예 막는 설정도 있어요.",
+    "DM을 ‘닫기’ 해도 대화 내용은 지워지지 않아요. 목록에서만 사라져요."
+  ],
+  "content": [
+    {
+      "p": "카톡에 익숙하면 디스코드 채팅이 처음엔 복잡해 보여요. DM도 있고, 서버도 있고, 채널 안에 또 스레드가 있죠. 그런데 구조만 한 번 보면 생각보다 단순해요."
+    },
+    {
+      "html": "<figure class=\"dg\"><svg class=\"dg-w\" viewBox=\"0 0 720 288\" role=\"img\" aria-label=\"디스코드에서 채팅하는 공간 정리: DM 쪽과 서버 쪽\"><defs><marker id=\"dgA\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" class=\"dg-ah\"/></marker></defs><rect class=\"dg-box dg-on\" x=\"10\" y=\"10\" width=\"340\" height=\"60\" rx=\"14\"/><text class=\"dg-t-on\" x=\"28\" y=\"36.0\">DM · 그룹 DM</text><text class=\"dg-s-on\" x=\"28\" y=\"56.0\">서버 밖, 친구끼리 (그룹은 최대 10명)</text><rect class=\"dg-box dg-on\" x=\"370\" y=\"10\" width=\"340\" height=\"60\" rx=\"14\"/><text class=\"dg-t-on\" x=\"388\" y=\"36.0\">서버</text><text class=\"dg-s-on\" x=\"388\" y=\"56.0\">같은 관심사 사람들이 모인 공간</text><rect class=\"dg-box\" x=\"390\" y=\"92\" width=\"300\" height=\"52\" rx=\"14\"/><text class=\"dg-t\" x=\"408\" y=\"114.0\">텍스트 채널</text><text class=\"dg-s\" x=\"408\" y=\"134.0\">주제별 대화방</text><rect class=\"dg-box\" x=\"390\" y=\"158\" width=\"300\" height=\"52\" rx=\"14\"/><text class=\"dg-t\" x=\"408\" y=\"180.0\">스레드</text><text class=\"dg-s\" x=\"408\" y=\"200.0\">채널 안 작은 곁가지 대화</text><rect class=\"dg-box\" x=\"390\" y=\"224\" width=\"300\" height=\"52\" rx=\"14\"/><text class=\"dg-t\" x=\"408\" y=\"246.0\">포럼 채널</text><text class=\"dg-s\" x=\"408\" y=\"266.0\">글마다 따로 댓글이 달리는 게시판</text><rect class=\"dg-box\" x=\"30\" y=\"92\" width=\"300\" height=\"52\" rx=\"14\"/><text class=\"dg-t\" x=\"48\" y=\"114.0\">1:1 DM</text><text class=\"dg-s\" x=\"48\" y=\"134.0\">친구와 둘만</text><rect class=\"dg-box\" x=\"30\" y=\"158\" width=\"300\" height=\"52\" rx=\"14\"/><text class=\"dg-t\" x=\"48\" y=\"180.0\">그룹 DM</text><text class=\"dg-s\" x=\"48\" y=\"200.0\">초대한 사람만, 최대 10명</text><rect class=\"dg-box\" x=\"30\" y=\"224\" width=\"300\" height=\"52\" rx=\"14\"/><text class=\"dg-t\" x=\"48\" y=\"246.0\">메시지 요청</text><text class=\"dg-s\" x=\"48\" y=\"266.0\">모르는 사람이 보낸 DM 대기함</text><line class=\"dg-ln\" x1=\"20\" y1=\"72\" x2=\"20\" y2=\"250\"/><line class=\"dg-ln\" x1=\"380\" y1=\"72\" x2=\"380\" y2=\"250\"/><line class=\"dg-ln\" x1=\"20\" y1=\"118\" x2=\"28\" y2=\"118\" marker-end=\"url(#dgA)\"/><line class=\"dg-ln\" x1=\"380\" y1=\"118\" x2=\"388\" y2=\"118\" marker-end=\"url(#dgA)\"/><line class=\"dg-ln\" x1=\"20\" y1=\"184\" x2=\"28\" y2=\"184\" marker-end=\"url(#dgA)\"/><line class=\"dg-ln\" x1=\"380\" y1=\"184\" x2=\"388\" y2=\"184\" marker-end=\"url(#dgA)\"/><line class=\"dg-ln\" x1=\"20\" y1=\"250\" x2=\"28\" y2=\"250\" marker-end=\"url(#dgA)\"/><line class=\"dg-ln\" x1=\"380\" y1=\"250\" x2=\"388\" y2=\"250\" marker-end=\"url(#dgA)\"/></svg><svg class=\"dg-n\" viewBox=\"0 0 360 950\" role=\"img\" aria-label=\"디스코드에서 채팅하는 공간 정리: DM 쪽과 서버 쪽\"><defs><marker id=\"dgA\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" class=\"dg-ah\"/></marker></defs><rect class=\"dg-box dg-on\" x=\"8\" y=\"8\" width=\"344\" height=\"62\" rx=\"14\"/><text class=\"dg-t-on\" x=\"26\" y=\"35.0\">DM · 그룹 DM</text><text class=\"dg-s-on\" x=\"26\" y=\"55.0\">서버 밖, 친구끼리</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"71\" x2=\"180.0\" y2=\"83\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"84\" width=\"344\" height=\"62\" rx=\"14\"/><text class=\"dg-t\" x=\"26\" y=\"111.0\">1:1 DM</text><text class=\"dg-s\" x=\"26\" y=\"131.0\">친구와 둘만</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"147\" x2=\"180.0\" y2=\"159\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"160\" width=\"344\" height=\"62\" rx=\"14\"/><text class=\"dg-t\" x=\"26\" y=\"187.0\">그룹 DM</text><text class=\"dg-s\" x=\"26\" y=\"207.0\">초대한 사람만, 최대 10명</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"223\" x2=\"180.0\" y2=\"235\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"236\" width=\"344\" height=\"62\" rx=\"14\"/><text class=\"dg-t\" x=\"26\" y=\"263.0\">메시지 요청</text><text class=\"dg-s\" x=\"26\" y=\"283.0\">모르는 사람 DM 대기함</text><rect class=\"dg-box dg-on\" x=\"8\" y=\"330\" width=\"344\" height=\"62\" rx=\"14\"/><text class=\"dg-t-on\" x=\"26\" y=\"357.0\">서버</text><text class=\"dg-s-on\" x=\"26\" y=\"377.0\">같은 관심사 사람들의 공간</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"393\" x2=\"180.0\" y2=\"405\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"406\" width=\"344\" height=\"62\" rx=\"14\"/><text class=\"dg-t\" x=\"26\" y=\"433.0\">텍스트 채널</text><text class=\"dg-s\" x=\"26\" y=\"453.0\">주제별 대화방</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"469\" x2=\"180.0\" y2=\"481\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"482\" width=\"344\" height=\"62\" rx=\"14\"/><text class=\"dg-t\" x=\"26\" y=\"509.0\">스레드</text><text class=\"dg-s\" x=\"26\" y=\"529.0\">채널 안 곁가지 대화</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"545\" x2=\"180.0\" y2=\"557\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"558\" width=\"344\" height=\"62\" rx=\"14\"/><text class=\"dg-t\" x=\"26\" y=\"585.0\">포럼 채널</text><text class=\"dg-s\" x=\"26\" y=\"605.0\">글마다 댓글이 달리는 게시판</text></svg><figcaption>디스코드 채팅은 크게 서버 밖(DM)과 서버 안(채널) 두 갈래예요.</figcaption></figure>"
+    },
+    {
+      "h2": "DM과 그룹 DM은 뭐예요?"
+    },
+    {
+      "p": "서버와 상관없이 사람끼리 직접 주고받는 채팅이에요. 왼쪽 위 디스코드 홈(DM 화면)에 모여 있어요."
+    },
+    {
+      "ul": [
+        "**1:1 DM**: 친구나 같은 서버 사람에게 보내는 개인 메시지",
+        "**그룹 DM**: 친구를 골라 만드는 단톡방. 나를 포함해 최대 10명",
+        "**통화**: DM과 그룹 DM 모두 위쪽 버튼으로 바로 통화할 수 있어요 ([디스코드 통화하는 법](/blog/discord-call-guide/))"
+      ]
+    },
+    {
+      "h2": "서버 텍스트 채널은 DM과 뭐가 달라요?"
+    },
+    {
+      "p": "서버 안에 주제별로 만든 대화방이에요. 서버에 들어온 사람이라면 권한에 따라 누구나 보고 쓸 수 있어요. 사람이 많아도 주제별로 나눌 수 있어서, 10명이 넘는 모임은 그룹 DM보다 서버가 훨씬 편해요. 서버 만드는 순서는 [디스코드 서버 완벽 가이드](/blog/discord-server-complete-guide/)에 정리해 뒀어요."
+    },
+    {
+      "h2": "스레드와 포럼은 언제 쓰나요?"
+    },
+    {
+      "ul": [
+        "**스레드**: 채널 대화 중 한 주제로 길어질 것 같을 때, 메시지에서 ‘스레드 만들기’로 곁가지 대화방을 열어요. 원래 채널이 덜 지저분해져요",
+        "**포럼 채널**: 질문, 후기, 자료처럼 글마다 따로 답이 달려야 하는 내용을 게시판처럼 모아요. 커뮤니티 기능을 켠 서버에서 만들 수 있어요"
+      ]
+    },
+    {
+      "p": "채널 종류와 만드는 법은 [디스코드 채널 만들기](/blog/discord-channel-guide/)에 자세히 적어 뒀어요."
+    },
+    {
+      "h2": "모르는 사람 DM은 어디로 가나요?"
+    },
+    {
+      "p": "친구가 아닌 사람이 보낸 DM은 **메시지 요청함**에 따로 모여요. 열어 보고 수락하면 일반 DM으로 옮겨지고, 무시하거나 신고할 수 있어요. 스팸이나 사기 링크가 많은 곳이라, 모르는 링크는 누르지 마세요."
+    },
+    {
+      "h3": "서버 사람들의 DM을 아예 막으려면"
+    },
+    {
+      "ul": [
+        "**모든 서버**: 사용자 설정 → 콘텐츠 및 소셜(개인정보)에서 서버 멤버의 DM 허용을 꺼요",
+        "**특정 서버만**: 서버 이름 메뉴 → 개인정보 설정에서 그 서버 사람들의 DM만 막아요"
+      ]
+    },
+    {
+      "p": "계속 귀찮게 하는 사람이 있다면 [디스코드 차단·무시](/blog/discord-block-ignore/)도 같이 보세요."
+    },
+    {
+      "h2": "DM 닫기와 삭제는 달라요"
+    },
+    {
+      "p": "DM 목록에서 대화방에 마우스를 올리고 ×(닫기)를 누르면 목록에서만 사라져요. 대화 내용은 그대로 남아 있어서, 그 사람과 다시 DM을 열면 예전 메시지가 다 보여요. 내 메시지를 지우려면 메시지마다 삭제해야 하고, 상대 메시지는 지울 수 없어요. ([메시지 수정·삭제하는 법](/blog/discord-message-tips/))"
+    },
+    {
+      "h2": "채팅을 더 편하게 쓰는 팁"
+    },
+    {
+      "ul": [
+        "**답장**: 메시지에 답장을 달면 누구한테 하는 말인지 헷갈리지 않아요",
+        "**멘션**: @이름으로 부르면 상대에게 알림이 가요. @everyone은 서버 전체 알림이라 조심",
+        "**글자 꾸미기**: 굵게, 스포일러, 코드블록 ([디스코드 채팅 꾸미기](/blog/discord-text-formatting/))",
+        "**사진·파일**: 끌어다 놓거나 붙여 넣기 ([사진·파일 보내는 법](/blog/discord-photo-file-upload/))"
+      ]
+    },
+    {
+      "p": "친구들끼리 그룹 DM이 점점 커지고 있다면 서버로 옮길 때예요. 채널과 역할까지 처음부터 잘 짜 두고 싶다면 [디스코드 서버제작](/discord-server-creation/)으로 맡기셔도 돼요."
+    }
+  ],
+  "faq": [
+    {
+      "q": "디스코드 DM과 서버 채팅은 뭐가 달라요?",
+      "a": "DM은 서버와 상관없이 사람끼리 직접 주고받는 채팅이고, 서버 채팅은 서버 안에 주제별로 만든 채널에서 여러 사람이 함께 대화하는 거예요."
+    },
+    {
+      "q": "디스코드 그룹 DM은 몇 명까지 돼요?",
+      "a": "나를 포함해 최대 10명까지예요. 더 많은 사람과 대화하려면 서버를 만드는 게 좋아요."
+    },
+    {
+      "q": "모르는 사람이 보낸 디스코드 DM은 어디 있어요?",
+      "a": "친구가 아닌 사람이 보낸 DM은 메시지 요청함에 따로 모여요. 수락하면 일반 DM으로 옮겨져요."
+    },
+    {
+      "q": "서버 사람들이 DM을 못 보내게 할 수 있어요?",
+      "a": "네. 사용자 설정의 개인정보 관련 메뉴에서 서버 멤버의 DM 허용을 끄거나, 서버별 개인정보 설정에서 특정 서버만 막을 수 있어요."
+    },
+    {
+      "q": "디스코드 DM을 닫으면 대화가 지워지나요?",
+      "a": "아니요. 닫기는 목록에서만 사라지고, 다시 DM을 열면 예전 대화가 그대로 보여요."
+    }
+  ]
+}

@@ -414,3 +414,19 @@ body:has(#pd[open]){overflow:hidden}
 .ask-pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;background:#FFFFFF;color:#000000 !important;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .15s}
 .ask-pill:hover,.ask-pill:focus-visible{background:#E5E7EB;outline:none}
 @media (max-width:860px){.ask-menu.ask-duo{position:fixed;left:16px;right:16px;gap:8px;padding:10px}.ask-pill{flex:1 1 0;min-height:50px;padding:0 10px}}
+
+/* ---------- 글 속 다이어그램 (SVG) ---------- */
+.post-body figure.dg{margin:26px 0;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--dark)}
+.post-body figure.dg svg{display:block;width:100%;height:auto;font-family:var(--sans)}
+.post-body figure.dg .dg-n{display:none;max-width:420px;margin:0 auto}
+@media (max-width:600px){.post-body figure.dg{padding:14px}.post-body figure.dg .dg-w{display:none}.post-body figure.dg .dg-n{display:block}}
+.dg-box{fill:var(--card2);stroke:var(--line2);stroke-width:1.2}
+.dg-on{fill:#EDEDED;stroke:#EDEDED}
+.dg-t{fill:var(--text);font-size:15px;font-weight:700}
+.dg-s{fill:var(--sub);font-size:12.5px}
+.dg-t-on{fill:#0A0A0A;font-size:15px;font-weight:800}
+.dg-s-on{fill:#3A3A3A;font-size:12.5px}
+.dg-num{fill:#EDEDED}.dg-numt{fill:#0A0A0A;font-size:13px;font-weight:800}
+.dg-num-on{fill:#0A0A0A}.dg-numt-on{fill:#EDEDED;font-size:13px;font-weight:800}
+.dg-ln{stroke:var(--line2);stroke-width:1.6}
+.dg-ah{fill:var(--line2)}

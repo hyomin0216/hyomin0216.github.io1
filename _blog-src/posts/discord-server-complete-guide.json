@@ -1,0 +1,201 @@
+{
+  "slug": "discord-server-complete-guide",
+  "title": "디스코드 서버 완벽 가이드: 만들기부터 채널·역할·봇·꾸미기·보안까지 9단계",
+  "description": "디스코드(디코) 서버를 처음 만드는 사람을 위한 총정리예요. 목적 정하기, 서버 만들기, 채널·카테고리, 역할·권한, 봇, 꾸미기, 보안, 초대, 부스트까지 9단계 순서와 단계별 자세한 가이드 링크, 체크리스트를 한 페이지에 모았어요.",
+  "category": "서버 세팅 가이드",
+  "date": "2026-11-28",
+  "updated": "2026-11-28",
+  "keywords": "디스코드 서버, 디스코드 서버 만들기, 디스코드 서버 운영, 디스코드 서버 세팅, 디코 서버, 디스코드 서버 꾸미기, 디스코드 서버 가이드, 디스코드 서버 관리",
+  "draft": false,
+  "cta": "server",
+  "tldr": [
+    "디스코드 서버는 목적 → 만들기 → 채널 → 역할·권한 → 봇 → 꾸미기 → 보안 → 초대 → 키우기 순서로 세팅하면 덜 헤매요.",
+    "제일 중요한 건 1단계 목적이에요. 친목인지, 게임 클랜인지, 판매 서버인지에 따라 채널과 역할이 완전히 달라져요.",
+    "사람을 부르기 전에 보안 설정(인증 단계, 운영진 2단계 인증)부터 끝내 두세요. 나중에 하면 이미 늦을 때가 많아요.",
+    "단계마다 자세한 가이드 글을 따로 정리해 뒀어요. 이 글은 전체 지도 역할을 해요."
+  ],
+  "content": [
+    {
+      "p": "디스코드 서버는 만드는 데 1분이면 되는데, 제대로 굴러가게 만드는 데는 며칠이 걸려요. 채널을 몇 개 만들다가 역할에서 막히고, 봇을 넣다가 권한이 꼬이고, 사람을 불렀더니 테러를 당하는 순서로요."
+    },
+    {
+      "p": "서버제작 일을 하면서 보니, 잘 되는 서버는 세팅 순서가 거의 같았어요. 그 순서를 9단계로 정리하고, 단계마다 자세히 써 둔 가이드를 연결해 둘게요. 처음이라면 위에서부터 하나씩 따라오세요."
+    },
+    {
+      "html": "<figure class=\"dg\"><svg class=\"dg-w\" viewBox=\"0 0 720 294\" role=\"img\" aria-label=\"디스코드 서버를 만들고 운영하는 9단계 순서\"><defs><marker id=\"dgA\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" class=\"dg-ah\"/></marker></defs><rect class=\"dg-box dg-on\" x=\"12\" y=\"12\" width=\"216\" height=\"74\" rx=\"14\"/><circle class=\"dg-num-on\" cx=\"42\" cy=\"49.0\" r=\"14\"/><text class=\"dg-numt-on\" x=\"42\" y=\"54.0\" text-anchor=\"middle\">1</text><text class=\"dg-t-on\" x=\"68\" y=\"45.0\">목적 정하기</text><text class=\"dg-s-on\" x=\"68\" y=\"65.0\">친목·게임·스터디·판매</text><line class=\"dg-ln\" x1=\"230\" y1=\"49.0\" x2=\"250\" y2=\"49.0\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"252\" y=\"12\" width=\"216\" height=\"74\" rx=\"14\"/><circle class=\"dg-num\" cx=\"282\" cy=\"49.0\" r=\"14\"/><text class=\"dg-numt\" x=\"282\" y=\"54.0\" text-anchor=\"middle\">2</text><text class=\"dg-t\" x=\"308\" y=\"45.0\">서버 만들기</text><text class=\"dg-s\" x=\"308\" y=\"65.0\">템플릿 고르기</text><line class=\"dg-ln\" x1=\"470\" y1=\"49.0\" x2=\"490\" y2=\"49.0\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"492\" y=\"12\" width=\"216\" height=\"74\" rx=\"14\"/><circle class=\"dg-num\" cx=\"522\" cy=\"49.0\" r=\"14\"/><text class=\"dg-numt\" x=\"522\" y=\"54.0\" text-anchor=\"middle\">3</text><text class=\"dg-t\" x=\"548\" y=\"45.0\">채널 짜기</text><text class=\"dg-s\" x=\"548\" y=\"65.0\">카테고리로 묶기</text><path class=\"dg-ln\" fill=\"none\" d=\"M600.0 88 V98.0 H120.0 V108\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"12\" y=\"110\" width=\"216\" height=\"74\" rx=\"14\"/><circle class=\"dg-num\" cx=\"42\" cy=\"147.0\" r=\"14\"/><text class=\"dg-numt\" x=\"42\" y=\"152.0\" text-anchor=\"middle\">4</text><text class=\"dg-t\" x=\"68\" y=\"143.0\">역할·권한</text><text class=\"dg-s\" x=\"68\" y=\"163.0\">운영진·멤버·신입</text><line class=\"dg-ln\" x1=\"230\" y1=\"147.0\" x2=\"250\" y2=\"147.0\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"252\" y=\"110\" width=\"216\" height=\"74\" rx=\"14\"/><circle class=\"dg-num\" cx=\"282\" cy=\"147.0\" r=\"14\"/><text class=\"dg-numt\" x=\"282\" y=\"152.0\" text-anchor=\"middle\">5</text><text class=\"dg-t\" x=\"308\" y=\"143.0\">봇 넣기</text><text class=\"dg-s\" x=\"308\" y=\"163.0\">인사·인증·로그</text><line class=\"dg-ln\" x1=\"470\" y1=\"147.0\" x2=\"490\" y2=\"147.0\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"492\" y=\"110\" width=\"216\" height=\"74\" rx=\"14\"/><circle class=\"dg-num\" cx=\"522\" cy=\"147.0\" r=\"14\"/><text class=\"dg-numt\" x=\"522\" y=\"152.0\" text-anchor=\"middle\">6</text><text class=\"dg-t\" x=\"548\" y=\"143.0\">꾸미기</text><text class=\"dg-s\" x=\"548\" y=\"163.0\">채널명·이모지·배너</text><path class=\"dg-ln\" fill=\"none\" d=\"M600.0 186 V196.0 H120.0 V206\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"12\" y=\"208\" width=\"216\" height=\"74\" rx=\"14\"/><circle class=\"dg-num\" cx=\"42\" cy=\"245.0\" r=\"14\"/><text class=\"dg-numt\" x=\"42\" y=\"250.0\" text-anchor=\"middle\">7</text><text class=\"dg-t\" x=\"68\" y=\"241.0\">보안 설정</text><text class=\"dg-s\" x=\"68\" y=\"261.0\">인증 단계·2단계 인증</text><line class=\"dg-ln\" x1=\"230\" y1=\"245.0\" x2=\"250\" y2=\"245.0\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"252\" y=\"208\" width=\"216\" height=\"74\" rx=\"14\"/><circle class=\"dg-num\" cx=\"282\" cy=\"245.0\" r=\"14\"/><text class=\"dg-numt\" x=\"282\" y=\"250.0\" text-anchor=\"middle\">8</text><text class=\"dg-t\" x=\"308\" y=\"241.0\">사람 모으기</text><text class=\"dg-s\" x=\"308\" y=\"261.0\">초대 링크·공지</text><line class=\"dg-ln\" x1=\"470\" y1=\"245.0\" x2=\"490\" y2=\"245.0\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"492\" y=\"208\" width=\"216\" height=\"74\" rx=\"14\"/><circle class=\"dg-num\" cx=\"522\" cy=\"245.0\" r=\"14\"/><text class=\"dg-numt\" x=\"522\" y=\"250.0\" text-anchor=\"middle\">9</text><text class=\"dg-t\" x=\"548\" y=\"241.0\">키우기</text><text class=\"dg-s\" x=\"548\" y=\"261.0\">부스트·이벤트</text></svg><svg class=\"dg-n\" viewBox=\"0 0 360 686\" role=\"img\" aria-label=\"디스코드 서버를 만들고 운영하는 9단계 순서\"><defs><marker id=\"dgA\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" class=\"dg-ah\"/></marker></defs><rect class=\"dg-box dg-on\" x=\"8\" y=\"8\" width=\"344\" height=\"62\" rx=\"14\"/><circle class=\"dg-num-on\" cx=\"38\" cy=\"39.0\" r=\"14\"/><text class=\"dg-numt-on\" x=\"38\" y=\"44.0\" text-anchor=\"middle\">1</text><text class=\"dg-t-on\" x=\"64\" y=\"35.0\">목적 정하기</text><text class=\"dg-s-on\" x=\"64\" y=\"55.0\">친목·게임·스터디·판매</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"71\" x2=\"180.0\" y2=\"83\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"84\" width=\"344\" height=\"62\" rx=\"14\"/><circle class=\"dg-num\" cx=\"38\" cy=\"115.0\" r=\"14\"/><text class=\"dg-numt\" x=\"38\" y=\"120.0\" text-anchor=\"middle\">2</text><text class=\"dg-t\" x=\"64\" y=\"111.0\">서버 만들기</text><text class=\"dg-s\" x=\"64\" y=\"131.0\">템플릿 고르기</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"147\" x2=\"180.0\" y2=\"159\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"160\" width=\"344\" height=\"62\" rx=\"14\"/><circle class=\"dg-num\" cx=\"38\" cy=\"191.0\" r=\"14\"/><text class=\"dg-numt\" x=\"38\" y=\"196.0\" text-anchor=\"middle\">3</text><text class=\"dg-t\" x=\"64\" y=\"187.0\">채널 짜기</text><text class=\"dg-s\" x=\"64\" y=\"207.0\">카테고리로 묶기</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"223\" x2=\"180.0\" y2=\"235\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"236\" width=\"344\" height=\"62\" rx=\"14\"/><circle class=\"dg-num\" cx=\"38\" cy=\"267.0\" r=\"14\"/><text class=\"dg-numt\" x=\"38\" y=\"272.0\" text-anchor=\"middle\">4</text><text class=\"dg-t\" x=\"64\" y=\"263.0\">역할·권한</text><text class=\"dg-s\" x=\"64\" y=\"283.0\">운영진·멤버·신입</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"299\" x2=\"180.0\" y2=\"311\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"312\" width=\"344\" height=\"62\" rx=\"14\"/><circle class=\"dg-num\" cx=\"38\" cy=\"343.0\" r=\"14\"/><text class=\"dg-numt\" x=\"38\" y=\"348.0\" text-anchor=\"middle\">5</text><text class=\"dg-t\" x=\"64\" y=\"339.0\">봇 넣기</text><text class=\"dg-s\" x=\"64\" y=\"359.0\">인사·인증·로그</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"375\" x2=\"180.0\" y2=\"387\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"388\" width=\"344\" height=\"62\" rx=\"14\"/><circle class=\"dg-num\" cx=\"38\" cy=\"419.0\" r=\"14\"/><text class=\"dg-numt\" x=\"38\" y=\"424.0\" text-anchor=\"middle\">6</text><text class=\"dg-t\" x=\"64\" y=\"415.0\">꾸미기</text><text class=\"dg-s\" x=\"64\" y=\"435.0\">채널명·이모지·배너</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"451\" x2=\"180.0\" y2=\"463\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"464\" width=\"344\" height=\"62\" rx=\"14\"/><circle class=\"dg-num\" cx=\"38\" cy=\"495.0\" r=\"14\"/><text class=\"dg-numt\" x=\"38\" y=\"500.0\" text-anchor=\"middle\">7</text><text class=\"dg-t\" x=\"64\" y=\"491.0\">보안 설정</text><text class=\"dg-s\" x=\"64\" y=\"511.0\">인증 단계·2단계 인증</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"527\" x2=\"180.0\" y2=\"539\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"540\" width=\"344\" height=\"62\" rx=\"14\"/><circle class=\"dg-num\" cx=\"38\" cy=\"571.0\" r=\"14\"/><text class=\"dg-numt\" x=\"38\" y=\"576.0\" text-anchor=\"middle\">8</text><text class=\"dg-t\" x=\"64\" y=\"567.0\">사람 모으기</text><text class=\"dg-s\" x=\"64\" y=\"587.0\">초대 링크·공지</text><line class=\"dg-ln\" x1=\"180.0\" y1=\"603\" x2=\"180.0\" y2=\"615\" marker-end=\"url(#dgA)\"/><rect class=\"dg-box\" x=\"8\" y=\"616\" width=\"344\" height=\"62\" rx=\"14\"/><circle class=\"dg-num\" cx=\"38\" cy=\"647.0\" r=\"14\"/><text class=\"dg-numt\" x=\"38\" y=\"652.0\" text-anchor=\"middle\">9</text><text class=\"dg-t\" x=\"64\" y=\"643.0\">키우기</text><text class=\"dg-s\" x=\"64\" y=\"663.0\">부스트·이벤트</text></svg><figcaption>디스코드 서버 운영 9단계. 1단계부터 차례로 하면 처음 온 사람이 길을 잃지 않는 서버가 돼요.</figcaption></figure>"
+    },
+    {
+      "h2": "1단계. 서버 목적부터 정해요"
+    },
+    {
+      "p": "목적이 정해져야 나머지가 정해져요. 아래 셋만 먼저 적어 보세요."
+    },
+    {
+      "ul": [
+        "**누가 오나요?** 아는 친구 몇 명인지, 모르는 사람도 받는 공개 서버인지",
+        "**뭘 하나요?** 수다, 같이 게임, 공부 인증, 판매·문의, 팬 활동",
+        "**몇 명쯤 될까요?** 10명 안팎인지, 수백 명 이상 받을 건지"
+      ]
+    },
+    {
+      "p": "인원이 적고 아는 사람끼리라면 채널 몇 개면 충분해요. 공개 서버이거나 사람이 많아질 예정이라면 처음부터 역할과 보안을 신경 써야 해요."
+    },
+    {
+      "h2": "2단계. 서버를 만들어요"
+    },
+    {
+      "p": "왼쪽 서버 목록 맨 아래 + 버튼으로 만들고, 목적에 맞는 템플릿을 고르면 기본 채널이 들어간 채로 시작해요. 서버 이름과 아이콘은 나중에 바꿀 수 있으니 부담 갖지 마세요."
+    },
+    {
+      "ul": [
+        "[디스코드 서버 만드는 법](/blog/how-to-make-discord-server/): PC·모바일 만들기와 첫 세팅",
+        "[디스코드 모바일 사용법](/blog/discord-mobile-app-guide/): 휴대폰으로만 운영한다면"
+      ]
+    },
+    {
+      "h2": "3단계. 채널과 카테고리를 짜요"
+    },
+    {
+      "p": "채널은 ‘처음 온 사람이 위에서 아래로 읽어 내려가는 순서’로 놓는 게 핵심이에요. 보통 안내(공지·규칙) → 대화 → 음성 → 운영진 순서예요. 비슷한 채널은 카테고리로 묶어서 권한도 한 번에 거세요."
+    },
+    {
+      "ul": [
+        "[디스코드 채널 만들기](/blog/discord-channel-guide/): 채널 종류, 비공개 채널, 서버 종류별 구성 예시",
+        "[디스코드 채널명 꾸미기](/blog/discord-channel-name-decoration/): 이모지·특수문자로 정돈해 보이게"
+      ]
+    },
+    {
+      "h2": "4단계. 역할과 권한을 나눠요"
+    },
+    {
+      "p": "역할은 ‘누가 뭘 할 수 있는지’를 정하는 거예요. 처음엔 운영진, 일반 멤버, 신입(인증 전) 세 단계만 있어도 충분해요. 역할 순서가 위일수록 힘이 세다는 것, 관리자 권한은 아무에게나 주면 안 된다는 것 두 가지만 기억하세요."
+    },
+    {
+      "ul": [
+        "[디스코드 역할·권한 설정](/blog/discord-role-permission/): 역할 만들기, 순서, 채널별 권한",
+        "[디스코드 개발자 모드](/blog/discord-developer-mode/): 봇 설정에 필요한 역할·채널 ID 복사"
+      ]
+    },
+    {
+      "h2": "5단계. 필요한 봇만 넣어요"
+    },
+    {
+      "p": "봇은 많이 넣는다고 좋은 게 아니에요. 입장 인사, 인증, 로그처럼 운영에 꼭 필요한 것부터 넣고, 노래봇·레벨봇은 서버가 자리 잡은 뒤에 넣어도 돼요. 봇 역할은 봇이 다룰 역할보다 위에 둬야 제대로 움직여요."
+    },
+    {
+      "ul": [
+        "[디스코드 봇 추가하는 법](/blog/discord-bot-add-guide/): 봇 넣는 법과 안 될 때",
+        "[디스코드 노래봇·TTS](/blog/discord-music-bot-tts/): 통화방에서 노래 틀기, 글 읽어 주기"
+      ]
+    },
+    {
+      "h2": "6단계. 서버를 꾸며요"
+    },
+    {
+      "p": "꾸미기는 ‘이 서버 신경 쓴 곳이구나’라는 첫인상을 만들어요. 채널 이름 정리, 서버 이모지, 공지 채널 글 꾸미기 세 가지만 해도 확 달라 보여요."
+    },
+    {
+      "ul": [
+        "[디스코드 이모지 추가하는 법](/blog/discord-custom-emoji/): 서버 이모지와 칸 늘리기",
+        "[디스코드 채팅 꾸미기](/blog/discord-text-formatting/): 공지에 쓰는 큰 글씨·코드블록",
+        "[디스코드 프로필 꾸미기](/blog/discord-profile-customize/): 운영진 프로필 정리"
+      ]
+    },
+    {
+      "h2": "7단계. 사람을 부르기 전에 보안부터"
+    },
+    {
+      "p": "가장 많이 놓치는 단계예요. 서버가 커지고 나서 테러를 당하면 되돌리기 정말 어려워요. 사람을 부르기 전에 최소한 아래는 끝내 두세요."
+    },
+    {
+      "ul": [
+        "**인증 단계 올리기**: 서버 설정 → 안전 설정에서 이메일 인증된 계정만 채팅하게",
+        "**운영진 2단계 인증**: 관리 기능은 2단계 인증한 계정만 쓰게",
+        "**초대 만들기 권한 제한**: 아무나 초대 링크를 뿌리지 못하게",
+        "**연령 제한 채널 최소화**: 청소년·미확인 연령 멤버는 연령 제한 채널을 못 봐요"
+      ]
+    },
+    {
+      "ul": [
+        "[서버 테러 막는 보안 설정](/blog/discord-server-raid-protection/)",
+        "[디스코드 계정 보안](/blog/discord-account-security/): 운영진 계정 지키기",
+        "[디스코드 연령 인증 정리](/blog/discord-age-verification/): 운영자가 알아둘 점"
+      ]
+    },
+    {
+      "h2": "8단계. 사람을 모아요"
+    },
+    {
+      "p": "초대 링크는 만료 기간부터 확인하세요. 기본이 7일이라, 블로그나 SNS에 걸어 둔 링크가 일주일 뒤에 막히는 일이 정말 많아요. 들어온 사람이 바로 볼 수 있게 공지와 규칙을 맨 위에 두는 것도 잊지 마세요."
+    },
+    {
+      "ul": [
+        "[디스코드 초대 링크 만들기](/blog/discord-invite-link/): 만료 안 되는 링크, 커스텀 링크",
+        "[디스코드 알림 설정](/blog/discord-notification-settings/): 서버 기본 알림을 ‘@멘션만’으로"
+      ]
+    },
+    {
+      "h2": "9단계. 서버를 키워요"
+    },
+    {
+      "p": "사람이 모이기 시작하면 서버 부스트로 레벨을 올려 이모지 칸, 방송 화질, 배너 같은 기능을 열 수 있어요. 니트로가 있으면 부스트 2개가 따라와서 레벨 1은 바로 올릴 수 있어요."
+    },
+    {
+      "ul": [
+        "[서버 부스트 하는 법](/blog/how-to-boost-discord-server/): 레벨별 혜택과 개수",
+        "[니트로 혜택·가격 총정리](/blog/discord-nitro-benefits-price/)",
+        "[디스코드 게임 같이 하는 법](/blog/discord-games-activities/): 음성방에서 액티비티로 모일 이유 만들기"
+      ]
+    },
+    {
+      "h2": "운영하다 자주 생기는 문제"
+    },
+    {
+      "ul": [
+        "**음성 채널에 못 들어가요**: [RTC 연결 중 해결법](/blog/discord-rtc-connecting-fix/)",
+        "**마이크·소리가 안 돼요**: [마이크·소리 해결법](/blog/discord-mic-sound-fix/)",
+        "**화면공유가 까매요**: [화면공유 하는 법](/blog/discord-screen-share/)",
+        "**문제 멤버가 있어요**: [차단·무시](/blog/discord-block-ignore/)와 서버 타임아웃·추방",
+        "**앱이 안 켜져요**: [디스코드 안 켜질 때](/blog/discord-not-opening-fix/)"
+      ]
+    },
+    {
+      "h2": "체크리스트: 사람 부르기 전에 확인하세요"
+    },
+    {
+      "ol": [
+        "공지·규칙 채널이 맨 위에 있고, 일반 멤버는 글을 못 쓰게 막아 뒀다",
+        "운영진·멤버·신입 역할이 있고, 관리자 권한은 서버 주인만 갖고 있다",
+        "봇 역할이 봇이 다룰 역할보다 위에 있다",
+        "인증 단계와 운영진 2단계 인증을 켰다",
+        "초대 링크 만료 기간을 확인했다",
+        "서버 기본 알림을 ‘@멘션만’으로 바꿨다"
+      ]
+    },
+    {
+      "p": "여기까지 직접 하기 번거롭다면, 목적만 알려 주세요. [디스코드 서버제작](/discord-server-creation/)으로 채널·역할·권한·봇·보안까지 위 9단계를 한 번에 맞춰 드려요. 직접 할지 맡길지 고민된다면 [서버제작, 직접 할까 맡길까?](/blog/discord-server-creation-checklist/)를 먼저 보세요."
+    }
+  ],
+  "faq": [
+    {
+      "q": "디스코드 서버는 어떤 순서로 세팅하나요?",
+      "a": "목적 정하기, 서버 만들기, 채널·카테고리, 역할·권한, 봇, 꾸미기, 보안 설정, 초대, 부스트로 키우기 순서로 하면 덜 헤매요. 특히 사람을 부르기 전에 보안 설정을 먼저 끝내 두세요."
+    },
+    {
+      "q": "디스코드 서버 채널은 몇 개가 적당해요?",
+      "a": "목적에 따라 다르지만, 처음에는 공지·규칙, 자유 채팅, 음성방 정도로 적게 시작하는 게 좋아요. 채널이 너무 많으면 대화가 흩어져요."
+    },
+    {
+      "q": "디스코드 서버 역할은 어떻게 나눠요?",
+      "a": "처음에는 운영진, 일반 멤버, 신입(인증 전) 세 단계면 충분해요. 관리자 권한은 서버 주인이나 정말 믿을 수 있는 사람만 갖게 하세요."
+    },
+    {
+      "q": "디스코드 서버 테러는 어떻게 막아요?",
+      "a": "서버 설정 → 안전 설정에서 인증 단계를 올리고, 운영진 관리 작업에 2단계 인증을 필수로 하고, 초대 만들기 권한을 운영진만 갖게 하세요."
+    },
+    {
+      "q": "디스코드 서버 세팅을 맡길 수 있나요?",
+      "a": "네. 리토(Rito0223) 서버제작으로 채널·역할·권한·봇·보안까지 목적에 맞게 맡길 수 있어요. 일반은 4,000원부터, 프리미엄은 10,000원이에요."
+    }
+  ]
+}
